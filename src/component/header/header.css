@@ -1,0 +1,9 @@
+.header_ul {
+  display: grid;
+
+  text-transform: uppercase;
+
+  grid-template-columns: 1fr 1fr 1fr;
+
+  list-style-type: none;
+}
