@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/ioanTudo/hooverShop.git/static/css/main.b3111582.css",
-    "main.js": "/ioanTudo/hooverShop.git/static/js/main.eeb553af.js",
-    "static/js/453.e027dca4.chunk.js": "/ioanTudo/hooverShop.git/static/js/453.e027dca4.chunk.js",
-    "static/media/AZ3002_01.webp": "/ioanTudo/hooverShop.git/static/media/AZ3002_01.be9687e2c881b697b34c.webp",
-    "static/media/AZ3900UKT_02.webp": "/ioanTudo/hooverShop.git/static/media/AZ3900UKT_02.39831bb7bd508781f665.webp",
-    "static/media/AZ3000UKT_01.webp": "/ioanTudo/hooverShop.git/static/media/AZ3000UKT_01.9df21ac04412f9bb87a5.webp",
-    "static/media/NZ691UKT_01.webp": "/ioanTudo/hooverShop.git/static/media/NZ691UKT_01.88c41ba1153a482e3262.webp",
-    "index.html": "/ioanTudo/hooverShop.git/index.html",
-    "main.b3111582.css.map": "/ioanTudo/hooverShop.git/static/css/main.b3111582.css.map",
-    "main.eeb553af.js.map": "/ioanTudo/hooverShop.git/static/js/main.eeb553af.js.map",
-    "453.e027dca4.chunk.js.map": "/ioanTudo/hooverShop.git/static/js/453.e027dca4.chunk.js.map"
+    "main.css": "/hooverShop/static/css/main.b3111582.css",
+    "main.js": "/hooverShop/static/js/main.622e5021.js",
+    "static/js/453.aace820d.chunk.js": "/hooverShop/static/js/453.aace820d.chunk.js",
+    "static/media/AZ3002_01.webp": "/hooverShop/static/media/AZ3002_01.be9687e2c881b697b34c.webp",
+    "static/media/AZ3900UKT_02.webp": "/hooverShop/static/media/AZ3900UKT_02.39831bb7bd508781f665.webp",
+    "static/media/AZ3000UKT_01.webp": "/hooverShop/static/media/AZ3000UKT_01.9df21ac04412f9bb87a5.webp",
+    "static/media/NZ691UKT_01.webp": "/hooverShop/static/media/NZ691UKT_01.88c41ba1153a482e3262.webp",
+    "index.html": "/hooverShop/index.html",
+    "main.b3111582.css.map": "/hooverShop/static/css/main.b3111582.css.map",
+    "main.622e5021.js.map": "/hooverShop/static/js/main.622e5021.js.map",
+    "453.aace820d.chunk.js.map": "/hooverShop/static/js/453.aace820d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b3111582.css",
-    "static/js/main.eeb553af.js"
+    "static/js/main.622e5021.js"
   ]
 }
