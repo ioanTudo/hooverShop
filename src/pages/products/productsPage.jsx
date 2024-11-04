@@ -1,13 +1,10 @@
-import { useState } from "react";
-import { PRODUCTS } from "../../data";
-import { ProductsDisplay } from "./productsDisplay.jsx";
+import { PRODUCTS } from "../../data"; // Update with your actual path
+import { ProductsDisplay } from "./productsDisplay.jsx"; // Update with your actual path
 
-export const ProductsPage = () => {
-  const [cart, setCart] = useState([]);
-
+export const ProductsPage = ({ cart, setCart }) => {
   const addToCart = (product) => {
     setCart((prevCart) => [...prevCart, product]);
-    console.log("Cart:", cart);
+    console.log("Cart:", [...cart, product]);
   };
 
   return (

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./header.css";
 
-export const Header = () => {
+export const Header = ({ cart }) => {
   return (
     <header className="header">
       <ul className="header_ul">
@@ -12,7 +12,7 @@ export const Header = () => {
           <Link to={"/products-page"}>products</Link>
         </li>
         <li>
-          <Link to={"/checkout-page"}>cart</Link>
+          <Link to={"/checkout-page"}>cart({cart.length})</Link>
         </li>
       </ul>
     </header>

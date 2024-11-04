@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import "../App.css";
-import { Link } from "react-router-dom";
 
-export const ComponentDisplay = ({ name, price, prodImg }) => {
-  let [amount, setAmount] = useState(1);
-  let [state, setState] = useState("del");
-  let [pret, setPret] = useState(price);
-  let [visibility, setVisibility] = useState("none");
+export const CartComponentDisplay = ({ name, price, prodImg }) => {
+  const [amount, setAmount] = useState(1);
+  const [state, setState] = useState("del");
+  const [pret, setPret] = useState(price);
+  const [visibility, setVisibility] = useState("none");
+
+  function deleteItem(item, index) {
+    item.splice(index);
+  }
 
   useEffect(() => {
     if (amount > 1) {
@@ -15,11 +18,12 @@ export const ComponentDisplay = ({ name, price, prodImg }) => {
       setState("del");
     }
 
-    setPret(price * amount);
+    setPret(price * amount || 0);
   }, [amount, price]);
 
   function changeDecreaseState() {
     if (state === "del") {
+      deleteItem();
       console.log("back to prod info");
     } else if (state === "-") {
       setAmount((prevAmount) => Math.max(prevAmount - 1, 1));
@@ -33,7 +37,7 @@ export const ComponentDisplay = ({ name, price, prodImg }) => {
 
       setVisibility("block");
 
-      setInterval(() => setVisibility("none"), 5000);
+      setTimeout(() => setVisibility("none"), 5000);
     }
   }
 
@@ -53,13 +57,11 @@ export const ComponentDisplay = ({ name, price, prodImg }) => {
           <div className="amount_container_wrapper">
             <div className="amount_container">
               <button onClick={changeDecreaseState}>{state}</button>
-
               <span>{amount}</span>
-
               <button onClick={changeIncreaseState}>+</button>
             </div>
 
-            <h4>${pret.toFixed(2)}</h4>
+            <h4>${pret ? pret.toFixed(2) : "0.00"}</h4>
           </div>
         </div>
       </div>
@@ -70,33 +72,6 @@ export const ComponentDisplay = ({ name, price, prodImg }) => {
         <h1 className="maxReached_message">max capacity reached</h1>
       </div>
       <hr style={{ marginTop: "30px" }} />
-      <div className="subtotal_container">
-        <h4>
-          Subtotal ({amount} {amount > 1 ? "items" : "item"})
-        </h4>
-
-        <h4>${pret.toFixed(2)}</h4>
-      </div>
-      <div>
-        <div className="checkout_container">
-          <div>
-            <button onClick={() => console.log("went to checkout")}>
-              checkout
-            </button>
-          </div>
-          <div className="optionsBtn_container">
-            <Link onClick={() => console.log("view cart btn clicked")}>
-              view cart
-            </Link>
-            <Link
-              onClick={() => console.log("continue shopping btn clicked")}
-              to={"/products"}
-            >
-              continue shopping
-            </Link>
-          </div>
-        </div>
-      </div>
     </>
   );
 };
