@@ -1,45 +1,65 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import "../App.css";
 
-export const CartComponentDisplay = ({ name, price, prodImg }) => {
-  const [amount, setAmount] = useState(1);
+export const CartComponentDisplay = ({
+  name,
+  price,
+  prodImg,
+  amount,
+  onDelete,
+  onAmountChange,
+}) => {
+  const [localAmount, setLocalAmount] = useState(amount || 1);
   const [state, setState] = useState("del");
-  const [pret, setPret] = useState(price);
+  const [totalPrice, setTotalPrice] = useState(price);
   const [visibility, setVisibility] = useState("none");
-
-  function deleteItem(item, index) {
-    item.splice(index);
-  }
+  const [deleteMessageVisibility, setDeleteMessageVisibility] =
+    useState("none");
 
   useEffect(() => {
-    if (amount > 1) {
+    if (localAmount > 1) {
       setState("-");
     } else {
       setState("del");
     }
 
-    setPret(price * amount || 0);
-  }, [amount, price]);
+    setTotalPrice(price * localAmount);
+  }, [localAmount, price]);
 
-  function changeDecreaseState() {
+  const handleDecrease = () => {
     if (state === "del") {
-      deleteItem();
-      console.log("back to prod info");
+      setDeleteMessageVisibility("block");
     } else if (state === "-") {
-      setAmount((prevAmount) => Math.max(prevAmount - 1, 1));
+      setLocalAmount((prev) => {
+        const newAmount = Math.max(prev - 1, 1);
+        onAmountChange(newAmount);
+        return newAmount;
+      });
     }
-  }
+  };
 
-  function changeIncreaseState() {
-    setAmount((prevAmount) => prevAmount + 1);
-    if (amount === 5) {
-      setAmount(Math.max(5));
-
+  const handleIncrease = () => {
+    if (localAmount < 5) {
+      setLocalAmount((prev) => {
+        const newAmount = prev + 1;
+        onAmountChange(newAmount);
+        return newAmount;
+      });
+    }
+    if (localAmount === 4) {
       setVisibility("block");
-
       setTimeout(() => setVisibility("none"), 5000);
     }
-  }
+  };
+
+  const handleDeleteConfirm = () => {
+    onDelete();
+    setDeleteMessageVisibility("none");
+  };
+
+  const handleDeleteCancel = () => {
+    setDeleteMessageVisibility("none");
+  };
 
   return (
     <>
@@ -56,20 +76,26 @@ export const CartComponentDisplay = ({ name, price, prodImg }) => {
           </div>
           <div className="amount_container_wrapper">
             <div className="amount_container">
-              <button onClick={changeDecreaseState}>{state}</button>
-              <span>{amount}</span>
-              <button onClick={changeIncreaseState}>+</button>
+              <button onClick={handleDecrease}>{state}</button>
+              <span>{localAmount}</span>
+              <button onClick={handleIncrease}>+</button>
             </div>
-
-            <h4>${pret ? pret.toFixed(2) : "0.00"}</h4>
+            <h4>${totalPrice.toFixed(2)}</h4>
           </div>
         </div>
       </div>
+      <div className="maxReached_container" style={{ display: visibility }}>
+        <h1 className="maxReached_message">Max capacity reached</h1>
+      </div>
       <div
-        className="maxReached_container"
-        style={{ display: `${visibility}` }}
+        style={{ display: deleteMessageVisibility }}
+        className="delete_message_container"
       >
-        <h1 className="maxReached_message">max capacity reached</h1>
+        <h2>Are you sure you want to delete the item?</h2>
+        <div className="deleteButtons_container">
+          <button onClick={handleDeleteConfirm}>Yes</button>
+          <button onClick={handleDeleteCancel}>No</button>
+        </div>
       </div>
       <hr style={{ marginTop: "30px" }} />
     </>

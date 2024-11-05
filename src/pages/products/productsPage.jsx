@@ -3,8 +3,19 @@ import { ProductsDisplay } from "./productsDisplay.jsx"; // Update with your act
 
 export const ProductsPage = ({ cart, setCart }) => {
   const addToCart = (product) => {
-    setCart((prevCart) => [...prevCart, product]);
-    console.log("Cart:", [...cart, product]);
+    setCart((prevCart) => {
+      const existingProduct = prevCart.find((item) => item.id === product.id);
+
+      if (existingProduct) {
+        return prevCart.map((item) =>
+          item.id === product.id ? { ...item, amount: item.amount + 1 } : item
+        );
+      } else {
+        return [...prevCart, { ...product, amount: 1 }];
+      }
+    });
+
+    console.log("Cart:", cart);
   };
 
   return (

@@ -1,25 +1,30 @@
 import { CartComponentDisplay } from "../../component/cartComponentDisplay"; // Update with your actual path
 import { Link } from "react-router-dom";
+import { useCallback } from "react";
+import "../../App.css";
 
 export const CheckoutPage = ({ cart, setCart }) => {
-  const updateItemAmount = (index, newAmount) => {
-    const updatedCart = [...cart];
-    updatedCart[index].amount = newAmount;
-    setCart(updatedCart);
-  };
-
-  const deleteItem = (e) => {
-    var updatedCart = [...this.state.cart];
-    var index = updatedCart.indexOf(cart.length - 1);
-    if (index !== -1) {
-      updatedCart.splice(index, 1);
-      this.setState({ cart: updatedCart });
-    }
-  };
-
-  const totalPrice = cart.reduce(
-    (acc, item) => acc + (item.price * item.amount || 0),
+  const subtotal = cart.reduce(
+    (total, item) => total + item.price * (item.amount || 1),
     0
+  );
+
+  const updateItemAmount = useCallback(
+    (index, newAmount) => {
+      setCart((prevCart) =>
+        prevCart.map((item, i) =>
+          i === index ? { ...item, amount: newAmount } : item
+        )
+      );
+    },
+    [setCart]
+  );
+
+  const handleDelete = useCallback(
+    (index) => {
+      setCart((prevCart) => prevCart.filter((_, i) => i !== index));
+    },
+    [setCart]
   );
 
   return (
@@ -35,8 +40,8 @@ export const CheckoutPage = ({ cart, setCart }) => {
             price={item.price}
             prodImg={item.prodImg}
             amount={item.amount}
-            onChangeAmount={(newAmount) => updateItemAmount(index, newAmount)}
-            onDelete={() => deleteItem(index)}
+            onDelete={() => handleDelete(index)}
+            onAmountChange={(newAmount) => updateItemAmount(index, newAmount)}
           />
         ))
       )}
@@ -45,23 +50,19 @@ export const CheckoutPage = ({ cart, setCart }) => {
         <h4>
           Subtotal ({cart.length} {cart.length > 1 ? "items" : "item"})
         </h4>
-        <h4>${totalPrice.toFixed(2)}</h4>
+        <h4>${subtotal.toFixed(2)}</h4>
       </div>
 
       <div className="checkout_container">
-        <div>
-          <button onClick={() => console.log("went to checkout")}>
-            checkout
-          </button>
-        </div>
-        <div className="optionsBtn_container">
-          <Link
-            onClick={() => console.log("continue shopping btn clicked")}
-            to={"/products-page"}
-          >
-            continue shopping
-          </Link>
-        </div>
+        <button onClick={() => console.log("went to checkout")}>
+          checkout
+        </button>
+        <Link
+          to="/products-page"
+          onClick={() => console.log("continue shopping btn clicked")}
+        >
+          continue shopping
+        </Link>
       </div>
     </div>
   );

@@ -22,7 +22,7 @@ function App() {
             />
             <Route
               path="/checkout-page"
-              element={<CheckoutPage cart={cart} />}
+              element={<CheckoutPage setCart={setCart} cart={cart} />}
             />
           </Routes>
         </BrowserRouter>
