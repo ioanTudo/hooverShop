@@ -1,5 +1,6 @@
 import "./homePage.css";
+import { HomePageDisplay } from "./homePageDisplay.jsx";
 
 export const HomePage = () => {
-  return <h1 className="header_homePage"> home</h1>;
+  return <HomePageDisplay />;
 };

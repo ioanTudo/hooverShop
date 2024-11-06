@@ -1,3 +1,5 @@
+import prod6Img from "./images/NZ801UKT_01.webp";
+import prod5Img from "./images/NV602UK_01.webp";
 import prod4Img from "./images/AZ3900UKT_02.webp";
 import prod3Img from "./images/AZ3000UKT_01.webp";
 import prod2Img from "./images/AZ3002_01.webp";
@@ -34,6 +36,22 @@ export const PRODUCTS = [
     info: "info - az3900ukt",
     price: 499,
     prodImg: prod4Img,
+    isAddedToCart: false,
+  },
+  {
+    id: 5,
+    name: "az3900ukt",
+    info: "info - NV602UK",
+    price: 499,
+    prodImg: prod5Img,
+    isAddedToCart: false,
+  },
+  {
+    id: 6,
+    name: "az3900ukt",
+    info: "info - nz810ukt",
+    price: 499,
+    prodImg: prod6Img,
     isAddedToCart: false,
   },
 ];

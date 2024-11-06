@@ -1,9 +1,42 @@
-.header_ul {
-  display: grid;
+@media (min-width: 375px) {
+  header {
+    border-bottom: 1px groove gray;
+  }
 
-  text-transform: uppercase;
+  .header_ul {
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
 
-  grid-template-columns: 1fr 1fr 1fr;
+    text-transform: uppercase;
 
-  list-style-type: none;
+    list-style-type: none;
+  }
+  .cart_amount {
+    border: 1px solid white;
+    border-radius: 100%;
+
+    padding: 1px 5px;
+
+    background-color: blueviolet;
+
+    color: white;
+  }
+  a {
+    text-decoration: none;
+  }
+  .header_logo {
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+  }
+
+  li {
+    margin: auto;
+  }
+  .logo_li {
+    margin-left: 50px;
+  }
+  .searchBar_header {
+    padding: 15px;
+    width: 220px;
+  }
 }

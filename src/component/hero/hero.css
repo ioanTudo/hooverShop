@@ -1,0 +1,32 @@
+@media (min-width: 375px) {
+  .hero_image_container {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    border: 1px groove black;
+
+    height: 100vh;
+
+    position: relative;
+  }
+  .hero_container button {
+    padding: 20px;
+
+    width: 200px;
+
+    font-size: 20px;
+
+    text-transform: capitalize;
+
+    border-radius: 40px;
+  }
+  .hero_container button:hover {
+    background-color: red;
+  }
+  .hero_content_container {
+    position: absolute;
+
+    justify-self: center;
+    align-self: center;
+  }
+}
