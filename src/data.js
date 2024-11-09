@@ -34,7 +34,7 @@ export const PRODUCTS = [
     id: 4,
     name: "az3900ukt",
     info: "info - az3900ukt",
-    price: 499,
+    price: 159,
     prodImg: prod4Img,
     isAddedToCart: false,
   },
@@ -42,7 +42,7 @@ export const PRODUCTS = [
     id: 5,
     name: "az3900ukt",
     info: "info - NV602UK",
-    price: 499,
+    price: 259,
     prodImg: prod5Img,
     isAddedToCart: false,
   },
@@ -50,8 +50,31 @@ export const PRODUCTS = [
     id: 6,
     name: "az3900ukt",
     info: "info - nz810ukt",
-    price: 499,
+    price: 99,
     prodImg: prod6Img,
     isAddedToCart: false,
+  },
+];
+
+export const NAVList = [
+  {
+    id: 0,
+    name: "home",
+    pathLink: "/",
+  },
+  {
+    id: 1,
+    name: "products",
+    pathLink: "/products-page",
+  },
+  {
+    id: 2,
+    name: "sign in",
+    pathLink: "/signIn-page",
+  },
+  {
+    id: 3,
+    name: "log in",
+    pathLink: "/logIn-page",
   },
 ];

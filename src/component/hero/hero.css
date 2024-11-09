@@ -19,6 +19,8 @@
     text-transform: capitalize;
 
     border-radius: 40px;
+
+    cursor: pointer;
   }
   .hero_container button:hover {
     background-color: red;

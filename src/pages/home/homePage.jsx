@@ -1,6 +1,11 @@
+import { HeroHome } from "../../component/hero/homeHero.jsx";
+import { TemplatePageDisplay } from "../templatePage/templatePageDisplay.jsx";
 import "./homePage.css";
-import { HomePageDisplay } from "./homePageDisplay.jsx";
 
-export const HomePage = () => {
-  return <HomePageDisplay />;
+export const HomePage = ({ cart }) => {
+  return (
+    <TemplatePageDisplay>
+      <HeroHome cart={cart} />
+    </TemplatePageDisplay>
+  );
 };

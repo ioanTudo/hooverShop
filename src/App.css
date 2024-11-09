@@ -199,3 +199,6 @@
 .deleteButtons_container > button {
   padding: 10px;
 }
+.active_page {
+  color: lightgray;
+}

@@ -5,7 +5,7 @@
 
   .header_ul {
     display: grid;
-    grid-template-columns: 2fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-columns: 2fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
 
     text-transform: uppercase;
 
@@ -38,5 +38,8 @@
   .searchBar_header {
     padding: 15px;
     width: 220px;
+  }
+  input:focus {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 }
