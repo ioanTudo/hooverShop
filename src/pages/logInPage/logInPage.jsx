@@ -1,9 +1,5 @@
-import { TemplatePageDisplay } from "../templatePage/templatePageDisplay";
+import { LogInFormDisplay } from "../../component/logInForm/logInFormDisplay";
 
 export const LogInPage = () => {
-  return (
-    <TemplatePageDisplay>
-      <h1>log in</h1>
-    </TemplatePageDisplay>
-  );
+  return <LogInFormDisplay />;
 };

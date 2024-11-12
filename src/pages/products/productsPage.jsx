@@ -23,18 +23,20 @@ export const ProductsPage = ({ cart, setCart }) => {
 
   return (
     <TemplatePageDisplay cart={cart} setCart={setCart}>
-      <h1>Products</h1>
-      <div className="products_container">
-        {PRODUCTS.map((product) => (
-          <ProductsDisplay
-            key={product.id}
-            name={product.name}
-            price={product.price}
-            prodImg={product.prodImg}
-            info={product.info}
-            onAddToCart={() => addToCart(product)}
-          />
-        ))}
+      <div className="products_wrapper">
+        <h1>Products</h1>
+        <div className="products_container">
+          {PRODUCTS.map((product) => (
+            <ProductsDisplay
+              key={product.id}
+              name={product.name}
+              price={product.price}
+              prodImg={product.prodImg}
+              info={product.info}
+              onAddToCart={() => addToCart(product)}
+            />
+          ))}
+        </div>
       </div>
     </TemplatePageDisplay>
   );

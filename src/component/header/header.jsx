@@ -19,7 +19,7 @@ export const Header = ({ cart }) => {
           />
         ))}
 
-        <CartHeader cart={cart || []} />
+        <CartHeader cart={cart} />
       </ul>
     </header>
   );

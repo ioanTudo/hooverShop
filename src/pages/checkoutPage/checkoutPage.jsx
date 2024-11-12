@@ -1,15 +1,18 @@
-import { CartComponentDisplay } from "../../component/cartComponentDisplay"; // Update with your actual path
+import { CartComponentDisplay } from "../../component/cartComponentDisplay";
 import { Link } from "react-router-dom";
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import "../../App.css";
 import { TemplatePageDisplay } from "../templatePage/templatePageDisplay";
 
 export const CheckoutPage = ({ cart, setCart }) => {
+  const { availability, setAvailability } = useState();
+
   const subtotal = cart.reduce(
     (total, item) => total + item.price * (item.amount || 1),
     0
   );
 
+  // Update the amount of an item in the cart
   const updateItemAmount = useCallback(
     (index, newAmount) => {
       setCart((prevCart) =>
@@ -29,7 +32,7 @@ export const CheckoutPage = ({ cart, setCart }) => {
   );
 
   return (
-    <TemplatePageDisplay>
+    <TemplatePageDisplay cart={cart} setCart={setCart}>
       <div className="cart_container">
         <h2>Your Cart</h2>
         {cart.length === 0 ? (
@@ -37,7 +40,7 @@ export const CheckoutPage = ({ cart, setCart }) => {
         ) : (
           cart.map((item, index) => (
             <CartComponentDisplay
-              key={index}
+              key={item.id}
               name={item.name}
               price={item.price}
               prodImg={item.prodImg}
@@ -56,14 +59,17 @@ export const CheckoutPage = ({ cart, setCart }) => {
         </div>
 
         <div className="checkout_container">
-          <button onClick={() => console.log("went to checkout")}>
-            checkout
+          <button
+            disabled={cart.length === 0}
+            onClick={() => console.log("went to checkout")}
+          >
+            Checkout
           </button>
           <Link
             to="/products-page"
             onClick={() => console.log("continue shopping btn clicked")}
           >
-            continue shopping
+            <p>Continue Shopping</p>
           </Link>
         </div>
       </div>

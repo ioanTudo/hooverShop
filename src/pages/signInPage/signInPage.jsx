@@ -1,9 +1,5 @@
-import { TemplatePageDisplay } from "../templatePage/templatePageDisplay";
+import { SignInForm } from "../../component/signInForm/signInForm";
 
-export const SignInPage = () => {
-  return (
-    <TemplatePageDisplay>
-      <h1>sign in</h1>
-    </TemplatePageDisplay>
-  );
+export const SignInPage = ({ cart, setCart }) => {
+  return <SignInForm />;
 };

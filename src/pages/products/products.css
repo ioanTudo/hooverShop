@@ -42,3 +42,8 @@
 
   margin: auto;
 }
+.products_wrapper {
+  padding: 10px;
+
+  min-height: 100vh;
+}

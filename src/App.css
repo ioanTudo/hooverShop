@@ -124,7 +124,9 @@
   font-size: 25px;
   text-transform: capitalize;
 
-  width: 100%;
+  margin: auto;
+
+  width: 25%;
 }
 
 .optionsBtn_container {
@@ -201,4 +203,13 @@
 }
 .active_page {
   color: lightgray;
+}
+.cart_container {
+  min-height: 100vh;
+
+  padding: 20px;
+
+  width: 75%;
+
+  margin: auto;
 }

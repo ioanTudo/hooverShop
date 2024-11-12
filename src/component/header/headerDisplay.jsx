@@ -16,7 +16,7 @@ export const HeaderDisplay = ({ pathLink, name, id }) => {
       <li key={id}>
         <NavLink
           style={({ isActive }) => ({
-            color: isActive ? "green" : "purple",
+            color: isActive ? "green" : "blueviolet",
             textDecoration: isActive ? "underline" : "none",
           })}
           onClick={handlePageSelect}
