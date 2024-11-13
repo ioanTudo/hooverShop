@@ -80,7 +80,9 @@ export const CartComponentDisplay = ({
             <div className="amount_container">
               <button onClick={handleDecrease}>{state}</button>
               <span>{localAmount}</span>
-              <button onClick={handleIncrease}>+</button>
+              <button disabled={localAmount === 5} onClick={handleIncrease}>
+                +
+              </button>
             </div>
             <h4>${totalPrice.toFixed(2)}</h4>
           </div>

@@ -26,7 +26,7 @@ function App() {
               path="/corded-hoovers"
               cart={cart}
               setCart={setCart}
-              element={<CorderVacPage />}
+              element={<CorderVacPage cart={cart} setCart={setCart} />}
             />
             <Route
               path="/signIn-page"

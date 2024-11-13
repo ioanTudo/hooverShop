@@ -10,7 +10,6 @@ export const CheckoutPage = ({ cart, setCart }) => {
     0
   );
 
-  // Update the amount of an item in the cart
   const updateItemAmount = useCallback(
     (index, newAmount) => {
       setCart((prevCart) =>
@@ -64,7 +63,7 @@ export const CheckoutPage = ({ cart, setCart }) => {
             Checkout
           </button>
           <Link
-            to="/products-page"
+            to="/corded-hoovers"
             onClick={() => console.log("continue shopping btn clicked")}
           >
             <p>Continue Shopping</p>
