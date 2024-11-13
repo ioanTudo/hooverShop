@@ -3,15 +3,31 @@
     border-bottom: 1px groove gray;
   }
 
+  .logo_li {
+    list-style: none;
+  }
+
   .header_ul {
     display: grid;
-    grid-template-columns: 2fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr;
 
     text-transform: uppercase;
 
     list-style-type: none;
   }
+  .burger_btn {
+    display: block;
+  }
+  .close_btn {
+    display: none;
+  }
+  .nav_link {
+    display: none;
+  }
+
   .cart_amount {
+    position: absolute;
+
     border: 1px solid white;
     border-radius: 100%;
 
@@ -21,30 +37,123 @@
 
     color: white;
   }
+
+  .cart_list {
+    position: relative;
+  }
   a {
     text-decoration: none;
   }
+  li {
+    margin: auto;
+  }
   .header_logo {
+    font-size: 30px;
     font-family: "Anton SC", sans-serif;
     font-weight: 400;
 
     color: blueviolet;
-
-    text-align: left;
   }
+  .searchBar_list {
+    grid-row: 2/3;
+    grid-column: 1 / span 4;
 
-  li {
-    margin: auto;
-  }
-
-  .logo_li {
-    margin-left: 50px;
+    display: none;
   }
   .searchBar_header {
+    margin-top: 20px;
+
     padding: 15px;
-    width: 220px;
+    width: 150px;
+
+    border-radius: 30px;
+    border: 1px solid blueviolet;
+  }
+  .searchBar_header::placeholder {
+    color: blueviolet;
+  }
+}
+
+@media (min-width: 1200px) {
+  .burger_btn {
+    display: none;
+  }
+  .close_btn {
+    display: none;
+  }
+  .searchBar_list {
+    grid-row: 1/2;
+    grid-column: 2/3;
+
+    display: block;
+
+    margin: auto;
+  }
+  .header_ul {
+    display: grid;
+    grid-template-columns: 1fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+
+    text-transform: uppercase;
+
+    list-style-type: none;
+  }
+  .searchLogo_list {
+    display: none;
   }
   input:focus {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .nav_link {
+    display: block;
+  }
+  .searchBar_header {
+    margin-top: 0;
+  }
+  .submenu_container {
+    position: relative;
+  }
+
+  .submenu_container ul {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    list-style: none;
+
+    font-size: larger;
+
+    padding: 1rem 1rem 0 1rem;
+
+    margin: 0;
+
+    border: 1px solid gray;
+
+    justify-content: center;
+
+    background-color: aliceblue;
+
+    min-width: 150px;
+
+    z-index: 999999;
+  }
+
+  .submenu_container li {
+    width: 100%;
+
+    text-align: center;
+
+    height: 35px;
+
+    font-size: 16px;
+
+    text-align: center;
+
+    margin: auto;
+    align-self: center;
   }
 }

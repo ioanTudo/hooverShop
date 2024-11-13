@@ -4,11 +4,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { CheckoutPage } from "./pages/checkoutPage/checkoutPage";
 
 import { HomePage } from "./pages/home/homePage";
-import { ProductsPage } from "./pages/products/productsPage";
 import { useState } from "react";
 
 import { SignInPage } from "./pages/signInPage/signInPage";
 import { LogInPage } from "./pages/logInPage/logInPage";
+import { CorderVacPage } from "./pages/cordedVacPage/cordedVacPage";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -21,9 +21,12 @@ function App() {
               path="/"
               element={<HomePage cart={cart} setCart={setCart} />}
             />
+
             <Route
-              path="/products-page"
-              element={<ProductsPage cart={cart} setCart={setCart} />}
+              path="/corded-hoovers"
+              cart={cart}
+              setCart={setCart}
+              element={<CorderVacPage />}
             />
             <Route
               path="/signIn-page"

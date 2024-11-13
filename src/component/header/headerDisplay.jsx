@@ -1,30 +1,44 @@
 import { NavLink } from "react-router-dom";
 import "./header.css";
 
-export const HeaderDisplay = ({ pathLink, name, id }) => {
+import { useState } from "react";
+
+export const HeaderDisplay = ({ pathLink, name, id, submenu }) => {
+  const [visibility, setVisibility] = useState("none");
+
   const onPageSelect = () => {
     console.log(`Page selected in header: ${name}`);
-
     document.body.style.overflow = "visible";
   };
-  const handlePageSelect = (name) => {
-    onPageSelect(name);
+
+  const handlePageSelect = () => {
+    onPageSelect(
+      visibility === "none" ? setVisibility("block") : setVisibility("none")
+    );
   };
 
   return (
-    <>
-      <li key={id}>
-        <NavLink
-          style={({ isActive }) => ({
-            color: isActive ? "green" : "blueviolet",
-            textDecoration: isActive ? "underline" : "none",
-          })}
-          onClick={handlePageSelect}
-          to={pathLink}
-        >
-          {name}
-        </NavLink>
-      </li>
-    </>
+    <li className="nav_link" key={id}>
+      <NavLink onClick={() => handlePageSelect(name)} to={pathLink}>
+        {name}
+      </NavLink>
+      <div className="submenu_container" style={{ display: visibility }}>
+        {submenu && submenu.length > 0 && (
+          <ul className="submenu">
+            {submenu.map((item) => (
+              <li key={item.id}>
+                <NavLink
+                  to={item.pathLink}
+                  onClick={() => handlePageSelect(item.name)}
+                  className="submenu_link"
+                >
+                  {item.name}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </li>
   );
 };

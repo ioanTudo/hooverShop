@@ -1,9 +1,10 @@
-import { PRODUCTS } from "../../data";
-import { TemplatePageDisplay } from "../templatePage/templatePageDisplay.jsx";
-import { ProductsDisplay } from "./productsDisplay.jsx";
 import { useEffect } from "react";
+import { PRODUCTS } from "../../data";
 
-export const ProductsPage = ({ cart, setCart }) => {
+import { TemplatePageDisplay } from "../templatePage/templatePageDisplay";
+import { CordedVacDisplay } from "./cordedVacDisplay";
+
+export const CorderVacPage = ({ cart, setCart }) => {
   const addToCart = (product) => {
     setCart((prevCart) => {
       const existingProduct = prevCart.find((item) => item.id === product.id);
@@ -20,18 +21,17 @@ export const ProductsPage = ({ cart, setCart }) => {
   useEffect(() => {
     console.log("Cart updated:", cart);
   }, [cart]);
-
   return (
     <TemplatePageDisplay cart={cart} setCart={setCart}>
       <div className="products_wrapper">
-        <h1>Products</h1>
+        <h1>Corded vaccum cleaners</h1>
         <div className="products_container">
           {PRODUCTS.map((product) => (
-            <ProductsDisplay
+            <CordedVacDisplay
               key={product.id}
               name={product.name}
               price={product.price}
-              prodImg={product.prodImg}
+              image={product.image}
               info={product.info}
               onAddToCart={() => addToCart(product)}
             />

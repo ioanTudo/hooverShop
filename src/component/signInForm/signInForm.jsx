@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import "./formStyle.css";
+import "../header/header.css";
 import { HeaderLogo } from "../header/headerLogo";
 import { Link } from "react-router-dom";
 

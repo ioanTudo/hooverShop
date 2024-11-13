@@ -4,23 +4,33 @@ import "./header.css";
 import { HeaderLogo } from "./headerLogo";
 import { SearchBar } from "./searchBar";
 import { CartHeader } from "./cartHeader.jsx";
+import { BurgerMenu } from "./burgerMenu.jsx";
+import { SearchLogo } from "./searchLogo.jsx";
+import { useState } from "react";
 
 export const Header = ({ cart }) => {
+  const [visibility, setVisibility] = useState("");
   return (
     <header className="header">
-      <ul className="header_ul">
-        <HeaderLogo />
-        <SearchBar />
-        {NAVList.map((navItems) => (
-          <HeaderDisplay
-            key={navItems.id}
-            pathLink={navItems.pathLink}
-            name={navItems.name}
-          />
-        ))}
+      <nav>
+        <ul className="header_ul">
+          <HeaderLogo />
+          <SearchBar visibility={visibility} />
+          <SearchLogo visibility={visibility} setVisibility={setVisibility} />
 
-        <CartHeader cart={cart} />
-      </ul>
+          {NAVList.map((navItems) => (
+            <HeaderDisplay
+              key={navItems.id}
+              pathLink={navItems.pathLink}
+              name={navItems.name}
+              submenu={navItems.submenu}
+            />
+          ))}
+
+          <CartHeader cart={cart} />
+          <BurgerMenu />
+        </ul>
+      </nav>
     </header>
   );
 };

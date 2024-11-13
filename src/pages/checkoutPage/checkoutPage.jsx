@@ -1,12 +1,10 @@
 import { CartComponentDisplay } from "../../component/cartComponentDisplay";
 import { Link } from "react-router-dom";
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 import "../../App.css";
 import { TemplatePageDisplay } from "../templatePage/templatePageDisplay";
 
 export const CheckoutPage = ({ cart, setCart }) => {
-  const { availability, setAvailability } = useState();
-
   const subtotal = cart.reduce(
     (total, item) => total + item.price * (item.amount || 1),
     0
@@ -43,7 +41,7 @@ export const CheckoutPage = ({ cart, setCart }) => {
               key={item.id}
               name={item.name}
               price={item.price}
-              prodImg={item.prodImg}
+              image={item.image}
               amount={item.amount}
               onDelete={() => handleDelete(index)}
               onAmountChange={(newAmount) => updateItemAmount(index, newAmount)}

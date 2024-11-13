@@ -4,7 +4,7 @@ import "../App.css";
 export const CartComponentDisplay = ({
   name,
   price,
-  prodImg,
+  image,
   amount,
   onDelete,
   onAmountChange,
@@ -27,6 +27,7 @@ export const CartComponentDisplay = ({
   }, [localAmount, price]);
 
   const handleDecrease = () => {
+    console.log(localAmount);
     if (state === "del") {
       setDeleteMessageVisibility("block");
     } else if (state === "-") {
@@ -40,6 +41,7 @@ export const CartComponentDisplay = ({
 
   const handleIncrease = () => {
     if (localAmount < 5) {
+      console.log(localAmount);
       setLocalAmount((prev) => {
         const newAmount = prev + 1;
         onAmountChange(newAmount);
@@ -67,7 +69,7 @@ export const CartComponentDisplay = ({
         <div
           className="img_position"
           style={{
-            backgroundImage: `url(${prodImg})`,
+            backgroundImage: `url(${image})`,
           }}
         ></div>
         <div className="wrapper">
