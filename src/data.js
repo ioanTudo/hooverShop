@@ -72,12 +72,12 @@ export const NAVList = [
       },
       {
         id: 2,
-        name: "cordless",
+        name: "hair dryers",
         pathLink: "/cordless-hoovers",
       },
       {
         id: 3,
-        name: "cordless",
+        name: "air purifiers",
         pathLink: "/cordless-hoovers",
       },
     ],
