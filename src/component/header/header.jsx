@@ -10,6 +10,7 @@ import { useState } from "react";
 
 export const Header = ({ cart }) => {
   const [visibility, setVisibility] = useState("");
+  const [navVisibility, setNavVisibility] = useState("");
   return (
     <header className="header">
       <nav>
@@ -24,11 +25,15 @@ export const Header = ({ cart }) => {
               pathLink={navItems.pathLink}
               name={navItems.name}
               submenu={navItems.submenu}
+              navVisibility={navVisibility}
             />
           ))}
 
           <CartHeader cart={cart} />
-          <BurgerMenu />
+          <BurgerMenu
+            navVisibility={navVisibility}
+            setNavVisibility={setNavVisibility}
+          />
         </ul>
       </nav>
     </header>

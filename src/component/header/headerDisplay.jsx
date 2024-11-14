@@ -3,7 +3,13 @@ import "./header.css";
 
 import { useState } from "react";
 
-export const HeaderDisplay = ({ pathLink, name, id, submenu }) => {
+export const HeaderDisplay = ({
+  pathLink,
+  name,
+  id,
+  submenu,
+  navVisibility,
+}) => {
   const [visibility, setVisibility] = useState("none");
 
   const onPageSelect = () => {
@@ -18,7 +24,7 @@ export const HeaderDisplay = ({ pathLink, name, id, submenu }) => {
   };
 
   return (
-    <li className="nav_link" key={id}>
+    <li style={{ display: navVisibility }} className="nav_link" key={id}>
       <NavLink onClick={() => handlePageSelect(name)} to={pathLink}>
         {name}
       </NavLink>
