@@ -1,6 +1,6 @@
 .products_container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 
   gap: 20px;
 }
@@ -11,10 +11,15 @@
   display: grid;
   grid-template-columns: 1fr;
 
-  border: 1px solid gray;
+  border: 1px solid #bfbfbf;
+
   border-radius: 10px;
 
   padding: 20px 5px;
+
+  width: 500px;
+
+  margin: auto;
 
   font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
@@ -23,8 +28,8 @@
   font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "XOPQ" 96, "XTRA" 468,
     "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
 }
-.product_page {
-  color: black;
+.products_container h3 {
+  color: #404040;
 }
 .product_img {
   width: 120px;
@@ -36,12 +41,26 @@
 
   margin: auto;
 }
+
+.product_item > button:hover {
+  background-color: rgb(138, 43, 226);
+}
 .product_item > button {
   width: 100px;
   height: 50px;
 
+  background-color: rgb(167, 90, 242);
+
+  border: 0px;
+  border-radius: 10px;
+
+  color: white;
+
   margin: auto;
+
+  cursor: pointer;
 }
+
 .products_wrapper {
   padding: 10px;
 

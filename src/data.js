@@ -137,3 +137,120 @@ export const NAVList = [
   { id: 2, name: "sign in", pathLink: "/signIn-page" },
   { id: 3, name: "log in", pathLink: "/logIn-page" },
 ];
+
+export const FOOTER_items = [
+  {
+    id: 0,
+    name: "about our company",
+    submenu: [
+      {
+        id: 0,
+        name: "about us",
+        pathLink: "/about-us",
+      },
+      {
+        id: 1,
+        name: "black friday",
+        pathLink: "/black-friday",
+      },
+      {
+        id: 2,
+        name: "reviews",
+        pathLink: "/reviews",
+      },
+      {
+        id: 3,
+        name: "cleaning tips and advice",
+        pathLink: "/cleaning-tips",
+      },
+      {
+        id: 4,
+        name: "coming soon",
+        pathLink: "/coming-soon",
+      },
+      {
+        id: 5,
+        name: "terms and conditions",
+        pathLink: "/terms-and-conditions",
+      },
+    ],
+  },
+  {
+    id: 1,
+    name: "Technology",
+    submenu: [
+      {
+        id: 0,
+        name: "anti hair wrap",
+        pathLink: "/about-us",
+      },
+      {
+        id: 1,
+        name: "duo clean",
+        pathLink: "/black-friday",
+      },
+      {
+        id: 2,
+        name: "power fins",
+        pathLink: "/reviews",
+      },
+      {
+        id: 3,
+        name: "anti-allergen",
+        pathLink: "/cleaning-tips",
+      },
+      {
+        id: 4,
+        name: "flexology",
+        pathLink: "/coming-soon",
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "Orders and payments",
+    submenu: [
+      {
+        id: 0,
+        name: "paypal",
+      },
+      {
+        id: 1,
+        name: "student discount",
+      },
+      {
+        id: 2,
+        name: "klarna",
+      },
+      {
+        id: 3,
+        name: "orders & payments",
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "Need Help?",
+    submenu: [
+      {
+        id: 0,
+        name: "contact us",
+        pathLink: "/contact-us",
+      },
+      {
+        id: 1,
+        name: "customer care",
+        pathLink: "/contact-us",
+      },
+      {
+        id: 2,
+        name: "parts and accesories",
+        pathLink: "/contact-us",
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: "join our mailing list",
+  },
+];

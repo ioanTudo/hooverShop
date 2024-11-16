@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import "./header.css";
 
 import { useState } from "react";
-import { NAVList } from "../../data";
 
 export const HeaderDisplay = ({
   pathLink,

@@ -3,7 +3,9 @@
     display: grid;
     grid-template-columns: 1fr;
 
-    border: 1px groove black;
+    color: rgb(138, 43, 226);
+
+    border: 1px groove white;
 
     height: 100vh;
 
@@ -19,11 +21,16 @@
     text-transform: capitalize;
 
     border-radius: 40px;
+    border: 0px;
 
     cursor: pointer;
+
+    background-color: rgb(167, 90, 242);
+
+    color: white;
   }
   .hero_container button:hover {
-    background-color: red;
+    background-color: rgb(138, 43, 226);
   }
   .hero_content_container {
     position: absolute;
