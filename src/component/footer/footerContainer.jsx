@@ -16,7 +16,7 @@ export const FooterContainer = () => {
         ))}
       </ul>
       <div className="copyright_container">
-        <p>&copy; 2024 My Website. All rights reserved.</p>
+        <p>&copy; 2024 Hoover Shop. All rights reserved.</p>
         <p>Privacy Policy | Terms of Service</p>
       </div>
     </footer>

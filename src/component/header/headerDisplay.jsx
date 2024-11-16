@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import "./header.css";
 
 import { useState } from "react";
+import { NAVList } from "../../data";
 
 export const HeaderDisplay = ({
   pathLink,
@@ -24,7 +25,11 @@ export const HeaderDisplay = ({
   };
 
   return (
-    <li style={{ display: navVisibility }} className="nav_link" key={id}>
+    <li
+      style={{ display: navVisibility }}
+      className={`nav_link ${name === "products" ? "dropdownIcon" : ""}`}
+      key={id}
+    >
       <NavLink onClick={() => handlePageSelect(name)} to={pathLink}>
         {name}
       </NavLink>

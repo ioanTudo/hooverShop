@@ -5,6 +5,13 @@ import prod3Img from "./images/AZ3000UKT_01.webp";
 import prod2Img from "./images/AZ3002_01.webp";
 import prod1Img from "./images/NZ691UKT_01.webp";
 
+import prod1cordless from "./images/IP1251UKT_02.webp";
+import prod2cordless from "./images/IZ202UKT_02.webp";
+import prod3cordless from "./images/IZ202UKTDB_02.webp";
+import prod4cordless from "./images/IZ400UKT_02.webp";
+import prod5cordless from "./images/IZ202UK_02.webp";
+import prod6cordless from "./images/IZ420UKTDB_02.webp";
+
 export const PRODUCTS = [
   {
     id: 1,
@@ -47,6 +54,51 @@ export const PRODUCTS = [
     info: "Affordable vacuum for everyday cleaning",
     price: 99,
     image: prod6Img,
+  },
+];
+
+export const PRODUCTS_CORDLESS = [
+  {
+    id: 0,
+    name: "IP1251UKT",
+    info: "Powerful vacuum cleaner with advanced technology",
+    price: 300,
+    image: prod1cordless,
+  },
+  {
+    id: 1,
+    name: "IZ202UKT",
+    info: "Powerful vacuum cleaner with advanced technology",
+    price: 250,
+    image: prod2cordless,
+  },
+  {
+    id: 2,
+    name: "IZ202UKTDB",
+    info: "Powerful vacuum cleaner with advanced technology",
+    price: 500,
+    image: prod3cordless,
+  },
+  {
+    id: 3,
+    name: "IZ400UKT",
+    info: "Powerful vacuum cleaner with advanced technology",
+    price: 130,
+    image: prod4cordless,
+  },
+  {
+    id: 4,
+    name: "IZ202UK",
+    info: "Powerful vacuum cleaner with advanced technology",
+    price: 299,
+    image: prod5cordless,
+  },
+  {
+    id: 5,
+    name: "IZ420UKTDB",
+    info: "Powerful vacuum cleaner with advanced technology",
+    price: 399,
+    image: prod6cordless,
   },
 ];
 

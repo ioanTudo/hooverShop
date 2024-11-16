@@ -3,6 +3,21 @@
     border-bottom: 1px groove gray;
   }
 
+  .dropdownIcon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -1.625rem;
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    pointer-events: none;
+    border-color: rgba(205, 209, 213, 0);
+    border-top-color: #cdd1d5;
+    border-width: 0.5rem;
+    margin-top: -0.25rem;
+  }
+
   .logo_li {
     list-style: none;
   }
@@ -24,6 +39,8 @@
     display: none;
   }
   .nav_link {
+    position: relative;
+
     margin-top: 50px;
 
     grid-row: 2/3;
