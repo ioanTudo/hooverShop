@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/hooverShop/static/css/main.dde9fc37.css",
+    "main.css": "/hooverShop/static/css/main.9a15a2db.css",
     "main.js": "/hooverShop/static/js/main.f457fce7.js",
     "static/js/453.6326208c.chunk.js": "/hooverShop/static/js/453.6326208c.chunk.js",
     "static/media/AZ3002_01.webp": "/hooverShop/static/media/AZ3002_01.be9687e2c881b697b34c.webp",
@@ -16,12 +16,12 @@
     "index.html": "/hooverShop/index.html",
     "static/media/NZ801UKT_01.webp": "/hooverShop/static/media/NZ801UKT_01.a5b4f3654c94fc8b8107.webp",
     "static/media/NZ691UKT_01.webp": "/hooverShop/static/media/NZ691UKT_01.88c41ba1153a482e3262.webp",
-    "main.dde9fc37.css.map": "/hooverShop/static/css/main.dde9fc37.css.map",
+    "main.9a15a2db.css.map": "/hooverShop/static/css/main.9a15a2db.css.map",
     "main.f457fce7.js.map": "/hooverShop/static/js/main.f457fce7.js.map",
     "453.6326208c.chunk.js.map": "/hooverShop/static/js/453.6326208c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dde9fc37.css",
+    "static/css/main.9a15a2db.css",
     "static/js/main.f457fce7.js"
   ]
 }
