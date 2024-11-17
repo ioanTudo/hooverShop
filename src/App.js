@@ -10,6 +10,7 @@ import { SignInPage } from "./pages/signInPage/signInPage";
 import { LogInPage } from "./pages/logInPage/logInPage";
 import { CorderVacPage } from "./pages/cordedVacPage/cordedVacPage";
 import { CordlessVacPage } from "./pages/cordlessVacPage/cordlessVacPage";
+import { OffersPage } from "./pages/offers/offersPage";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -22,7 +23,10 @@ function App() {
               path="/"
               element={<HomePage cart={cart} setCart={setCart} />}
             />
-
+            <Route
+              path="/offers"
+              element={<OffersPage cart={cart} setCart={setCart} />}
+            />
             <Route
               path="/corded-hoovers"
               cart={cart}
