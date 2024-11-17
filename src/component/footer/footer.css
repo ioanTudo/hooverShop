@@ -1,18 +1,15 @@
 @media (min-width: 375px) {
   footer {
-    display: flex;
-    flex-direction: column;
-
     border-top: 1px groove gray;
 
     background-color: rgb(167, 90, 242);
   }
-  h4 {
+  footer h4 {
     text-align: left;
   }
   .footerNav_link {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
 
     margin: auto;
 
@@ -119,5 +116,10 @@
     background-color: rgb(137, 61, 186);
 
     cursor: pointer;
+  }
+}
+@media (min-width: 1200px) {
+  .footerNav_link {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }

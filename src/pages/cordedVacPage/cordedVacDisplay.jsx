@@ -8,10 +8,12 @@ export const CordedVacDisplay = ({ name, price, image, info, onAddToCart }) => {
       ></div>
       <div className="product_info">
         <h3>{name}</h3>
-        <h4>{info}</h4>
-        <p>Price: ${price}</p>
+        <span>{info}</span>
       </div>
-      <button onClick={onAddToCart}>Add to Cart</button>
+      <div className="product_paymentInfo">
+        <p>Price: ${price}</p>
+        <button onClick={onAddToCart}>Add to Cart</button>
+      </div>
     </div>
   );
 };

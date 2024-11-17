@@ -105,8 +105,8 @@ export const PRODUCTS_CORDLESS = [
 export const NAVList = [
   {
     id: 0,
-    name: "home",
-    pathLink: "/",
+    name: "offers",
+    pathLink: "/offers",
   },
   {
     id: 1,

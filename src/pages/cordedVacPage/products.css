@@ -1,68 +1,97 @@
-.products_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+@media (min-width: 375px) {
+  .products_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-  gap: 20px;
+    gap: 10px;
+  }
+  .products_container > hr {
+    color: gray;
+  }
+  .product_item {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    border: 1px solid #bfbfbf;
+
+    border-radius: 10px;
+
+    padding: 20px 5px 10px 5px;
+
+    width: 95%;
+    height: auto;
+
+    margin: auto;
+
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "XOPQ" 96,
+      "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514,
+      "YTUC" 712;
+  }
+
+  .products_container h3 {
+    color: rgb(120, 75, 160);
+  }
+  .product_info {
+    justify-self: center;
+
+    color: rgb(138, 43, 226);
+  }
+  .product_info h4 {
+    color: rgb(167, 90, 242);
+  }
+
+  .product_paymentInfo p {
+    color: black;
+  }
+  .product_img {
+    width: 120px;
+    height: 120px;
+
+    border-radius: 10px;
+
+    background-size: cover;
+
+    margin: auto;
+  }
+  .product_paymentInfo {
+    margin-bottom: 0;
+  }
+  .product_paymentInfo button:hover {
+    background-color: rgb(138, 43, 226);
+  }
+  .product_paymentInfo button {
+    width: 100px;
+    height: 50px;
+
+    grid-row: 3/4;
+
+    background-color: rgb(167, 90, 242);
+
+    border: 0px;
+    border-radius: 10px;
+
+    color: white;
+
+    margin: auto auto 0 auto;
+
+    cursor: pointer;
+  }
+
+  .products_wrapper {
+    padding: 10px;
+
+    min-height: 100vh;
+  }
 }
-.products_container > hr {
-  color: gray;
-}
-.product_item {
-  display: grid;
-  grid-template-columns: 1fr;
-
-  border: 1px solid #bfbfbf;
-
-  border-radius: 10px;
-
-  padding: 20px 5px;
-
-  width: 500px;
-
-  margin: auto;
-
-  font-family: "Roboto Flex", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "XOPQ" 96, "XTRA" 468,
-    "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
-}
-.products_container h3 {
-  color: #404040;
-}
-.product_img {
-  width: 120px;
-  height: 120px;
-
-  border-radius: 10px;
-
-  background-size: cover;
-
-  margin: auto;
-}
-
-.product_item > button:hover {
-  background-color: rgb(138, 43, 226);
-}
-.product_item > button {
-  width: 100px;
-  height: 50px;
-
-  background-color: rgb(167, 90, 242);
-
-  border: 0px;
-  border-radius: 10px;
-
-  color: white;
-
-  margin: auto;
-
-  cursor: pointer;
-}
-
-.products_wrapper {
-  padding: 10px;
-
-  min-height: 100vh;
+@media (min-width: 1200px) {
+  .products_container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .product_item {
+    width: 500px;
+  }
 }
