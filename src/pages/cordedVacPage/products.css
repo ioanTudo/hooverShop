@@ -5,6 +5,10 @@
 
     gap: 10px;
   }
+
+  .hairDryPage h1 {
+    text-transform: capitalize;
+  }
   .products_container > hr {
     color: gray;
   }
@@ -34,14 +38,13 @@
 
   .products_container h3 {
     color: rgb(120, 75, 160);
+
+    text-transform: uppercase;
   }
   .product_info {
     justify-self: center;
 
     color: rgb(138, 43, 226);
-  }
-  .product_info h4 {
-    color: rgb(167, 90, 242);
   }
 
   .product_paymentInfo p {

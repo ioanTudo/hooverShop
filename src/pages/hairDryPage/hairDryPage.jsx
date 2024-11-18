@@ -1,10 +1,9 @@
 import { useEffect } from "react";
-import { PRODUCTS } from "../../data";
+import { PRODUCTS_HAIRDRY } from "../../data.js";
+import { TemplatePageDisplay } from "../templatePage/templatePageDisplay.jsx";
+import { HairDryDisplay } from "./hairDryDisplay.jsx";
 
-import { TemplatePageDisplay } from "../templatePage/templatePageDisplay";
-import { CordedVacDisplay } from "./cordedVacDisplay";
-
-export const CordedVacPage = ({ cart, setCart }) => {
+export const HairDryPage = ({ cart, setCart }) => {
   const addToCart = (product) => {
     setCart((prevCart) => {
       const existingProduct = prevCart.find((item) => item.id === product.id);
@@ -24,10 +23,10 @@ export const CordedVacPage = ({ cart, setCart }) => {
   return (
     <TemplatePageDisplay cart={cart} setCart={setCart}>
       <div className="products_wrapper">
-        <h1>Corded vaccum cleaners</h1>
+        <h1>hair dryers</h1>
         <div className="products_container">
-          {PRODUCTS.map((product) => (
-            <CordedVacDisplay
+          {PRODUCTS_HAIRDRY.map((product) => (
+            <HairDryDisplay
               key={product.id}
               name={product.name}
               price={product.price}

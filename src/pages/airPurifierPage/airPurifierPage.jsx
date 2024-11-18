@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { PRODUCTS } from "../../data";
+import { PRODUCTS_AIRPURIFIERS } from "../../data.js";
+import { TemplatePageDisplay } from "../templatePage/templatePageDisplay.jsx";
 
-import { TemplatePageDisplay } from "../templatePage/templatePageDisplay";
-import { CordedVacDisplay } from "./cordedVacDisplay";
+import { AirPurifierDisplay } from "./airPurifierDisplay.jsx";
 
-export const CordedVacPage = ({ cart, setCart }) => {
+export const AirPurifierPage = ({ cart, setCart }) => {
   const addToCart = (product) => {
     setCart((prevCart) => {
       const existingProduct = prevCart.find((item) => item.id === product.id);
@@ -24,10 +24,10 @@ export const CordedVacPage = ({ cart, setCart }) => {
   return (
     <TemplatePageDisplay cart={cart} setCart={setCart}>
       <div className="products_wrapper">
-        <h1>Corded vaccum cleaners</h1>
+        <h1>air purifiers</h1>
         <div className="products_container">
-          {PRODUCTS.map((product) => (
-            <CordedVacDisplay
+          {PRODUCTS_AIRPURIFIERS.map((product) => (
+            <AirPurifierDisplay
               key={product.id}
               name={product.name}
               price={product.price}

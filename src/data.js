@@ -12,6 +12,14 @@ import prod4cordless from "./images/IZ400UKT_02.webp";
 import prod5cordless from "./images/IZ202UK_02.webp";
 import prod6cordless from "./images/IZ420UKTDB_02.webp";
 
+import prod1HairDry from "./images/HD731UK_02.webp";
+import prod2HairDry from "./images/HD752UK_02.webp";
+import prod3HairDry from "./images/HD731202UK_02.webp";
+
+import prod1AirPur from "./images/HP300UK_01.webp";
+import prod2AirPur from "./images/HP150UK_01.webp";
+import prod3AirPur from "./images/HC450UK_01.webp";
+
 export const PRODUCTS = [
   {
     id: 1,
@@ -101,6 +109,53 @@ export const PRODUCTS_CORDLESS = [
     image: prod6cordless,
   },
 ];
+export const PRODUCTS_AIRPURIFIERS = [
+  {
+    id: 0,
+    name: "hp300uk",
+    info: "",
+    price: 100,
+    image: prod1AirPur,
+  },
+  {
+    id: 1,
+    name: "hp150uk",
+    info: "",
+    price: 150,
+    image: prod2AirPur,
+  },
+  {
+    id: 2,
+    name: "hc450",
+    info: "",
+    price: 300,
+    image: prod3AirPur,
+  },
+];
+
+export const PRODUCTS_HAIRDRY = [
+  {
+    id: 0,
+    name: "hd731uk",
+    info: "High-performance hair-dryer with advanced technology",
+    price: 209,
+    image: prod1HairDry,
+  },
+  {
+    id: 1,
+    name: "hd752uk",
+    info: "High-performance hair-dryer with advanced technology",
+    price: 299,
+    image: prod2HairDry,
+  },
+  {
+    id: 2,
+    name: "hd731202uk",
+    info: "High-performance hair-dryer with advanced technology",
+    price: 199,
+    image: prod3HairDry,
+  },
+];
 
 export const NAVList = [
   {
@@ -125,12 +180,12 @@ export const NAVList = [
       {
         id: 2,
         name: "hair dryers",
-        pathLink: "/hairdryers",
+        pathLink: "/hairDry-page",
       },
       {
         id: 3,
         name: "air purifiers",
-        pathLink: "/airpurifiers",
+        pathLink: "/airPurifier-page",
       },
     ],
   },
