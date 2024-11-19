@@ -30,6 +30,7 @@ export const CartComponentDisplay = ({
     console.log(localAmount);
     if (state === "del") {
       setDeleteMessageVisibility("block");
+      document.body.style.overflow = "hidden";
     } else if (state === "-") {
       setLocalAmount((prev) => {
         const newAmount = Math.max(prev - 1, 1);
@@ -57,10 +58,12 @@ export const CartComponentDisplay = ({
   const handleDeleteConfirm = () => {
     onDelete();
     setDeleteMessageVisibility("none");
+    document.body.style.overflow = "visible";
   };
 
   const handleDeleteCancel = () => {
     setDeleteMessageVisibility("none");
+    document.body.style.overflow = "visible";
   };
 
   return (

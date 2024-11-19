@@ -18,17 +18,17 @@ export const Header = ({ cart }) => {
           <HeaderLogo />
           <SearchBar visibility={visibility} />
           <SearchLogo visibility={visibility} setVisibility={setVisibility} />
-
-          {NAVList.map((navItems) => (
-            <HeaderDisplay
-              key={navItems.id}
-              pathLink={navItems.pathLink}
-              name={navItems.name}
-              submenu={navItems.submenu}
-              navVisibility={navVisibility}
-            />
-          ))}
-
+          <div className="navItm_container" style={{ display: navVisibility }}>
+            {NAVList.map((navItems) => (
+              <HeaderDisplay
+                key={navItems.id}
+                pathLink={navItems.pathLink}
+                name={navItems.name}
+                submenu={navItems.submenu}
+                navVisibility={navVisibility}
+              />
+            ))}
+          </div>
           <CartHeader cart={cart} />
           <BurgerMenu
             navVisibility={navVisibility}
