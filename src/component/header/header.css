@@ -1,7 +1,26 @@
 @media (min-width: 375px) {
-  header {
-    border-bottom: 1px groove gray;
+  html,
+  body {
+    margin: 0;
+    padding: 0;
   }
+  .topNav {
+    position: fixed;
+
+    top: 0;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #fff;
+
+    width: 100%;
+
+    border-bottom: 1px groove gray;
+
+    z-index: 1000;
+  }
+
   .searchLogo_list {
     grid-column: 2 / span 2;
   }
@@ -189,9 +208,7 @@
   .cart_list {
     grid-column: 7/8;
   }
-  .submenu_container ul {
-    position: absolute;
-  }
+
   .searchBar_list {
     grid-row: 1/2;
     grid-column: 2/3;
@@ -241,5 +258,13 @@
 
   .dropdownIcon::before {
     left: 90%;
+  }
+  .submenu_container {
+    position: relative;
+  }
+  .submenu_container .submenu {
+    position: absolute;
+
+    z-index: 1;
   }
 }

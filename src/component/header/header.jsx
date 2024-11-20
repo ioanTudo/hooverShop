@@ -13,7 +13,7 @@ export const Header = ({ cart }) => {
   const [navVisibility, setNavVisibility] = useState("");
   return (
     <header className="header">
-      <nav>
+      <nav className="topNav">
         <ul className="header_ul">
           <HeaderLogo />
           <SearchBar visibility={visibility} />
