@@ -7,12 +7,14 @@ export const CordlessVacDisplay = ({
   image,
   onAddToCart,
   price,
+  imgHover,
 }) => {
   return (
     <CordedVacDisplay
       name={name}
       info={info}
       image={image}
+      imgHover={imgHover}
       onAddToCart={onAddToCart}
       price={price}
     />

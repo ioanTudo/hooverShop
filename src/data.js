@@ -1,7 +1,13 @@
+import prod1ImgHover from "./hoverImgs/NZ801UKhoover.webp";
+import prod2ImgHover from "./hoverImgs/AZ3000UKThoover.webp";
+import prod3ImgHover from "./hoverImgs/AZ3900UKThoover.webp";
+import prod4ImgHover from "./hoverImgs/NV602UKhoover.webp";
+import prod5ImgHover from "./hoverImgs/NZ801UKhoover.webp";
+
 import prod6Img from "./images/NZ801UKT_01.webp";
 import prod5Img from "./images/NV602UK_01.webp";
-import prod4Img from "./images/AZ3900UKT_02.webp";
-import prod3Img from "./images/AZ3000UKT_01.webp";
+import prod4Img from "./images/AZ3000UKT_01.webp";
+import prod3Img from "./images/AZ3900UKT_01.webp";
 import prod2Img from "./images/AZ3002_01.webp";
 import prod1Img from "./images/NZ691UKT_01.webp";
 
@@ -27,6 +33,7 @@ export const PRODUCTS = [
     info: "Powerful vacuum cleaner with advanced technology",
     price: 199,
     image: prod1Img,
+    hoverImg: prod1ImgHover,
   },
   {
     id: 2,
@@ -34,6 +41,7 @@ export const PRODUCTS = [
     info: "High-performance vacuum for deep cleaning",
     price: 299,
     image: prod2Img,
+    hoverImg: prod1ImgHover,
   },
   {
     id: 3,
@@ -41,6 +49,7 @@ export const PRODUCTS = [
     info: "Compact vacuum with multiple attachments",
     price: 399,
     image: prod3Img,
+    hoverImg: prod1ImgHover,
   },
   {
     id: 4,
@@ -48,6 +57,7 @@ export const PRODUCTS = [
     info: "Lightweight and powerful vacuum",
     price: 159,
     image: prod4Img,
+    hoverImg: prod1ImgHover,
   },
   {
     id: 5,
@@ -55,6 +65,7 @@ export const PRODUCTS = [
     info: "Versatile vacuum with HEPA filter",
     price: 259,
     image: prod5Img,
+    hoverImg: prod1ImgHover,
   },
   {
     id: 6,
@@ -62,6 +73,7 @@ export const PRODUCTS = [
     info: "Affordable vacuum for everyday cleaning",
     price: 99,
     image: prod6Img,
+    hoverImg: prod1ImgHover,
   },
 ];
 
@@ -72,6 +84,7 @@ export const PRODUCTS_CORDLESS = [
     info: "Powerful vacuum cleaner with advanced technology",
     price: 300,
     image: prod1cordless,
+    hoverImg: prod1ImgHover, // Added hoverImg property
   },
   {
     id: 1,
@@ -79,6 +92,7 @@ export const PRODUCTS_CORDLESS = [
     info: "Powerful vacuum cleaner with advanced technology",
     price: 250,
     image: prod2cordless,
+    hoverImg: prod1ImgHover,
   },
   {
     id: 2,
@@ -86,6 +100,7 @@ export const PRODUCTS_CORDLESS = [
     info: "Powerful vacuum cleaner with advanced technology",
     price: 500,
     image: prod3cordless,
+    hoverImg: prod1ImgHover,
   },
   {
     id: 3,
@@ -93,6 +108,7 @@ export const PRODUCTS_CORDLESS = [
     info: "Powerful vacuum cleaner with advanced technology",
     price: 130,
     image: prod4cordless,
+    hoverImg: prod4ImgHover,
   },
   {
     id: 4,
@@ -100,6 +116,7 @@ export const PRODUCTS_CORDLESS = [
     info: "Powerful vacuum cleaner with advanced technology",
     price: 299,
     image: prod5cordless,
+    hoverImg: prod1ImgHover,
   },
   {
     id: 5,
@@ -107,6 +124,7 @@ export const PRODUCTS_CORDLESS = [
     info: "Powerful vacuum cleaner with advanced technology",
     price: 399,
     image: prod6cordless,
+    hoverImg: prod1ImgHover,
   },
 ];
 export const PRODUCTS_AIRPURIFIERS = [
@@ -116,6 +134,7 @@ export const PRODUCTS_AIRPURIFIERS = [
     info: "",
     price: 100,
     image: prod1AirPur,
+    hoverImg: prod1ImgHover,
   },
   {
     id: 1,
@@ -123,6 +142,7 @@ export const PRODUCTS_AIRPURIFIERS = [
     info: "",
     price: 150,
     image: prod2AirPur,
+    hoverImg: prod1ImgHover,
   },
   {
     id: 2,
@@ -130,6 +150,7 @@ export const PRODUCTS_AIRPURIFIERS = [
     info: "",
     price: 300,
     image: prod3AirPur,
+    hoverImg: prod1ImgHover,
   },
 ];
 
@@ -140,6 +161,7 @@ export const PRODUCTS_HAIRDRY = [
     info: "High-performance hair-dryer with advanced technology",
     price: 209,
     image: prod1HairDry,
+    hoverImg: prod1ImgHover,
   },
   {
     id: 1,
@@ -147,6 +169,7 @@ export const PRODUCTS_HAIRDRY = [
     info: "High-performance hair-dryer with advanced technology",
     price: 299,
     image: prod2HairDry,
+    hoverImg: prod1ImgHover,
   },
   {
     id: 2,
@@ -154,6 +177,7 @@ export const PRODUCTS_HAIRDRY = [
     info: "High-performance hair-dryer with advanced technology",
     price: 199,
     image: prod3HairDry,
+    hoverImg: prod1ImgHover,
   },
 ];
 

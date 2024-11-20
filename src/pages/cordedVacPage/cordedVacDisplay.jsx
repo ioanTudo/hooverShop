@@ -1,10 +1,21 @@
 import "./products.css";
-export const CordedVacDisplay = ({ name, price, image, info, onAddToCart }) => {
+export const CordedVacDisplay = ({
+  name,
+  price,
+  image,
+  imgHover,
+  info,
+  onAddToCart,
+}) => {
   return (
     <div className="product_item">
       <div
         className="product_img"
         style={{ backgroundImage: `url(${image})` }}
+      ></div>
+      <div
+        className="product_img"
+        style={{ backgroundImage: `url(${imgHover})` }}
       ></div>
       <div className="product_info">
         <h3>{name}</h3>

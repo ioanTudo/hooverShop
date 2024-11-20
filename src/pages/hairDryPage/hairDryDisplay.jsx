@@ -1,6 +1,13 @@
 import { CordedVacDisplay } from "../cordedVacPage/cordedVacDisplay";
 import "../cordedVacPage/products.css";
-export const HairDryDisplay = ({ name, price, image, info, onAddToCart }) => {
+export const HairDryDisplay = ({
+  name,
+  price,
+  image,
+  info,
+  onAddToCart,
+  imgHover,
+}) => {
   return (
     <CordedVacDisplay
       name={name}
@@ -8,6 +15,7 @@ export const HairDryDisplay = ({ name, price, image, info, onAddToCart }) => {
       image={image}
       onAddToCart={onAddToCart}
       price={price}
+      imgHover={imgHover}
     />
   );
 };
