@@ -1,22 +1,48 @@
+import { useState } from "react";
 import "./products.css";
+import { Link } from "react-router-dom";
 export const CordedVacDisplay = ({
   name,
   price,
   image,
-  imgHover,
   info,
   onAddToCart,
+  prodPageInfo,
 }) => {
+  const [hoverImgVisibility, setHoverImgVisibility] = useState("none");
+  const [firstImgVisibility, setFirstImgVisibility] = useState("");
+
   return (
-    <div className="product_item">
-      <div
-        className="product_img"
-        style={{ backgroundImage: `url(${image})` }}
-      ></div>
-      <div
-        className="product_img"
-        style={{ backgroundImage: `url(${imgHover})` }}
-      ></div>
+    <div
+      onMouseLeave={() => {
+        setFirstImgVisibility("block");
+        setHoverImgVisibility("none");
+      }}
+      className="product_item"
+    >
+      <Link to={prodPageInfo}>
+        <div className="prodImg_container">
+          <div
+            onMouseEnter={() => {
+              setFirstImgVisibility("none");
+              setHoverImgVisibility("block");
+            }}
+            className="product_img"
+            style={{
+              backgroundImage: `url(${image})`,
+              display: firstImgVisibility,
+            }}
+          ></div>
+
+          <div
+            style={{ display: hoverImgVisibility }}
+            className="secondImgHover"
+          >
+            <span>hoover img</span>
+          </div>
+        </div>
+      </Link>
+
       <div className="product_info">
         <h3>{name}</h3>
         <span>{info}</span>

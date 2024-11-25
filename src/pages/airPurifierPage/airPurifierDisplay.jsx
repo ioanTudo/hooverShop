@@ -15,7 +15,6 @@ export const AirPurifierDisplay = ({
       image={image}
       onAddToCart={onAddToCart}
       price={price}
-      imgHoover={imgHover}
     />
   );
 };

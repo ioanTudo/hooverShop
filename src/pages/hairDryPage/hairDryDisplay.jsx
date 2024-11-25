@@ -15,7 +15,6 @@ export const HairDryDisplay = ({
       image={image}
       onAddToCart={onAddToCart}
       price={price}
-      imgHover={imgHover}
     />
   );
 };

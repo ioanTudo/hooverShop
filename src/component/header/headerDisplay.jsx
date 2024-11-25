@@ -40,18 +40,16 @@ export const HeaderDisplay = ({
         <div className="submenu_container" style={{ display: visibility }}>
           <ul className="submenu">
             {submenu.map((item) => (
-              <li key={item.id}>
-                <NavLink
-                  to={item.pathLink}
-                  onClick={() => {
-                    onPageSelect();
-                    handleToggleVisibility();
-                  }}
-                  className="submenu_link"
-                >
-                  {item.name}
-                </NavLink>
-              </li>
+              <NavLink
+                to={item.pathLink}
+                onClick={() => {
+                  onPageSelect();
+                  handleToggleVisibility();
+                }}
+                className="submenu_link"
+              >
+                <li key={item.id}>{item.name}</li>
+              </NavLink>
             ))}
           </ul>
         </div>

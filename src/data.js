@@ -1,9 +1,3 @@
-import prod1ImgHover from "./hoverImgs/NZ801UKhoover.webp";
-import prod2ImgHover from "./hoverImgs/AZ3000UKThoover.webp";
-import prod3ImgHover from "./hoverImgs/AZ3900UKThoover.webp";
-import prod4ImgHover from "./hoverImgs/NV602UKhoover.webp";
-import prod5ImgHover from "./hoverImgs/NZ801UKhoover.webp";
-
 import prod6Img from "./images/NZ801UKT_01.webp";
 import prod5Img from "./images/NV602UK_01.webp";
 import prod4Img from "./images/AZ3000UKT_01.webp";
@@ -33,7 +27,7 @@ export const PRODUCTS = [
     info: "Powerful vacuum cleaner with advanced technology",
     price: 199,
     image: prod1Img,
-    hoverImg: prod1ImgHover,
+    prodPageInfo: "/zIdNZ691UKT",
   },
   {
     id: 2,
@@ -41,7 +35,7 @@ export const PRODUCTS = [
     info: "High-performance vacuum for deep cleaning",
     price: 299,
     image: prod2Img,
-    hoverImg: prod1ImgHover,
+    prodPageInfo: "/zIdNZ691UKT",
   },
   {
     id: 3,
@@ -49,7 +43,7 @@ export const PRODUCTS = [
     info: "Compact vacuum with multiple attachments",
     price: 399,
     image: prod3Img,
-    hoverImg: prod1ImgHover,
+    prodPageInfo: "/zIdNZ691UKT",
   },
   {
     id: 4,
@@ -57,7 +51,7 @@ export const PRODUCTS = [
     info: "Lightweight and powerful vacuum",
     price: 159,
     image: prod4Img,
-    hoverImg: prod1ImgHover,
+    prodPageInfo: "/zIdNZ691UKT",
   },
   {
     id: 5,
@@ -65,7 +59,7 @@ export const PRODUCTS = [
     info: "Versatile vacuum with HEPA filter",
     price: 259,
     image: prod5Img,
-    hoverImg: prod1ImgHover,
+    prodPageInfo: "/zIdNZ691UKT",
   },
   {
     id: 6,
@@ -73,111 +67,112 @@ export const PRODUCTS = [
     info: "Affordable vacuum for everyday cleaning",
     price: 99,
     image: prod6Img,
-    hoverImg: prod1ImgHover,
+    prodPageInfo: "/zIdNZ691UKT",
   },
 ];
 
 export const PRODUCTS_CORDLESS = [
   {
-    id: 0,
+    id: 7,
     name: "IP1251UKT",
     info: "Powerful vacuum cleaner with advanced technology",
     price: 300,
     image: prod1cordless,
-    hoverImg: prod1ImgHover, // Added hoverImg property
+    prodPageInfo: "/zIdNZ691UKT",
   },
   {
-    id: 1,
+    id: 8,
     name: "IZ202UKT",
     info: "Powerful vacuum cleaner with advanced technology",
     price: 250,
     image: prod2cordless,
-    hoverImg: prod1ImgHover,
+    prodPageInfo: "/zIdNZ691UKT",
   },
   {
-    id: 2,
+    id: 9,
     name: "IZ202UKTDB",
     info: "Powerful vacuum cleaner with advanced technology",
     price: 500,
     image: prod3cordless,
-    hoverImg: prod1ImgHover,
+    prodPageInfo: "/zIdNZ691UKT",
   },
   {
-    id: 3,
+    id: 10,
     name: "IZ400UKT",
     info: "Powerful vacuum cleaner with advanced technology",
     price: 130,
     image: prod4cordless,
-    hoverImg: prod4ImgHover,
+    prodPageInfo: "/zIdNZ691UKT",
   },
   {
-    id: 4,
+    id: 11,
     name: "IZ202UK",
     info: "Powerful vacuum cleaner with advanced technology",
     price: 299,
     image: prod5cordless,
-    hoverImg: prod1ImgHover,
+    prodPageInfo: "/zIdNZ691UKT",
   },
   {
-    id: 5,
+    id: 12,
     name: "IZ420UKTDB",
     info: "Powerful vacuum cleaner with advanced technology",
     price: 399,
     image: prod6cordless,
-    hoverImg: prod1ImgHover,
+
+    prodPageInfo: "/zIdNZ691UKT",
   },
 ];
 export const PRODUCTS_AIRPURIFIERS = [
   {
-    id: 0,
+    id: 13,
     name: "hp300uk",
     info: "",
     price: 100,
     image: prod1AirPur,
-    hoverImg: prod1ImgHover,
+    prodPageInfo: "/zIdNZ691UKT",
   },
   {
-    id: 1,
+    id: 14,
     name: "hp150uk",
     info: "",
     price: 150,
     image: prod2AirPur,
-    hoverImg: prod1ImgHover,
+    prodPageInfo: "/zIdNZ691UKT",
   },
   {
-    id: 2,
+    id: 15,
     name: "hc450",
     info: "",
     price: 300,
     image: prod3AirPur,
-    hoverImg: prod1ImgHover,
+    prodPageInfo: "/zIdNZ691UKT",
   },
 ];
 
 export const PRODUCTS_HAIRDRY = [
   {
-    id: 0,
+    id: 16,
     name: "hd731uk",
     info: "High-performance hair-dryer with advanced technology",
     price: 209,
     image: prod1HairDry,
-    hoverImg: prod1ImgHover,
+    prodPageInfo: "/zIdNZ691UKT",
   },
   {
-    id: 1,
+    id: 17,
     name: "hd752uk",
     info: "High-performance hair-dryer with advanced technology",
     price: 299,
     image: prod2HairDry,
-    hoverImg: prod1ImgHover,
+    prodPageInfo: "/zIdNZ691UKT",
   },
   {
-    id: 2,
+    id: 18,
     name: "hd731202uk",
     info: "High-performance hair-dryer with advanced technology",
     price: 199,
     image: prod3HairDry,
-    hoverImg: prod1ImgHover,
+    prodPageInfo: "/zIdNZ691UKT",
   },
 ];
 

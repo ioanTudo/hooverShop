@@ -14,7 +14,6 @@ export const CordlessVacDisplay = ({
       name={name}
       info={info}
       image={image}
-      imgHover={imgHover}
       onAddToCart={onAddToCart}
       price={price}
     />

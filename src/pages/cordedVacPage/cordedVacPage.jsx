@@ -32,8 +32,8 @@ export const CordedVacPage = ({ cart, setCart }) => {
               name={product.name}
               price={product.price}
               image={product.image}
-              imgHover={product.imgHover}
               info={product.info}
+              prodPageInfo={product.prodPageInfo}
               onAddToCart={() => addToCart(product)}
             />
           ))}

@@ -32,7 +32,6 @@ export const AirPurifierPage = ({ cart, setCart }) => {
               name={product.name}
               price={product.price}
               image={product.image}
-              imgHover={product.imgHover}
               info={product.info}
               onAddToCart={() => addToCart(product)}
             />
