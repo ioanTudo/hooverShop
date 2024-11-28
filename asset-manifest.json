@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/hooverShop/static/css/main.f3f43e3c.css",
-    "main.js": "/hooverShop/static/js/main.22dd1ca1.js",
+    "main.css": "/hooverShop/static/css/main.766a3d52.css",
+    "main.js": "/hooverShop/static/js/main.cf91d82b.js",
     "static/js/453.6326208c.chunk.js": "/hooverShop/static/js/453.6326208c.chunk.js",
+    "static/media/NZ801UKT_prodINFO.webp": "/hooverShop/static/media/NZ801UKT_prodINFO.49fcdfdf2d02b73858c7.webp",
     "static/media/AZ3002_01.webp": "/hooverShop/static/media/AZ3002_01.be9687e2c881b697b34c.webp",
     "static/media/HD731202UK_02.webp": "/hooverShop/static/media/HD731202UK_02.abe3ea74fe46107fa072.webp",
     "static/media/NV602UK_01.webp": "/hooverShop/static/media/NV602UK_01.655f232ae011f177818c.webp",
-    "static/media/AZ3900UKT_02.webp": "/hooverShop/static/media/AZ3900UKT_02.39831bb7bd508781f665.webp",
     "static/media/HC450UK_01.webp": "/hooverShop/static/media/HC450UK_01.d2b4e64ab253cf74a8cf.webp",
     "static/media/HD752UK_02.webp": "/hooverShop/static/media/HD752UK_02.ea186e0db659993fa0f3.webp",
     "static/media/HD731UK_02.webp": "/hooverShop/static/media/HD731UK_02.96bee2719d7a11b571b7.webp",
+    "static/media/AZ3900UKT_01.webp": "/hooverShop/static/media/AZ3900UKT_01.88b78a58ca5dce2b1059.webp",
     "static/media/IZ400UKT_02.webp": "/hooverShop/static/media/IZ400UKT_02.569b03ece7a6f450edf8.webp",
     "static/media/AZ3000UKT_01.webp": "/hooverShop/static/media/AZ3000UKT_01.9df21ac04412f9bb87a5.webp",
     "static/media/IZ420UKTDB_02.webp": "/hooverShop/static/media/IZ420UKTDB_02.0ed8d65daa7a6194de28.webp",
@@ -22,12 +23,12 @@
     "index.html": "/hooverShop/index.html",
     "static/media/NZ801UKT_01.webp": "/hooverShop/static/media/NZ801UKT_01.a5b4f3654c94fc8b8107.webp",
     "static/media/NZ691UKT_01.webp": "/hooverShop/static/media/NZ691UKT_01.88c41ba1153a482e3262.webp",
-    "main.f3f43e3c.css.map": "/hooverShop/static/css/main.f3f43e3c.css.map",
-    "main.22dd1ca1.js.map": "/hooverShop/static/js/main.22dd1ca1.js.map",
+    "main.766a3d52.css.map": "/hooverShop/static/css/main.766a3d52.css.map",
+    "main.cf91d82b.js.map": "/hooverShop/static/js/main.cf91d82b.js.map",
     "453.6326208c.chunk.js.map": "/hooverShop/static/js/453.6326208c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3f43e3c.css",
-    "static/js/main.22dd1ca1.js"
+    "static/css/main.766a3d52.css",
+    "static/js/main.cf91d82b.js"
   ]
 }
