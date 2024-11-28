@@ -1,0 +1,80 @@
+@media (min-width: 375px) {
+  .prodInfo_body {
+    padding-bottom: 78px;
+  }
+
+  .prodInfoContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    padding: 10px;
+
+    margin-top: 70px;
+
+    min-height: 100vh;
+  }
+  .prodInfoImg {
+    width: 300px;
+    height: 300px;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    margin: auto;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .paymentProdInfo_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    border-top: 1px solid #ccc;
+
+    background: white;
+
+    margin: auto;
+
+    width: 100%;
+
+    padding: 15px 0;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    z-index: 10000;
+  }
+
+  .priceProdInfo_container {
+    margin: auto;
+
+    font-size: 30px;
+
+    font-family: "proxima-nova-normal-700", "Helvetica", "Arial", sans-serif;
+
+    color: #d93c08;
+  }
+  .buttonPayment_container {
+    margin: auto;
+  }
+  .buttonPayment_container button:hover {
+    background-color: rgb(138, 43, 226);
+  }
+  .buttonPayment_container button {
+    width: 150px;
+    height: 50px;
+
+    background-color: rgb(167, 90, 242);
+
+    border: 0px;
+    border-radius: 10px;
+
+    color: white;
+
+    cursor: pointer;
+  }
+}

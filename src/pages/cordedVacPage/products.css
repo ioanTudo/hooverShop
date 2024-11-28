@@ -51,6 +51,8 @@
     justify-self: center;
 
     color: rgb(138, 43, 226);
+
+    height: 150px;
   }
 
   .product_paymentInfo p {

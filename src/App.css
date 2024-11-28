@@ -37,6 +37,9 @@
   .products_wrapper h1 {
     text-transform: capitalize;
   }
+  .homepage {
+    padding-bottom: 0;
+  }
   .cart_card {
     position: relative;
 

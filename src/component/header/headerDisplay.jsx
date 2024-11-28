@@ -37,10 +37,15 @@ export const HeaderDisplay = ({
       </NavLink>
 
       {submenu && submenu.length > 0 && (
-        <div className="submenu_container" style={{ display: visibility }}>
+        <div
+          key={id}
+          className="submenu_container"
+          style={{ display: visibility }}
+        >
           <ul className="submenu">
             {submenu.map((item) => (
               <NavLink
+                key={`${id}-${item.id}`}
                 to={item.pathLink}
                 onClick={() => {
                   onPageSelect();
