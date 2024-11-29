@@ -3,11 +3,11 @@ import { TemplatePageDisplay } from "../../templatePage/templatePageDisplay";
 import { TemplateProdInfoPage } from "../templateProdInfoPageDisplay";
 import "../prodInfo.css";
 
-export const AZ3002UKPage = ({ setCart, cart, addToCart }) => {
+export const NV602UKPage = ({ setCart, cart, addToCart }) => {
   return (
     <TemplatePageDisplay cart={cart} setCart={setCart}>
-      <div className="az3002ukContainer">
-        {PRODUCTS.filter((item) => item.id === 2).map((item) => (
+      <div className="nv602ukContainer">
+        {PRODUCTS.filter((item) => item.id === 5).map((item) => (
           <TemplateProdInfoPage
             name={item.name}
             key={item.id}
