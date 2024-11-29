@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/hooverShop/static/css/main.766a3d52.css",
-    "main.js": "/hooverShop/static/js/main.cf91d82b.js",
+    "main.js": "/hooverShop/static/js/main.92c580db.js",
     "static/js/453.6326208c.chunk.js": "/hooverShop/static/js/453.6326208c.chunk.js",
     "static/media/NZ801UKT_prodINFO.webp": "/hooverShop/static/media/NZ801UKT_prodINFO.49fcdfdf2d02b73858c7.webp",
     "static/media/AZ3002_01.webp": "/hooverShop/static/media/AZ3002_01.be9687e2c881b697b34c.webp",
@@ -24,11 +24,11 @@
     "static/media/NZ801UKT_01.webp": "/hooverShop/static/media/NZ801UKT_01.a5b4f3654c94fc8b8107.webp",
     "static/media/NZ691UKT_01.webp": "/hooverShop/static/media/NZ691UKT_01.88c41ba1153a482e3262.webp",
     "main.766a3d52.css.map": "/hooverShop/static/css/main.766a3d52.css.map",
-    "main.cf91d82b.js.map": "/hooverShop/static/js/main.cf91d82b.js.map",
+    "main.92c580db.js.map": "/hooverShop/static/js/main.92c580db.js.map",
     "453.6326208c.chunk.js.map": "/hooverShop/static/js/453.6326208c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.766a3d52.css",
-    "static/js/main.cf91d82b.js"
+    "static/js/main.92c580db.js"
   ]
 }
