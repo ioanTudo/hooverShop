@@ -1,3 +1,5 @@
+import { TemplateProdInfoPageDisplay } from "./templateProdInfoPageDisplay";
+
 export const TemplateProdInfoPage = ({
   info,
   technology,
@@ -6,9 +8,10 @@ export const TemplateProdInfoPage = ({
   whatsIncluded,
   prodInfoImg,
   price,
+  onAddToCart,
 }) => {
   return (
-    <TemplateProdInfoPage
+    <TemplateProdInfoPageDisplay
       info={info}
       technology={technology}
       name={name}
@@ -16,6 +19,7 @@ export const TemplateProdInfoPage = ({
       whatsIncluded={whatsIncluded}
       prodInfoImg={prodInfoImg}
       price={price}
+      onAddToCart={onAddToCart}
     />
   );
 };

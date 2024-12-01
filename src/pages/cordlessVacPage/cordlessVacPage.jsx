@@ -3,19 +3,7 @@ import { PRODUCTS_CORDLESS } from "../../data";
 import { CordedVacDisplay } from "../cordedVacPage/cordedVacDisplay";
 import { TemplatePageDisplay } from "../templatePage/templatePageDisplay";
 
-export const CordlessVacPage = ({ cart, setCart }) => {
-  const addToCart = (product) => {
-    setCart((prevCart) => {
-      const existingProduct = prevCart.find((item) => item.id === product.id);
-      if (existingProduct) {
-        return prevCart.map((item) =>
-          item.id === product.id ? { ...item, amount: item.amount + 1 } : item
-        );
-      } else {
-        return [...prevCart, { ...product, amount: 1 }];
-      }
-    });
-  };
+export const CordlessVacPage = ({ cart, setCart, addToCart }) => {
   return (
     <TemplatePageDisplay cart={cart} setCart={setCart}>
       <div className="products_wrapper">
@@ -28,6 +16,7 @@ export const CordlessVacPage = ({ cart, setCart }) => {
               price={product.price}
               image={product.image}
               info={product.info}
+              prodPagePath={product.prodPagePath}
               onAddToCart={() => addToCart(product)}
             />
           ))}

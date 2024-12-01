@@ -1,7 +1,7 @@
-import { PRODUCTS } from "../../../data";
-import { TemplatePageDisplay } from "../../templatePage/templatePageDisplay";
-import { TemplateProdInfoPage } from "../templateProdInfoPageDisplay";
-import "../prodInfo.css";
+import "../../prodInfo.css";
+import { PRODUCTS } from "../../../../data";
+import { TemplatePageDisplay } from "../../../templatePage/templatePageDisplay";
+import { TemplateProdInfoPage } from "../../templateProdInfoPage";
 
 export const AZ3900UKTPage = ({ setCart, cart, addToCart }) => {
   return (

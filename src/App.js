@@ -10,12 +10,24 @@ import { CordlessVacPage } from "./pages/cordlessVacPage/cordlessVacPage";
 import { OffersPage } from "./pages/offers/offersPage";
 import { HairDryPage } from "./pages/hairDryPage/hairDryPage";
 import { AirPurifierPage } from "./pages/airPurifierPage/airPurifierPage";
-import { NZ801UKTPage } from "./pages/templateProdInfoPage/nz801Page/nz801Page";
-import { AZ3002UKPage } from "./pages/templateProdInfoPage/az3002ukPage/az3002ukPage";
-import { AZ3000UKTPage } from "./pages/templateProdInfoPage/az3000uktPage/az3000uktPage";
-import { NV602UKPage } from "./pages/templateProdInfoPage/nv602ukPage/nv602ukPage";
-import { NZ691UKTPage } from "./pages/templateProdInfoPage/nz691uktPage/nz691uktPage";
-import { AZ3900UKTPage } from "./pages/templateProdInfoPage/az3900uktPage/az3900uktPage";
+import { IP1251UKTPage } from "./pages/templateProdInfoPage/cordlessVacs/ip1251uktPage/ip1251uktPage.jsx";
+import { NZ801UKTPage } from "./pages/templateProdInfoPage/cordedVacs/nz801Page/nz801Page.jsx";
+import { AZ3002UKPage } from "./pages/templateProdInfoPage/cordedVacs/az3002ukPage/az3002ukPage.jsx";
+import { NZ691UKTPage } from "./pages/templateProdInfoPage/cordedVacs/nz691uktPage/nz691uktPage.jsx";
+import { NV602UKPage } from "./pages/templateProdInfoPage/cordedVacs/nv602ukPage/nv602ukPage.jsx";
+import { AZ3900UKTPage } from "./pages/templateProdInfoPage/cordedVacs/az3900uktPage/az3900uktPage.jsx";
+import { AZ3000UKTPage } from "./pages/templateProdInfoPage/cordedVacs/az3000uktPage/az3000uktPage.jsx";
+import { IZ202UKTDBPage } from "./pages/templateProdInfoPage/cordlessVacs/iz202uktdbPage/iz202uktdbPage.jsx";
+import { IZ400UKTPage } from "./pages/templateProdInfoPage/cordlessVacs/iz400uktPage/iz400uktPage.jsx";
+import { IZ202UKTPage } from "./pages/templateProdInfoPage/cordlessVacs/iz202uktPage/iz202uktPage.jsx";
+import { IZ202UKPage } from "./pages/templateProdInfoPage/cordlessVacs/iz202ukPage/iz202ukPage.jsx";
+import { IZ420UKTDBPage } from "./pages/templateProdInfoPage/cordlessVacs/iz420uktdbPage/iz420uktdbPage.jsx";
+import { HD731UKPage } from "./pages/templateProdInfoPage/beautyProd/hairDryers/hd731ukPage/hd731ukPage.jsx";
+import { HD752UKPage } from "./pages/templateProdInfoPage/beautyProd/hairDryers/hd752ukPage/hd752ukPage.jsx";
+import { HD731202UKPage } from "./pages/templateProdInfoPage/beautyProd/hairDryers/hd731202ukPage/hd731202ukPage.jsx";
+import { HP300UKPage } from "./pages/templateProdInfoPage/airPurifiers/hp300ukPage/hp300ukPage.jsx";
+import { HP150UKPage } from "./pages/templateProdInfoPage/airPurifiers/hp150ukPage/hp150ukPage.jsx";
+import { HC450UKPage } from "./pages/templateProdInfoPage/airPurifiers/hc450Page/hc450Page.jsx";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -35,13 +47,19 @@ function App() {
   };
 
   useEffect(() => {
-    if (
-      location.pathname === "/zIdNZ810UKT" ||
-      location.pathname === "/zIdAZ3002UK" ||
-      location.pathname === "/zIdAZ3000UKT" ||
-      location.pathname === "/zIdNV602UK" ||
-      location.pathname === "/zIdNZ691UKT"
-    ) {
+    const pathsWithProdInfoBody = [
+      "/zIdNZ810UKT",
+      "/zIdAZ3002UK",
+      "/zIdAZ3000UKT",
+      "/zIdNV602UK",
+      "/zIdNZ691UKT",
+      "/zIdIP1251UKT",
+      "/zIdIZ202UKT",
+      "/zIdIZ202UKTDB",
+      "/zIdIZ400UKT",
+    ];
+
+    if (pathsWithProdInfoBody.includes(location.pathname)) {
       document.body.classList.add("prodInfo_body");
     } else {
       document.body.classList.remove("prodInfo_body");
@@ -50,7 +68,7 @@ function App() {
     return () => {
       document.body.classList.remove("prodInfo_body");
     };
-  }, [location]);
+  }, [location.pathname]); // Folosește doar `pathname`, nu `key`.
 
   return (
     <div className="App">
@@ -66,15 +84,29 @@ function App() {
         />
         <Route
           path="/cordless-hoovers"
-          element={<CordlessVacPage cart={cart} setCart={setCart} />}
+          element={
+            <CordlessVacPage
+              addToCart={addToCart}
+              cart={cart}
+              setCart={setCart}
+            />
+          }
         />
         <Route
           path="/hairDry-page"
-          element={<HairDryPage cart={cart} setCart={setCart} />}
+          element={
+            <HairDryPage addToCart={addToCart} cart={cart} setCart={setCart} />
+          }
         />
         <Route
           path="/airPurifier-page"
-          element={<AirPurifierPage cart={cart} setCart={setCart} />}
+          element={
+            <AirPurifierPage
+              addToCart={addToCart}
+              cart={cart}
+              setCart={setCart}
+            />
+          }
         />
         <Route
           path="/signIn-page"
@@ -112,6 +144,7 @@ function App() {
             <NZ691UKTPage setCart={setCart} addToCart={addToCart} cart={cart} />
           }
         />
+
         <Route
           path="/zIdAZ3900UKT"
           element={
@@ -131,6 +164,94 @@ function App() {
               addToCart={addToCart}
               cart={cart}
             />
+          }
+        />
+        <Route
+          path="/zIdIP1251UKT"
+          element={
+            <IP1251UKTPage
+              setCart={setCart}
+              addToCart={addToCart}
+              cart={cart}
+            />
+          }
+        />
+        <Route
+          path="/zIdIZ202UKT"
+          element={
+            <IZ202UKTPage setCart={setCart} addToCart={addToCart} cart={cart} />
+          }
+        />
+        <Route
+          path="/zIdIZ202UKTDB"
+          element={
+            <IZ202UKTDBPage
+              setCart={setCart}
+              addToCart={addToCart}
+              cart={cart}
+            />
+          }
+        />
+        <Route
+          path="/zIdIZ400UKT"
+          element={
+            <IZ400UKTPage setCart={setCart} addToCart={addToCart} cart={cart} />
+          }
+        />
+        <Route
+          path="/zIdIZ202UK"
+          element={
+            <IZ202UKPage setCart={setCart} addToCart={addToCart} cart={cart} />
+          }
+        />
+        <Route
+          path="/zIdIZ420UKTDB"
+          element={
+            <IZ420UKTDBPage
+              setCart={setCart}
+              addToCart={addToCart}
+              cart={cart}
+            />
+          }
+        />
+        <Route
+          path="/zIdHD731UK"
+          element={
+            <HD731UKPage setCart={setCart} addToCart={addToCart} cart={cart} />
+          }
+        />
+        <Route
+          path="/zIdHD752UK"
+          element={
+            <HD752UKPage setCart={setCart} addToCart={addToCart} cart={cart} />
+          }
+        />
+        <Route
+          path="/zIdHD731202UK"
+          element={
+            <HD731202UKPage
+              setCart={setCart}
+              addToCart={addToCart}
+              cart={cart}
+            />
+          }
+        />
+        <Route
+          path="/zIdHP300UK"
+          element={
+            <HP300UKPage setCart={setCart} addToCart={addToCart} cart={cart} />
+          }
+        />
+        <Route
+          path="/zIdHP150UK"
+          element={
+            <HP150UKPage setCart={setCart} addToCart={addToCart} cart={cart} />
+          }
+        />
+        <Route
+          path="/zIdHC450"
+          element={
+            <HC450UKPage setCart={setCart} addToCart={addToCart} cart={cart} />
           }
         />
 

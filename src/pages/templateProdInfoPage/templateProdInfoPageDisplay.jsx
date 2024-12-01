@@ -1,6 +1,6 @@
 import "./prodInfo.css";
 
-export const TemplateProdInfoPage = ({
+export const TemplateProdInfoPageDisplay = ({
   info,
   technology,
   name,

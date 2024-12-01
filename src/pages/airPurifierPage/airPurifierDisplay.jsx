@@ -6,7 +6,7 @@ export const AirPurifierDisplay = ({
   image,
   info,
   onAddToCart,
-  imgHover,
+  prodPagePath,
 }) => {
   return (
     <CordedVacDisplay
@@ -15,6 +15,7 @@ export const AirPurifierDisplay = ({
       image={image}
       onAddToCart={onAddToCart}
       price={price}
+      prodPagePath={prodPagePath}
     />
   );
 };

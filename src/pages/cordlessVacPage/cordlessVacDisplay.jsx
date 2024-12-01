@@ -7,7 +7,7 @@ export const CordlessVacDisplay = ({
   image,
   onAddToCart,
   price,
-  imgHover,
+  prodPagePath,
 }) => {
   return (
     <CordedVacDisplay
@@ -16,6 +16,7 @@ export const CordlessVacDisplay = ({
       image={image}
       onAddToCart={onAddToCart}
       price={price}
+      prodPagePath={prodPagePath}
     />
   );
 };

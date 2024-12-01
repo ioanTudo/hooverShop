@@ -3,20 +3,7 @@ import { PRODUCTS_HAIRDRY } from "../../data.js";
 import { TemplatePageDisplay } from "../templatePage/templatePageDisplay.jsx";
 import { HairDryDisplay } from "./hairDryDisplay.jsx";
 
-export const HairDryPage = ({ cart, setCart }) => {
-  const addToCart = (product) => {
-    setCart((prevCart) => {
-      const existingProduct = prevCart.find((item) => item.id === product.id);
-      if (existingProduct) {
-        return prevCart.map((item) =>
-          item.id === product.id ? { ...item, amount: item.amount + 1 } : item
-        );
-      } else {
-        return [...prevCart, { ...product, amount: 1 }];
-      }
-    });
-  };
-
+export const HairDryPage = ({ cart, setCart, addToCart }) => {
   useEffect(() => {
     console.log("Cart updated:", cart);
   }, [cart]);
@@ -32,6 +19,7 @@ export const HairDryPage = ({ cart, setCart }) => {
               price={product.price}
               image={product.image}
               info={product.info}
+              prodPagePath={product.prodPagePath}
               onAddToCart={() => addToCart(product)}
             />
           ))}

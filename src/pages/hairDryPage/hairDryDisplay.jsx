@@ -6,7 +6,7 @@ export const HairDryDisplay = ({
   image,
   info,
   onAddToCart,
-  imgHover,
+  prodPagePath,
 }) => {
   return (
     <CordedVacDisplay
@@ -15,6 +15,7 @@ export const HairDryDisplay = ({
       image={image}
       onAddToCart={onAddToCart}
       price={price}
+      prodPagePath={prodPagePath}
     />
   );
 };

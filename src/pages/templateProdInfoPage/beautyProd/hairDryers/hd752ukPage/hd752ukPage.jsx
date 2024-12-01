@@ -1,13 +1,13 @@
-import { PRODUCTS } from "../../../data";
-import { TemplatePageDisplay } from "../../templatePage/templatePageDisplay";
-import { TemplateProdInfoPage } from "../templateProdInfoPageDisplay";
-import "../prodInfo.css";
+import "../../../prodInfo.css";
 
-export const AZ3000UKTPage = ({ setCart, cart, addToCart }) => {
+import { PRODUCTS_HAIRDRY } from "../../../../../data";
+import { TemplatePageDisplay } from "../../../../templatePage/templatePageDisplay";
+import { TemplateProdInfoPage } from "../../../templateProdInfoPage";
+export const HD752UKPage = ({ setCart, cart, addToCart }) => {
   return (
     <TemplatePageDisplay cart={cart} setCart={setCart}>
-      <div className="az3000uktContainer">
-        {PRODUCTS.filter((item) => item.id === 3).map((item) => (
+      <div className="hd752ukContainer">
+        {PRODUCTS_HAIRDRY.filter((item) => item.id === 17).map((item) => (
           <TemplateProdInfoPage
             name={item.name}
             key={item.id}

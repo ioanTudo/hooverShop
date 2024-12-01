@@ -4,20 +4,7 @@ import { PRODUCTS } from "../../data";
 import { TemplatePageDisplay } from "../templatePage/templatePageDisplay";
 import { CordedVacDisplay } from "./cordedVacDisplay";
 
-export const CordedVacPage = ({ cart, setCart }) => {
-  const addToCart = (product) => {
-    setCart((prevCart) => {
-      const existingProduct = prevCart.find((item) => item.id === product.id);
-      if (existingProduct) {
-        return prevCart.map((item) =>
-          item.id === product.id ? { ...item, amount: item.amount + 1 } : item
-        );
-      } else {
-        return [...prevCart, { ...product, amount: 1 }];
-      }
-    });
-  };
-
+export const CordedVacPage = ({ cart, setCart, addToCart }) => {
   useEffect(() => {
     console.log("Cart updated:", cart);
   }, [cart]);
@@ -33,7 +20,7 @@ export const CordedVacPage = ({ cart, setCart }) => {
               price={product.price}
               image={product.image}
               info={product.info}
-              prodPageInfo={product.prodPageInfo}
+              prodPagePath={product.prodPagePath}
               onAddToCart={() => addToCart(product)}
             />
           ))}

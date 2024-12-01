@@ -7,7 +7,7 @@ export const CordedVacDisplay = ({
   image,
   info,
   onAddToCart,
-  prodPageInfo,
+  prodPagePath,
 }) => {
   const [hoverImgVisibility, setHoverImgVisibility] = useState("none");
   const [firstImgVisibility, setFirstImgVisibility] = useState("");
@@ -20,7 +20,7 @@ export const CordedVacDisplay = ({
       }}
       className="product_item"
     >
-      <Link to={prodPageInfo}>
+      <Link to={prodPagePath}>
         <div className="prodImg_container">
           <div
             onMouseEnter={() => {
