@@ -216,7 +216,7 @@ export const PRODUCTS_HAIRDRY = [
     info: "Professional-grade hair dryer with customizable heat settings.",
     price: 299,
     image: prod2HairDry,
-    prodPagePath: "/zIdhd752uk",
+    prodPagePath: "/zIdHD752UK",
     prodInfoImg: prod2HairDry,
     technology: "Ceramic Ionic Technology",
     whatsIncluded: ["Hair dryer", "Styling attachments", "Travel bag"],
@@ -227,7 +227,7 @@ export const PRODUCTS_HAIRDRY = [
     info: "Lightweight hair dryer with fast-drying capabilities.",
     price: 199,
     image: prod3HairDry,
-    prodPagePath: "/zIdhd731202uk",
+    prodPagePath: "/zIdHD731202UK",
     prodInfoImg: prod3HairDry,
     technology: "Turbo Ionic Technology",
     whatsIncluded: ["Hair dryer", "Comb attachment", "User guide"],
@@ -384,5 +384,36 @@ export const FOOTER_items = [
   {
     id: 4,
     name: "join our mailing list",
+  },
+];
+
+export const PRODUCTS_CATEGORY = [
+  {
+    id: 0,
+    name: "corded hoovers",
+    pathLink: "/corded-hoovers",
+    title: "Powerful Corded Hoovers",
+    info: "Explore our range of corded hoovers designed for high-performance cleaning with long-lasting power.",
+  },
+  {
+    id: 1,
+    name: "cordless hoovers",
+    pathLink: "/cordless-hoovers",
+    title: "Versatile Cordless Hoovers",
+    info: "Discover lightweight and convenient cordless hoovers for hassle-free cleaning anywhere in your home.",
+  },
+  {
+    id: 2,
+    name: "hair dryers",
+    pathLink: "/hairDry-page",
+    title: "Professional Hair Dryers",
+    info: "Check out our range of hair dryers engineered for fast drying and salon-quality results at home.",
+  },
+  {
+    id: 3,
+    name: "air purifiers",
+    pathLink: "/airPurifier-page",
+    title: "Efficient Air Purifiers",
+    info: "Breathe clean air with our air purifiers, designed to remove dust, allergens, and other impurities.",
   },
 ];

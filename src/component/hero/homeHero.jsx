@@ -14,7 +14,7 @@ export const HeroHome = () => {
             </p>
           </div>
           <div className="hero_button_container">
-            <Link to={"/corded-hoovers"}>
+            <Link to={"/products-category"}>
               <button>shop now</button>
             </Link>
           </div>

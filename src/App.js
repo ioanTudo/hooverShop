@@ -28,6 +28,7 @@ import { HD731202UKPage } from "./pages/templateProdInfoPage/beautyProd/hairDrye
 import { HP300UKPage } from "./pages/templateProdInfoPage/airPurifiers/hp300ukPage/hp300ukPage.jsx";
 import { HP150UKPage } from "./pages/templateProdInfoPage/airPurifiers/hp150ukPage/hp150ukPage.jsx";
 import { HC450UKPage } from "./pages/templateProdInfoPage/airPurifiers/hc450Page/hc450Page.jsx";
+import { ProductsCategoryPage } from "./pages/products-category/productsCategoryPage.jsx";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -57,6 +58,16 @@ function App() {
       "/zIdIZ202UKT",
       "/zIdIZ202UKTDB",
       "/zIdIZ400UKT",
+      "/zIdIZ202UKT",
+      "/zIdIZ202UKTDB",
+      "/zIdIZ202UK",
+      "/zIdIZ420UKTDB",
+      "/zIdHD731UK",
+      "/zIdHD752UK",
+      "/zIdHD731202UK",
+      "/zIdHP300UK",
+      "/zIdHP150UK",
+      "/zIdHC450",
     ];
 
     if (pathsWithProdInfoBody.includes(location.pathname)) {
@@ -68,7 +79,7 @@ function App() {
     return () => {
       document.body.classList.remove("prodInfo_body");
     };
-  }, [location.pathname]); // Folosește doar `pathname`, nu `key`.
+  }, [location.pathname]);
 
   return (
     <div className="App">
@@ -252,6 +263,16 @@ function App() {
           path="/zIdHC450"
           element={
             <HC450UKPage setCart={setCart} addToCart={addToCart} cart={cart} />
+          }
+        />
+        <Route
+          path="/products-category"
+          element={
+            <ProductsCategoryPage
+              setCart={setCart}
+              addToCart={addToCart}
+              cart={cart}
+            />
           }
         />
 
