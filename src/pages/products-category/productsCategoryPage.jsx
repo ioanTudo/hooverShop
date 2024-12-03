@@ -15,6 +15,7 @@ export const ProductsCategoryPage = () => {
               info={category.info}
               pathLink={category.pathLink}
               title={category.title}
+              bgImg={category.bgImg}
             />
           ))}
         </div>

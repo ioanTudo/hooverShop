@@ -22,6 +22,11 @@ import prod1AirPur from "./images/HP300UK_01.webp";
 import prod2AirPur from "./images/HP150UK_01.webp";
 import prod3AirPur from "./images/HC450UK_01.webp";
 
+import cordedVacProdCat from "./images/prodCatImgs/corded-prodCat.webp";
+import cordlessVacProdCat from "./images/prodCatImgs/cordless-prodCat.webp";
+import hairDryProdCat from "./images/prodCatImgs/hairDry-prodCat.webp";
+import airPurProdCat from "./images/prodCatImgs/airPuri-prodCat.webp";
+
 export const PRODUCTS = [
   {
     id: 1,
@@ -391,6 +396,7 @@ export const PRODUCTS_CATEGORY = [
   {
     id: 0,
     name: "corded hoovers",
+    bgImg: cordedVacProdCat,
     pathLink: "/corded-hoovers",
     title: "Powerful Corded Hoovers",
     info: "Explore our range of corded hoovers designed for high-performance cleaning with long-lasting power.",
@@ -398,6 +404,7 @@ export const PRODUCTS_CATEGORY = [
   {
     id: 1,
     name: "cordless hoovers",
+    bgImg: cordlessVacProdCat,
     pathLink: "/cordless-hoovers",
     title: "Versatile Cordless Hoovers",
     info: "Discover lightweight and convenient cordless hoovers for hassle-free cleaning anywhere in your home.",
@@ -405,6 +412,7 @@ export const PRODUCTS_CATEGORY = [
   {
     id: 2,
     name: "hair dryers",
+    bgImg: hairDryProdCat,
     pathLink: "/hairDry-page",
     title: "Professional Hair Dryers",
     info: "Check out our range of hair dryers engineered for fast drying and salon-quality results at home.",
@@ -413,6 +421,7 @@ export const PRODUCTS_CATEGORY = [
     id: 3,
     name: "air purifiers",
     pathLink: "/airPurifier-page",
+    bgImg: airPurProdCat,
     title: "Efficient Air Purifiers",
     info: "Breathe clean air with our air purifiers, designed to remove dust, allergens, and other impurities.",
   },
