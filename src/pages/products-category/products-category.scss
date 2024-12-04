@@ -67,12 +67,6 @@
   transition: transform 0.3s, opacity 0.3s 0.25s;
 }
 
-.tiles:hover .title,
-.tiles:hover .info {
-  opacity: 1;
-
-  transform: translateY(0);
-}
 @media (min-width: 375px) {
   .details {
     display: none;
@@ -97,10 +91,6 @@
   .tiles h1 {
     font-size: 24px;
   }
-
-  .tiles:hover {
-    transform: scale(1.1);
-  }
 }
 @media (min-width: 600px) {
   .prodCategory_flexWrapper {
@@ -113,11 +103,20 @@
 }
 
 @media (min-width: 1200px) {
+  .tiles:hover {
+    transform: scale(1.1);
+  }
   .prodCategory_flexWrapper {
     gap: 15px;
   }
   .tiles:hover {
     transform: scale(1.05);
+  }
+  .tiles:hover .title,
+  .tiles:hover .info {
+    opacity: 1;
+
+    transform: translateY(0);
   }
 
   .tiles:before {
