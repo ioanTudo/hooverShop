@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./products.css";
 import { Link } from "react-router-dom";
+
 export const CordedVacDisplay = ({
   name,
   price,
@@ -11,12 +12,26 @@ export const CordedVacDisplay = ({
 }) => {
   const [hoverImgVisibility, setHoverImgVisibility] = useState("none");
   const [firstImgVisibility, setFirstImgVisibility] = useState("");
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1200);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 1200);
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div
       onMouseLeave={() => {
-        setFirstImgVisibility("block");
-        setHoverImgVisibility("none");
+        if (isLargeScreen) {
+          setFirstImgVisibility("block");
+          setHoverImgVisibility("none");
+        }
       }}
       className="product_item"
     >
@@ -24,8 +39,10 @@ export const CordedVacDisplay = ({
         <div className="prodImg_container">
           <div
             onMouseEnter={() => {
-              setFirstImgVisibility("none");
-              setHoverImgVisibility("block");
+              if (isLargeScreen) {
+                setFirstImgVisibility("none");
+                setHoverImgVisibility("block");
+              }
             }}
             className="product_img"
             style={{

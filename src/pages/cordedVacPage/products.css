@@ -71,9 +71,7 @@
   .product_paymentInfo {
     margin-bottom: 0;
   }
-  .product_paymentInfo button:hover {
-    background-color: rgb(138, 43, 226);
-  }
+
   .product_paymentInfo button {
     width: 100px;
     height: 50px;
@@ -101,6 +99,9 @@
   }
 }
 @media (min-width: 1200px) {
+  .product_paymentInfo button:hover {
+    background-color: rgb(138, 43, 226);
+  }
   .products_container {
     grid-template-columns: auto auto auto;
 
