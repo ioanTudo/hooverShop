@@ -91,7 +91,13 @@ function App() {
         />
         <Route
           path="/corded-hoovers"
-          element={<CordedVacPage cart={cart} setCart={setCart} />}
+          element={
+            <CordedVacPage
+              addToCart={addToCart}
+              cart={cart}
+              setCart={setCart}
+            />
+          }
         />
         <Route
           path="/cordless-hoovers"

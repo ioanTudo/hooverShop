@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
-export const FooterDisplay = ({ pathLink, name, submenu, id }) => {
+export const FooterDisplay = ({ pathLink, name, submenu }) => {
   const [email, setEmail] = useState("");
 
   const handlePageSelect = (pageName) => {
