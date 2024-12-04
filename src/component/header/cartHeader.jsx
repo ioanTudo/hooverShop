@@ -9,6 +9,7 @@ export const CartHeader = ({ cart = [] }) => {
           className="fa fa-shopping-cart"
           style={{ fontSize: "30px", color: "blueviolet" }}
         ></i>
+
         <span className="cart_amount">{totalAmount}</span>
       </Link>
     </li>

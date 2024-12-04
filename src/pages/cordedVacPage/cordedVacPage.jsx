@@ -8,10 +8,11 @@ export const CordedVacPage = ({ cart, setCart, addToCart }) => {
   useEffect(() => {
     console.log("Cart updated:", cart);
   }, [cart]);
+
   return (
     <TemplatePageDisplay cart={cart} setCart={setCart}>
       <div className="products_wrapper">
-        <h1>Corded vaccum cleaners</h1>
+        <h1>Corded vacuum cleaners</h1>
         <div className="products_container">
           {PRODUCTS.map((product) => (
             <CordedVacDisplay

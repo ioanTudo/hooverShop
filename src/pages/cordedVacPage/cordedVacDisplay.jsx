@@ -13,6 +13,7 @@ export const CordedVacDisplay = ({
   const [hoverImgVisibility, setHoverImgVisibility] = useState("none");
   const [firstImgVisibility, setFirstImgVisibility] = useState("");
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1200);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -24,6 +25,12 @@ export const CordedVacDisplay = ({
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const handleAddToCart = () => {
+    setLoading(true);
+    onAddToCart();
+    setTimeout(() => setLoading(false), 3000);
+  };
 
   return (
     <div
@@ -66,7 +73,13 @@ export const CordedVacDisplay = ({
       </div>
       <div className="product_paymentInfo">
         <p>Price: ${price}</p>
-        <button onClick={onAddToCart}>Add to Cart</button>
+        <button disabled={loading ? true : false} onClick={handleAddToCart}>
+          {loading ? (
+            <i className="fa fa-spinner fa-spin"></i>
+          ) : (
+            <span>Add to Cart</span>
+          )}
+        </button>
       </div>
     </div>
   );

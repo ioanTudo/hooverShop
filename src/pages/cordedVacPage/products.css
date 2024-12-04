@@ -89,6 +89,12 @@
 
     cursor: pointer;
   }
+  .product_paymentInfo button:disabled {
+    background-color: rgb(203, 148, 255);
+    color: #f2f2f2;
+    border: 1px solid #bfbfbf;
+    cursor: not-allowed;
+  }
 
   .products_wrapper {
     padding: 10px;
