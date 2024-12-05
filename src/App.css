@@ -156,7 +156,6 @@
 
     text-transform: uppercase;
   }
-
   .maxReached_container {
     position: absolute;
 
@@ -221,7 +220,15 @@
     justify-content: center;
   }
   .deleteButtons_container > button {
-    padding: 10px;
+    padding: 15px;
+
+    border: 0px;
+    border-radius: 10px;
+  }
+  .deleteButtons_container > button:hover {
+    background-color: rgb(138, 43, 226);
+
+    cursor: pointer;
   }
   .active_page {
     color: lightgray;

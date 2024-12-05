@@ -242,6 +242,11 @@
     margin-top: 0;
   }
 
+  .submenu_link:hover {
+    background-color: rgb(167, 90, 242);
+    color: white;
+  }
+
   .logo_li {
     grid-column: 1/2;
     grid-row: 1/2;
