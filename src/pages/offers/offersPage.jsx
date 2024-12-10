@@ -25,7 +25,7 @@ export const OffersPage = ({ addToCart, cart, setCart }) => {
   return (
     <TemplatePageDisplay cart={cart} setCart={setCart}>
       <div className="offersPage_container">
-        <h1>Special Offers</h1>]
+        <h1>Special Offers</h1>
         <div className="offersProd_container">
           <div className="design_container">
             <h2>Corded Vacuum Cleaners</h2>
