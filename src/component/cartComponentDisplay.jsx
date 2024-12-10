@@ -3,15 +3,15 @@ import "../App.css";
 
 export const CartComponentDisplay = ({
   name,
-  price,
+  price = 0,
   image,
-  amount,
+  amount = 1,
   onDelete,
   onAmountChange,
 }) => {
-  const [localAmount, setLocalAmount] = useState(amount || 1);
+  const [localAmount, setLocalAmount] = useState(amount);
   const [state, setState] = useState("del");
-  const [totalPrice, setTotalPrice] = useState(price);
+  const [totalPrice, setTotalPrice] = useState(price * amount);
   const [visibility, setVisibility] = useState("none");
   const [deleteMessageVisibility, setDeleteMessageVisibility] =
     useState("none");
@@ -23,11 +23,10 @@ export const CartComponentDisplay = ({
       setState("del");
     }
 
-    setTotalPrice(price * localAmount);
+    setTotalPrice((price || 0) * localAmount);
   }, [localAmount, price]);
 
   const handleDecrease = () => {
-    console.log(localAmount);
     if (state === "del") {
       setDeleteMessageVisibility("block");
       document.body.style.overflow = "hidden";
@@ -42,7 +41,6 @@ export const CartComponentDisplay = ({
 
   const handleIncrease = () => {
     if (localAmount < 5) {
-      console.log(localAmount);
       setLocalAmount((prev) => {
         const newAmount = prev + 1;
         onAmountChange(newAmount);
@@ -87,7 +85,7 @@ export const CartComponentDisplay = ({
                 +
               </button>
             </div>
-            <h4>${totalPrice.toFixed(2)}</h4>
+            <h4>${totalPrice ? totalPrice.toFixed(2) : "N/A"}</h4>
           </div>
         </div>
       </div>

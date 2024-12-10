@@ -4,6 +4,9 @@
   gap: 15px;
 }
 .productsCategory_container_bigWrapper {
+  color: rgb(167, 90, 242);
+}
+.productsCategory_container_bigWrapper {
   display: flex;
   flex-direction: column;
 
@@ -29,6 +32,8 @@
   justify-self: center;
 
   text-transform: capitalize;
+
+  color: rgb(167, 90, 242);
 
   margin: 10px 0;
 }

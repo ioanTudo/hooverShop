@@ -88,7 +88,9 @@ function App() {
         <Route path="/" element={<HomePage cart={cart} setCart={setCart} />} />
         <Route
           path="/offers"
-          element={<OffersPage cart={cart} setCart={setCart} />}
+          element={
+            <OffersPage addToCart={addToCart} cart={cart} setCart={setCart} />
+          }
         />
         <Route
           path="/corded-hoovers"

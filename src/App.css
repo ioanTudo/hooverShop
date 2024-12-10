@@ -36,6 +36,8 @@
 @media (min-width: 375px) {
   .products_wrapper h1 {
     text-transform: capitalize;
+
+    color: rgb(167, 90, 242);
   }
   .homepage {
     padding-bottom: 0;

@@ -73,7 +73,11 @@ export const CordedVacDisplay = ({
       </div>
       <div className="product_paymentInfo">
         <p>Price: ${price}</p>
-        <button className="addCartButton" disabled={loading ? true : false} onClick={handleAddToCart}>
+        <button
+          className="addCartButton"
+          disabled={loading ? true : false}
+          onClick={handleAddToCart}
+        >
           {loading ? (
             <i className="fa fa-spinner fa-spin"></i>
           ) : (
