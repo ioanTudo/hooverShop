@@ -9,6 +9,8 @@ export const CordedVacDisplay = ({
   info,
   onAddToCart,
   prodPagePath,
+  salePrice,
+  onSale,
 }) => {
   const [hoverImgVisibility, setHoverImgVisibility] = useState("none");
   const [firstImgVisibility, setFirstImgVisibility] = useState("");
@@ -72,7 +74,14 @@ export const CordedVacDisplay = ({
         <span>{info}</span>
       </div>
       <div className="product_paymentInfo">
-        <p>Price: ${price}</p>
+        {onSale ? (
+          <div>
+            <s>${price}</s>
+            <p>Sale Price: ${salePrice}</p>
+          </div>
+        ) : (
+          <p>Price: ${price}</p>
+        )}
         <button
           className="addCartButton"
           disabled={loading ? true : false}

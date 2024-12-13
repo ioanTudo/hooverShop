@@ -1,8 +1,8 @@
 @media (min-width: 375px) {
-  html,
-  body {
-    margin: 0;
-    padding: 0;
+  s {
+    color: #888;
+    margin-left: 10px;
+    font-size: 0.9em;
   }
 
   .products_container {
@@ -70,6 +70,9 @@
   }
   .product_paymentInfo {
     margin-bottom: 0;
+
+    display: flex;
+    flex-direction: column;
   }
 
   .product_paymentInfo button {

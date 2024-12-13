@@ -9,6 +9,8 @@ export const TemplateProdInfoPage = ({
   prodInfoImg,
   price,
   onAddToCart,
+  onSale,
+  salePrice,
 }) => {
   return (
     <TemplateProdInfoPageDisplay
@@ -20,6 +22,8 @@ export const TemplateProdInfoPage = ({
       prodInfoImg={prodInfoImg}
       price={price}
       onAddToCart={onAddToCart}
+      onSale={onSale}
+      salePrice={salePrice}
     />
   );
 };

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./prodInfo.css";
 
 export const TemplateProdInfoPageDisplay = ({
@@ -9,7 +10,16 @@ export const TemplateProdInfoPageDisplay = ({
   prodInfoImg,
   onAddToCart,
   price,
+  onSale,
+  salePrice,
 }) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleAddToCart = () => {
+    setLoading(true);
+    onAddToCart();
+    setTimeout(() => setLoading(false), 3000);
+  };
   return (
     <div className="prodInfoContainer" key={id}>
       <div
@@ -33,10 +43,27 @@ export const TemplateProdInfoPageDisplay = ({
       </div>
       <div className="paymentProdInfo_container">
         <div className="priceProdInfo_container">
-          <span>${price}</span>
+          {onSale ? (
+            <div className="priceInfo_container">
+              <s>${price}</s>
+              <span>Sale: ${salePrice}</span>
+            </div>
+          ) : (
+            <span>Price: ${price}</span>
+          )}
         </div>
         <div className="buttonPayment_container">
-          <button onClick={onAddToCart}>Add to Cart</button>
+          <button
+            className="addCartButton"
+            disabled={loading ? true : false}
+            onClick={handleAddToCart}
+          >
+            {loading ? (
+              <i className="fa fa-spinner fa-spin"></i>
+            ) : (
+              <span>Add to Cart</span>
+            )}
+          </button>
         </div>
       </div>
     </div>

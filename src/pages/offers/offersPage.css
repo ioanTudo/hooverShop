@@ -20,14 +20,7 @@
 .headeContent_container {
   margin: auto;
 }
-.products_grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
 
-  justify-self: center;
-
-  gap: 10px;
-}
 .design_container {
   display: grid;
 
@@ -46,4 +39,20 @@
   color: white;
 
   margin: auto;
+}
+@media (min-width: 375px) {
+  .products_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .products_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    justify-self: center;
+  }
 }

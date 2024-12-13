@@ -1,6 +1,6 @@
 @media (min-width: 375px) {
   .prodInfo_body {
-    padding-bottom: 78px;
+    padding-bottom: 90px;
   }
 
   .prodInfoContainer {
@@ -47,6 +47,10 @@
     left: 0;
 
     z-index: 10000;
+  }
+  .priceInfo_container {
+    display: flex;
+    flex-direction: column;
   }
 
   .priceProdInfo_container {

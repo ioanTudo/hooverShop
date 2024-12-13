@@ -17,6 +17,8 @@ export const NV602UKPage = ({ setCart, cart, addToCart }) => {
             prodInfoImg={item.prodInfoImg}
             price={item.price}
             onAddToCart={() => addToCart(item)}
+            onSale={item.onSale}
+            salePrice={item.salePrice}
           />
         ))}
       </div>

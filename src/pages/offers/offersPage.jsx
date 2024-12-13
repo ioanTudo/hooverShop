@@ -7,6 +7,7 @@ import {
   PRODUCTS_HAIRDRY,
 } from "../../data";
 import "./offersPage.css";
+import headerOffersPageImg from "../../images/prodCatImgs/Shark-UK-Header-Template-Desktop-1500x720.webp";
 
 export const OffersPage = ({ addToCart, cart, setCart }) => {
   const filteredCordedProducts = PRODUCTS.filter((product) =>
@@ -26,6 +27,10 @@ export const OffersPage = ({ addToCart, cart, setCart }) => {
     <TemplatePageDisplay cart={cart} setCart={setCart}>
       <div className="offersPage_container">
         <h1>Special Offers</h1>
+        <div
+          className="headerImg"
+          style={{ backgroundImage: `url(${headerOffersPageImg})` }}
+        ></div>
         <div className="offersProd_container">
           <div className="design_container">
             <h2>Corded Vacuum Cleaners</h2>
@@ -36,6 +41,8 @@ export const OffersPage = ({ addToCart, cart, setCart }) => {
                 key={product.id}
                 name={product.name}
                 price={product.price}
+                onSale={product.onSale}
+                salePrice={product.salePrice}
                 image={product.image}
                 info={product.info}
                 prodPagePath={product.prodPagePath}
@@ -54,6 +61,8 @@ export const OffersPage = ({ addToCart, cart, setCart }) => {
                 key={product.id}
                 name={product.name}
                 price={product.price}
+                onSale={product.onSale}
+                salePrice={product.salePrice}
                 image={product.image}
                 info={product.info}
                 prodPagePath={product.prodPagePath}
