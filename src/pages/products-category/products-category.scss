@@ -3,9 +3,7 @@
 
   gap: 15px;
 }
-.productsCategory_container_bigWrapper {
-  color: rgb(167, 90, 242);
-}
+
 .productsCategory_container_bigWrapper {
   display: flex;
   flex-direction: column;
@@ -13,6 +11,8 @@
   margin-top: 70px;
 
   padding: 10px;
+
+  color: rgb(167, 90, 242);
 }
 .tiles {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

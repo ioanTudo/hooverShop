@@ -71,14 +71,24 @@ function App() {
       "/zIdHC450",
     ];
 
-    if (pathsWithProdInfoBody.includes(location.pathname)) {
+    const isProdInfoPage = pathsWithProdInfoBody.includes(location.pathname);
+    const isProdCategoryPage = location.pathname === "/products-category";
+
+    if (isProdInfoPage) {
       document.body.classList.add("prodInfo_body");
     } else {
       document.body.classList.remove("prodInfo_body");
     }
 
+    if (isProdCategoryPage) {
+      document.body.classList.add("prodCategory_body");
+    } else {
+      document.body.classList.remove("prodCategory_body");
+    }
+
     return () => {
       document.body.classList.remove("prodInfo_body");
+      document.body.classList.remove("prodCategory_body");
     };
   }, [location.pathname]);
 
