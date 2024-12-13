@@ -3,11 +3,13 @@ import "../cordedVacPage/products.css";
 
 export const CordlessVacDisplay = ({
   name,
-  info,
-  image,
-  onAddToCart,
   price,
+  image,
+  info,
+  onAddToCart,
   prodPagePath,
+  salePrice,
+  onSale,
 }) => {
   return (
     <CordedVacDisplay
@@ -17,6 +19,8 @@ export const CordlessVacDisplay = ({
       onAddToCart={onAddToCart}
       price={price}
       prodPagePath={prodPagePath}
+      salePrice={salePrice}
+      onSale={onSale}
     />
   );
 };

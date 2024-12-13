@@ -7,6 +7,8 @@ export const HairDryDisplay = ({
   info,
   onAddToCart,
   prodPagePath,
+  salePrice,
+  onSale,
 }) => {
   return (
     <CordedVacDisplay
@@ -16,6 +18,8 @@ export const HairDryDisplay = ({
       onAddToCart={onAddToCart}
       price={price}
       prodPagePath={prodPagePath}
+      salePrice={salePrice}
+      onSale={onSale}
     />
   );
 };

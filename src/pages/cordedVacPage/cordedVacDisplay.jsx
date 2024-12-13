@@ -76,7 +76,7 @@ export const CordedVacDisplay = ({
       <div className="product_paymentInfo">
         {onSale ? (
           <div>
-            <s>${price}</s>
+            <s>Price: ${price}</s>
             <p>Sale Price: ${salePrice}</p>
           </div>
         ) : (

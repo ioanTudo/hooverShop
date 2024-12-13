@@ -17,6 +17,8 @@ export const HairDryPage = ({ cart, setCart, addToCart }) => {
               key={product.id}
               name={product.name}
               price={product.price}
+              onSale={product.onSale}
+              salePrice={product.salePrice}
               image={product.image}
               info={product.info}
               prodPagePath={product.prodPagePath}

@@ -81,6 +81,8 @@ export const OffersPage = ({ addToCart, cart, setCart }) => {
                 key={product.id}
                 name={product.name}
                 price={product.price}
+                onSale={product.onSale}
+                salePrice={product.salePrice}
                 image={product.image}
                 info={product.info}
                 prodPagePath={product.prodPagePath}
@@ -99,6 +101,8 @@ export const OffersPage = ({ addToCart, cart, setCart }) => {
                 key={product.id}
                 name={product.name}
                 price={product.price}
+                onSale={product.onSale}
+                salePrice={product.salePrice}
                 image={product.image}
                 info={product.info}
                 prodPagePath={product.prodPagePath}
