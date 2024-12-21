@@ -1,0 +1,42 @@
+.reviewsPage_container {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 70px;
+
+  padding: 10px;
+
+  color: rgb(167, 90, 242);
+
+  min-height: 100vh;
+}
+.content_container {
+  text-align: left;
+
+  padding: 10px 180px;
+}
+.content_container p {
+  color: rgb(63, 0, 122);
+
+  font-size: 20px;
+}
+.review_btn {
+  padding: 20px;
+
+  font-size: 20px;
+  text-transform: capitalize;
+
+  border-radius: 40px;
+  border: 0px;
+
+  cursor: pointer;
+
+  background-color: rgb(167, 90, 242);
+  color: white;
+}
+.review_btn:hover {
+  background-color: rgb(138, 43, 226);
+}
+.reviewBtn_container {
+  margin-top: 50px;
+}

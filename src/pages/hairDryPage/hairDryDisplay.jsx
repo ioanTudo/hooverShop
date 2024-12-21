@@ -9,6 +9,7 @@ export const HairDryDisplay = ({
   prodPagePath,
   salePrice,
   onSale,
+  rating,
 }) => {
   return (
     <CordedVacDisplay
@@ -20,6 +21,7 @@ export const HairDryDisplay = ({
       prodPagePath={prodPagePath}
       salePrice={salePrice}
       onSale={onSale}
+      rating={rating}
     />
   );
 };

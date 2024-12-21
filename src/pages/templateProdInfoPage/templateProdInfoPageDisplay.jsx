@@ -12,6 +12,7 @@ export const TemplateProdInfoPageDisplay = ({
   price,
   onSale,
   salePrice,
+  rating,
 }) => {
   const [loading, setLoading] = useState(false);
 
@@ -28,6 +29,10 @@ export const TemplateProdInfoPageDisplay = ({
       ></div>
       <div>
         <h2>{name}</h2>
+        <p className="ratingValue">
+          <span class="fa fa-star checked"></span>
+          {rating}
+        </p>
         <h3>{info}</h3>
         <ul key={id}>
           <li>Technology: {technology}</li>
@@ -46,6 +51,7 @@ export const TemplateProdInfoPageDisplay = ({
           {onSale ? (
             <div className="priceInfo_container">
               <s>${price}</s>
+
               <span>Sale: ${salePrice}</span>
             </div>
           ) : (

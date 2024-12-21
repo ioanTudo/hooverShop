@@ -46,6 +46,7 @@ export const OffersPage = ({ addToCart, cart, setCart }) => {
                 image={product.image}
                 info={product.info}
                 prodPagePath={product.prodPagePath}
+                rating={product.rating}
                 onAddToCart={() => addToCart(product)}
               />
             ))}
@@ -66,6 +67,7 @@ export const OffersPage = ({ addToCart, cart, setCart }) => {
                 image={product.image}
                 info={product.info}
                 prodPagePath={product.prodPagePath}
+                rating={product.rating}
                 onAddToCart={() => addToCart(product)}
               />
             ))}
@@ -86,6 +88,7 @@ export const OffersPage = ({ addToCart, cart, setCart }) => {
                 image={product.image}
                 info={product.info}
                 prodPagePath={product.prodPagePath}
+                rating={product.rating}
                 onAddToCart={() => addToCart(product)}
               />
             ))}
@@ -106,6 +109,7 @@ export const OffersPage = ({ addToCart, cart, setCart }) => {
                 image={product.image}
                 info={product.info}
                 prodPagePath={product.prodPagePath}
+                rating={product.rating}
                 onAddToCart={() => addToCart(product)}
               />
             ))}

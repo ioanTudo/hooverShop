@@ -11,6 +11,7 @@ export const CordedVacDisplay = ({
   prodPagePath,
   salePrice,
   onSale,
+  rating,
 }) => {
   const [hoverImgVisibility, setHoverImgVisibility] = useState("none");
   const [firstImgVisibility, setFirstImgVisibility] = useState("");
@@ -71,6 +72,10 @@ export const CordedVacDisplay = ({
 
       <div className="product_info">
         <h3>{name}</h3>
+        <p className="ratingValue">
+          <span class="fa fa-star checked"></span>
+          {rating}
+        </p>
         <span>{info}</span>
       </div>
       <div className="product_paymentInfo">

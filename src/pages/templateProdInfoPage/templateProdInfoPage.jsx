@@ -11,6 +11,7 @@ export const TemplateProdInfoPage = ({
   onAddToCart,
   onSale,
   salePrice,
+  rating,
 }) => {
   return (
     <TemplateProdInfoPageDisplay
@@ -24,6 +25,7 @@ export const TemplateProdInfoPage = ({
       onAddToCart={onAddToCart}
       onSale={onSale}
       salePrice={salePrice}
+      rating={rating}
     />
   );
 };

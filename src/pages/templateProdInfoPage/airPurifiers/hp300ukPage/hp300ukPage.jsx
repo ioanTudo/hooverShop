@@ -17,6 +17,7 @@ export const HP300UKPage = ({ setCart, cart, addToCart }) => {
             technology={item.technology}
             prodInfoImg={item.prodInfoImg}
             price={item.price}
+            rating={item.rating}
             onAddToCart={() => addToCart(item)}
           />
         ))}

@@ -19,6 +19,7 @@ export const CordlessVacPage = ({ cart, setCart, addToCart }) => {
               image={product.image}
               info={product.info}
               prodPagePath={product.prodPagePath}
+              rating={product.rating}
               onAddToCart={() => addToCart(product)}
             />
           ))}

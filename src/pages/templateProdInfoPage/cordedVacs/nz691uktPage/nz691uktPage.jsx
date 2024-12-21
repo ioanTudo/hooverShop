@@ -18,6 +18,7 @@ export const NZ691UKTPage = ({ setCart, cart, addToCart }) => {
             price={item.price}
             onAddToCart={() => addToCart(item)}
             onSale={item.onSale}
+            rating={item.rating}
             salePrice={item.salePrice}
           />
         ))}

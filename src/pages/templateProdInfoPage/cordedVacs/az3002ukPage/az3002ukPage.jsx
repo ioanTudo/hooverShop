@@ -18,6 +18,7 @@ export const AZ3002UKPage = ({ setCart, cart, addToCart }) => {
             price={item.price}
             onAddToCart={() => addToCart(item)}
             onSale={item.onSale}
+            rating={item.rating}
             salePrice={item.salePrice}
           />
         ))}

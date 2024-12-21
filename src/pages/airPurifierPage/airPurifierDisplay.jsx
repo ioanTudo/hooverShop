@@ -9,6 +9,7 @@ export const AirPurifierDisplay = ({
   prodPagePath,
   salePrice,
   onSale,
+  rating,
 }) => {
   return (
     <CordedVacDisplay
@@ -20,6 +21,7 @@ export const AirPurifierDisplay = ({
       prodPagePath={prodPagePath}
       salePrice={salePrice}
       onSale={onSale}
+      rating={rating}
     />
   );
 };

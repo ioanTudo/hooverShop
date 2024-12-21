@@ -40,6 +40,7 @@ export const PRODUCTS = [
     onSale: true,
     weight: "5kg",
     technology: "Anti-Allergen Complete Seal + DuoClean Technology",
+    rating: 4.5,
     whatsIncluded: ["Vacuum cleaner", "Upholstery tool", "Dusting brush"],
   },
   {
@@ -54,6 +55,7 @@ export const PRODUCTS = [
     onSale: true,
     weight: "5kg",
     technology: "DuoClean + Self-Cleaning Brushroll",
+    rating: 4.5,
     whatsIncluded: ["Vacuum cleaner", "Crevice tool", "Pet power brush"],
   },
   {
@@ -67,6 +69,7 @@ export const PRODUCTS = [
     prodPagePath: "/zIdAZ3000UKT",
     prodInfoImg: prod3Img,
     technology: "Lift-Away Technology",
+    rating: 4.5,
     whatsIncluded: ["Vacuum cleaner", "Multi-surface tool", "Dusting brush"],
   },
   {
@@ -79,6 +82,7 @@ export const PRODUCTS = [
     prodInfoImg: prod4Img,
     onSale: false,
     technology: "Anti-Hair Wrap Technology",
+    rating: 4.5,
     whatsIncluded: ["Vacuum cleaner", "Floor nozzle", "Detailing kit"],
   },
   {
@@ -91,6 +95,7 @@ export const PRODUCTS = [
     prodInfoImg: prod5Img,
     onSale: false,
     technology: "HEPA Filtration + Anti-Allergen Seal",
+    rating: 4.5,
     whatsIncluded: ["Vacuum cleaner", "Pet tool", "Extension wand"],
   },
   {
@@ -103,6 +108,7 @@ export const PRODUCTS = [
     prodInfoImg: prodInfoCordedImg6,
     onSale: false,
     technology: "Cyclonic Technology",
+    rating: 4.5,
     whatsIncluded: ["Vacuum cleaner", "Crevice tool", "Brush roll"],
   },
 ];
@@ -119,6 +125,7 @@ export const PRODUCTS_CORDLESS = [
     onSale: true,
     salePrice: 150,
     technology: "PowerFins Technology",
+    rating: 4.5,
     whatsIncluded: ["Cordless vacuum", "Charger", "Pet multi-tool"],
   },
   {
@@ -132,6 +139,7 @@ export const PRODUCTS_CORDLESS = [
     onSale: true,
     salePrice: 150,
     technology: "Flexology + Anti-Hair Wrap",
+    rating: 4.5,
     whatsIncluded: ["Cordless vacuum", "Pet tool", "Wall mount"],
   },
   {
@@ -145,6 +153,7 @@ export const PRODUCTS_CORDLESS = [
     onSale: true,
     salePrice: 150,
     technology: "DuoClean PowerFins",
+    rating: 4.5,
     whatsIncluded: ["Cordless vacuum", "Extra battery", "Multi-surface tool"],
   },
   {
@@ -158,6 +167,7 @@ export const PRODUCTS_CORDLESS = [
     onSale: true,
     salePrice: 150,
     technology: "Anti-Hair Wrap + Flexology",
+    rating: 4.5,
     whatsIncluded: ["Cordless vacuum", "Car cleaning kit", "Upholstery tool"],
   },
   {
@@ -170,6 +180,7 @@ export const PRODUCTS_CORDLESS = [
     onSale: false,
     prodInfoImg: prod5cordless,
     technology: "Cyclonic Suction Technology",
+    rating: 4.5,
     whatsIncluded: ["Cordless vacuum", "Dusting brush", "Charger"],
   },
   {
@@ -182,6 +193,7 @@ export const PRODUCTS_CORDLESS = [
     prodPagePath: "/zIdIZ420UKTDB",
     prodInfoImg: prod6cordless,
     technology: "HyperVelocity Suction",
+    rating: 4.5,
     whatsIncluded: ["Cordless vacuum", "Floor nozzle", "Spare filters"],
   },
 ];
@@ -198,6 +210,7 @@ export const PRODUCTS_AIRPURIFIERS = [
     prodPagePath: "/zIdHP300UK",
     prodInfoImg: prod1AirPur,
     technology: "HEPA Filtration",
+    rating: 4.5,
     whatsIncluded: ["Air purifier", "Replacement filter", "User manual"],
   },
   {
@@ -210,6 +223,7 @@ export const PRODUCTS_AIRPURIFIERS = [
     prodPagePath: "/zIdHP150UK",
     prodInfoImg: prod2AirPur,
     technology: "Odor-Eliminating HEPA Filter",
+    rating: 4.5,
     whatsIncluded: ["Air purifier", "Filter set", "Power cord"],
   },
   {
@@ -223,6 +237,7 @@ export const PRODUCTS_AIRPURIFIERS = [
     prodPagePath: "/zIdHC450",
     prodInfoImg: prod3AirPur,
     technology: "Smart HEPA Filtration + Air Quality Monitor",
+    rating: 4.5,
     whatsIncluded: ["Air purifier", "Remote control", "Filter set"],
   },
 ];
@@ -239,6 +254,7 @@ export const PRODUCTS_HAIRDRY = [
     prodPagePath: "/zIdHD731UK",
     prodInfoImg: prod1HairDry,
     technology: "Ionic Technology",
+    rating: 4.5,
     whatsIncluded: ["Hair dryer", "Concentrator nozzle", "Diffuser"],
   },
   {
@@ -251,6 +267,7 @@ export const PRODUCTS_HAIRDRY = [
     prodPagePath: "/zIdHD752UK",
     prodInfoImg: prod2HairDry,
     technology: "Ceramic Ionic Technology",
+    rating: 4.5,
     whatsIncluded: ["Hair dryer", "Styling attachments", "Travel bag"],
   },
   {
@@ -263,6 +280,7 @@ export const PRODUCTS_HAIRDRY = [
     prodPagePath: "/zIdHD731202UK",
     prodInfoImg: prod3HairDry,
     technology: "Turbo Ionic Technology",
+    rating: 4.5,
     whatsIncluded: ["Hair dryer", "Comb attachment", "User guide"],
   },
 ];
@@ -465,5 +483,16 @@ export const AboutUs_data = [
     companyDetails: "HooverShop LTD,",
     companyAdress: "Ramnicu Valcea 8,",
     companyLocation: "Bucharest, Romania",
+  },
+];
+
+export const Reviews_content = [
+  {
+    id: 0,
+    title: "We Value Your Feedback!",
+    content:
+      "Your opinion matters to us! If you’ve enjoyed your experience with our service, we’d love to hear from you. By sharing your review, you help others make informed decisions and help us continue improving.It only takes a moment, and your feedback goes a long way. Whether it’s a suggestion, a compliment, or an area we can improve, your thoughts are invaluable to us.",
+    finishingContent:
+      "Thank you for being part of our community – we look forward to hearing from you!",
   },
 ];

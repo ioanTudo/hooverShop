@@ -30,6 +30,7 @@ import { HP150UKPage } from "./pages/templateProdInfoPage/airPurifiers/hp150ukPa
 import { HC450UKPage } from "./pages/templateProdInfoPage/airPurifiers/hc450Page/hc450Page.jsx";
 import { ProductsCategoryPage } from "./pages/products-category/productsCategoryPage.jsx";
 import { AboutUsPage } from "./pages/aboutUsPage/aboutUsPage.jsx";
+import { ReviewsPage } from "./pages/reviews/reviewsPage.jsx";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -295,7 +296,14 @@ function App() {
             />
           }
         />
-        <Route path="/about-us" element={<AboutUsPage />} />
+        <Route
+          path="/about-us"
+          element={<AboutUsPage setCart={setCart} cart={cart} />}
+        />
+        <Route
+          path="/reviews"
+          element={<ReviewsPage setCart={setCart} cart={cart} />}
+        />
 
         <Route path="*" element={<h1>Page not found</h1>} />
       </Routes>
