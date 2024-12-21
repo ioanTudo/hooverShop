@@ -454,3 +454,16 @@ export const PRODUCTS_CATEGORY = [
     info: "Breathe clean air with our air purifiers, designed to remove dust, allergens, and other impurities.",
   },
 ];
+
+export const AboutUs_data = [
+  {
+    id: 0,
+    title: "About Us",
+    text: "We are a leading manufacturer of revolutionary cleaning products and services. Our mission is to create high-quality, environmentally friendly products that meet the needs of our customers. We strive to deliver exceptional service and customer satisfaction.",
+    moreInfo:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus    velit illo non quae earum consectetur pariatur commodi nulla        reiciendis facere odio ducimus impedit ad tenetur necessitatibus,         rerum aliquid voluptas veniam itaque similique ipsum maxime harum!          Incidunt quae odio, nostrum tempora cum dolores, perferendis labore          amet culpa, facilis saepe beatae magni consectetur assumenda quasi          voluptates vero voluptatibus ullam doloribus totam fugit. Fugiat,          minima necessitatibus harum voluptas voluptatum minus! Ducimus          explicabo praesentium vero blanditiis sequi id hic commodi          exercitationem optio, nam quam, beatae iusto voluptates aliquam fuga          pariatur aperiam ab excepturi voluptatibus, fugit est veniam odit?          Similique pariatur quia consectetur repellat reiciendis, iste iusto         error animi maxime odit. Ullam in minus deleniti perferendis possimus          eaque quod quas, eveniet qui nam voluptatum cum fugiat perspiciatis         quis, ea, laboriosam placeat ex ducimus! Eius animi nobis vel error         explicabo possimus. At, explicabo. Dolorum eum doloremque unde         dolorem, omnis recusandae aut obcaecati ex maiores dolor magnam          explicabo est? Beatae eveniet in illum tempora quibusdam voluptatem          dolore nulla, nihil exercitationem iure veritatis explicabo id sed          voluptatibus, vel consequatur enim esse blanditiis eligendi dolor          omnis minima doloremque, ea eaque? Totam, magnam odit. Doloremque          velit quidem voluptate facilis asperiores distinctio expedita iste          molestiae eaque itaque? Aperiam, iusto! Quidem, culpa!",
+    companyDetails: "HooverShop LTD,",
+    companyAdress: "Ramnicu Valcea 8,",
+    companyLocation: "Bucharest, Romania",
+  },
+];

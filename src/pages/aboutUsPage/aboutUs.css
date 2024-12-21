@@ -1,0 +1,38 @@
+.aboutUs_page {
+  margin-top: 70px;
+}
+.aboutUs_page h1 {
+  color: rgb(167, 90, 242);
+}
+.text_container {
+  font-size: 20px;
+
+  text-align: left;
+}
+.aboutUs_page p {
+  color: rgb(63, 0, 122);
+}
+.companyDetails_container {
+  text-align: left;
+}
+.companyDetails_container h2 {
+  margin-bottom: 0;
+
+  color: rgb(167, 90, 242);
+}
+@media (min-width: 375px) {
+  .aboutUs_page {
+    padding: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .text_container {
+    margin: auto;
+  }
+  .aboutUs_page {
+    height: 100vh;
+  }
+  .aboutUs_page {
+    padding: 10px 180px;
+  }
+}

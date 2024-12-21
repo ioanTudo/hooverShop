@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 
 export const FooterDisplay = ({ pathLink, name, submenu }) => {
@@ -26,13 +26,13 @@ export const FooterDisplay = ({ pathLink, name, submenu }) => {
           <ul className="footer_submenu">
             {submenu.map((item) => (
               <li className="footer_nav_links" key={item.id}>
-                <NavLink
-                  to={pathLink}
+                <Link
+                  to={item.pathLink}
                   onClick={() => handlePageSelect(item.name)}
                   className="submenu_link"
                 >
                   {item.name}
-                </NavLink>
+                </Link>
               </li>
             ))}
           </ul>
