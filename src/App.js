@@ -31,6 +31,8 @@ import { HC450UKPage } from "./pages/templateProdInfoPage/airPurifiers/hc450Page
 import { ProductsCategoryPage } from "./pages/products-category/productsCategoryPage.jsx";
 import { AboutUsPage } from "./pages/aboutUsPage/aboutUsPage.jsx";
 import { ReviewsPage } from "./pages/reviews/reviewsPage.jsx";
+import { CleaningTipsPage } from "./pages/cleaningTipsPage/cleaningTipsPage.jsx";
+import { set } from "react-hook-form";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -303,6 +305,10 @@ function App() {
         <Route
           path="/reviews"
           element={<ReviewsPage setCart={setCart} cart={cart} />}
+        />
+        <Route
+          path="/cleaning-tips"
+          element={<CleaningTipsPage cart={cart} setCart={setCart} />}
         />
 
         <Route path="*" element={<h1>Page not found</h1>} />

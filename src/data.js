@@ -496,3 +496,54 @@ export const Reviews_content = [
       "Thank you for being part of our community – we look forward to hearing from you!",
   },
 ];
+
+export const CleaningTips_content = [
+  {
+    id: 0,
+    text1:
+      "Assess your household needs (carpets vs. hard floors, pet hair, home size).",
+    text2: "Pros and cons of bagged vs. bagless vacuums.",
+    text3: "Why a robot vacuum might be a worthwhile investment.",
+    title: "How to Choose the Right Vacuum Cleaner for Your Home",
+  },
+  {
+    id: 1,
+    text1: "Regularly clean or replace filters.",
+    text2: "Check for blockages in hoses and brushes.",
+    text3:
+      "Empty the dust container or change the bag before it gets too full.",
+    title: "How to Choose the Right Vacuum Cleaner for Your Home",
+  },
+  {
+    id: 2,
+    text1: "Vacuum in a systematic pattern to ensure you don’t miss any spots.",
+    text2:
+      "Adjust the suction power depending on the surface (low for curtains, high for carpets).",
+    text3: "Vacuum high-traffic areas more frequently.",
+    title:
+      "Use the right attachment for specific tasks (e.g., crevice tool for edges, upholstery tool for furniture).",
+  },
+  {
+    id: 3,
+    text1: "Use vacuums designed specifically for pet hair.",
+    text2: "Pros and cons of bagged vs. bagless vacuums.",
+    text3: "Groom your pet regularly to minimize shedding.",
+    title: "How to Choose the Right Vacuum Cleaner for Your Home",
+  },
+  {
+    id: 4,
+    text1: "Use reusable or washable filters.",
+    text2:
+      "Schedule vacuuming during off-peak hours to save energy if using a robot vacuum.",
+    text3: "Opt for models with energy-saving modes.",
+    title: "How to Choose the Right Vacuum Cleaner for Your Home",
+  },
+  {
+    id: 5,
+    text1: "Wash washable filters every 1–3 months.",
+    text2: "Use a damp cloth to wipe the vacuum’s exterior.",
+    text3:
+      "Avoid using water on electrical components; instead, use a dry cloth.",
+    title: "How to Choose the Right Vacuum Cleaner for Your Home",
+  },
+];
