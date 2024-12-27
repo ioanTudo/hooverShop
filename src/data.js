@@ -165,7 +165,7 @@ export const PRODUCTS_CORDLESS = [
     prodPagePath: "/zIdIZ400UKT",
     prodInfoImg: prod4cordless,
     onSale: true,
-    salePrice: 150,
+    salePrice: 100,
     technology: "Anti-Hair Wrap + Flexology",
     rating: 4.5,
     whatsIncluded: ["Cordless vacuum", "Car cleaning kit", "Upholstery tool"],
@@ -520,8 +520,7 @@ export const CleaningTips_content = [
     text2:
       "Adjust the suction power depending on the surface (low for curtains, high for carpets).",
     text3: "Vacuum high-traffic areas more frequently.",
-    title:
-      "Use the right attachment for specific tasks (e.g., crevice tool for edges, upholstery tool for furniture).",
+    title: "Use the right attachment for specific tasks .",
   },
   {
     id: 3,

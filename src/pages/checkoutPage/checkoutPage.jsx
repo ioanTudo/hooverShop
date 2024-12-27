@@ -6,7 +6,8 @@ import { TemplatePageDisplay } from "../templatePage/templatePageDisplay";
 
 export const CheckoutPage = ({ cart, setCart }) => {
   const subtotal = cart.reduce(
-    (total, item) => total + item.price * (item.amount || 1),
+    (total, item) =>
+      total + (item.onSale ? item.salePrice : item.price) * (item.amount || 1),
     0
   );
 
@@ -39,8 +40,10 @@ export const CheckoutPage = ({ cart, setCart }) => {
             <CartComponentDisplay
               key={item.id}
               name={item.name}
-              price={item.price}
+              price={item.onSale ? item.salePrice : item.price}
               image={item.image}
+              salePrice={item.salePrice}
+              onSale={item.onSale}
               amount={item.amount}
               onDelete={() => handleDelete(index)}
               onAmountChange={(newAmount) => updateItemAmount(index, newAmount)}

@@ -8,6 +8,8 @@ export const CartComponentDisplay = ({
   amount = 1,
   onDelete,
   onAmountChange,
+  onSale,
+  salePrice,
 }) => {
   const [localAmount, setLocalAmount] = useState(amount);
   const [state, setState] = useState("del");
@@ -17,14 +19,11 @@ export const CartComponentDisplay = ({
     useState("none");
 
   useEffect(() => {
-    if (localAmount > 1) {
-      setState("-");
-    } else {
-      setState("del");
-    }
+    setState(localAmount > 1 ? "-" : "del");
 
-    setTotalPrice((price || 0) * localAmount);
-  }, [localAmount, price]);
+    const effectivePrice = onSale ? salePrice : price;
+    setTotalPrice((effectivePrice || 0) * localAmount);
+  }, [localAmount, price, salePrice, onSale]);
 
   const handleDecrease = () => {
     if (state === "del") {

@@ -32,7 +32,6 @@ import { ProductsCategoryPage } from "./pages/products-category/productsCategory
 import { AboutUsPage } from "./pages/aboutUsPage/aboutUsPage.jsx";
 import { ReviewsPage } from "./pages/reviews/reviewsPage.jsx";
 import { CleaningTipsPage } from "./pages/cleaningTipsPage/cleaningTipsPage.jsx";
-import { set } from "react-hook-form";
 
 function App() {
   const [cart, setCart] = useState([]);

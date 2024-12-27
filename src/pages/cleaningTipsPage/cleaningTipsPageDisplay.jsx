@@ -1,9 +1,9 @@
 import "./cleaningTipsPage.css";
 
-export const CleaningTipsPageDisplay = ({ text1, text2, text3, title }) => {
+export const CleaningTipsPageDisplay = ({ text1, text2, text3, title, id }) => {
   return (
     <div className="list_container">
-      <ul>
+      <ul key={id}>
         <h3>{title}</h3>
         <li>
           <p>{text1}</p>

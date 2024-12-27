@@ -12,6 +12,7 @@ export const CleaningTipsPage = ({ cart, setCart }) => {
         <div>
           {CleaningTips_content.map((item) => (
             <CleaningTipsPageDisplay
+              key={item.id}
               title={item.title}
               text1={item.text1}
               text2={item.text2}
