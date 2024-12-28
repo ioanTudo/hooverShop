@@ -1,4 +1,8 @@
 @media (min-width: 375px) {
+  .prodInfoText {
+    display: none;
+  }
+
   s {
     color: #888;
     margin-left: 10px;
@@ -31,7 +35,7 @@
     padding: 20px 5px 10px 5px;
 
     width: 95%;
-    height: auto;
+    height: 390px;
 
     margin: auto;
 
@@ -108,6 +112,9 @@
   }
 }
 @media (min-width: 1200px) {
+  .prodInfoText {
+    display: block;
+  }
   .product_paymentInfo button:hover {
     background-color: rgb(138, 43, 226);
   }

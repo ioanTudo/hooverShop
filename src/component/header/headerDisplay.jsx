@@ -23,10 +23,11 @@ export const HeaderDisplay = ({
   return (
     <li
       style={{ display: navVisibility }}
-      className={`nav_link ${name === "products" ? "dropdownIcon" : ""}`}
+      className={`nav_link ${name === "products" ? "dropdownIcon" : ""}  `}
       key={id}
     >
       <NavLink
+        className={`${name === "offers" ? "offersButton" : ""}`}
         onClick={() => {
           onPageSelect();
           handleToggleVisibility();

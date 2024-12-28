@@ -21,6 +21,9 @@
 .header_container h1 {
   text-transform: capitalize;
 }
+.list_container ul {
+  text-align: left;
+}
 
 @media (min-width: 375px) {
   .header_container {

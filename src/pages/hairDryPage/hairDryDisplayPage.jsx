@@ -1,6 +1,6 @@
 import { CordedVacDisplay } from "../cordedVacPage/cordedVacDisplay";
 import "../cordedVacPage/products.css";
-export const HairDryDisplay = ({
+export const HairDryDisplayPage = ({
   name,
   price,
   image,

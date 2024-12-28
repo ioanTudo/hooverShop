@@ -20,6 +20,8 @@ export const HC450UKPage = ({ setCart, cart, addToCart }) => {
             price={item.price}
             rating={item.rating}
             onAddToCart={() => addToCart(item)}
+            onSale={item.onSale}
+            salePrice={item.salePrice}
           />
         ))}
       </div>

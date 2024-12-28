@@ -365,7 +365,7 @@ export const FOOTER_items = [
       {
         id: 0,
         name: "anti hair wrap",
-        pathLink: "/about-us",
+        pathLink: "/antiWrap-technology",
       },
       {
         id: 1,
@@ -375,17 +375,17 @@ export const FOOTER_items = [
       {
         id: 2,
         name: "power fins",
-        pathLink: "/reviews",
+        pathLink: "/powerFins-technology",
       },
       {
         id: 3,
         name: "anti-allergen",
-        pathLink: "/cleaning-tips",
+        pathLink: "/antiAllergeb-technology",
       },
       {
         id: 4,
         name: "flexology",
-        pathLink: "/coming-soon",
+        pathLink: "/flexology-technology",
       },
     ],
   },
