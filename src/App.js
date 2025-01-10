@@ -32,6 +32,7 @@ import { ProductsCategoryPage } from "./pages/products-category/productsCategory
 import { AboutUsPage } from "./pages/aboutUsPage/aboutUsPage.jsx";
 import { ReviewsPage } from "./pages/reviews/reviewsPage.jsx";
 import { CleaningTipsPage } from "./pages/cleaningTipsPage/cleaningTipsPage.jsx";
+import { PaymentPage } from "./pages/paymentPage/paymentPage.jsx";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -308,6 +309,10 @@ function App() {
         <Route
           path="/cleaning-tips"
           element={<CleaningTipsPage cart={cart} setCart={setCart} />}
+        />
+        <Route
+          path="/payment-page"
+          element={<PaymentPage setCart={setCart} cart={cart} />}
         />
 
         <Route path="*" element={<h1>Page not found</h1>} />

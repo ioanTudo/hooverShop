@@ -59,12 +59,14 @@ export const CheckoutPage = ({ cart, setCart }) => {
         </div>
 
         <div className="checkout_container">
-          <button
-            disabled={cart.length === 0}
-            onClick={() => console.log("went to checkout")}
-          >
-            Checkout
-          </button>
+          <Link to={"/payment-page"}>
+            <button
+              disabled={cart.length === 0}
+              onClick={() => console.log("went to checkout")}
+            >
+              To Payment
+            </button>
+          </Link>
           <Link
             to="/corded-hoovers"
             onClick={() => console.log("continue shopping btn clicked")}

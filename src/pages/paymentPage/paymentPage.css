@@ -1,0 +1,48 @@
+.paymentPage_container {
+  padding: 10px;
+  margin-top: 70px;
+
+  margin: 100px auto;
+
+  min-height: 100vh;
+  width: 100%;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.orderDetails_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 20px;
+
+  max-width: 425px;
+
+  border: 1px solid red;
+}
+.orderInfo_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  margin: auto;
+  align-items: center;
+}
+.total_container {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+.buttonChange_container {
+  display: flex;
+  justify-content: flex-end;
+
+  bottom: 0;
+}
+.prodImg {
+  width: 100px;
+  height: 100px;
+
+  background-position: center;
+  background-size: contain;
+}
