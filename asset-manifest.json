@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hooverShop/static/css/main.809fb7e1.css",
-    "main.js": "/hooverShop/static/js/main.5801f672.js",
+    "main.css": "/hooverShop/static/css/main.4266f47f.css",
+    "main.js": "/hooverShop/static/js/main.0ab4c9a2.js",
     "static/js/453.6326208c.chunk.js": "/hooverShop/static/js/453.6326208c.chunk.js",
     "static/media/Shark-UK-Header-Template-Desktop-1500x720.webp": "/hooverShop/static/media/Shark-UK-Header-Template-Desktop-1500x720.76e2d8c72665f88ee532.webp",
     "static/media/NZ801UKT_prodINFO.webp": "/hooverShop/static/media/NZ801UKT_prodINFO.49fcdfdf2d02b73858c7.webp",
@@ -21,19 +21,19 @@
     "static/media/HP300UK_01.webp": "/hooverShop/static/media/HP300UK_01.028baa7be808dd770380.webp",
     "static/media/airPuri-prodCat.webp": "/hooverShop/static/media/airPuri-prodCat.028baa7be808dd770380.webp",
     "static/media/HP150UK_01.webp": "/hooverShop/static/media/HP150UK_01.76efe3ce0e9da32c0c24.webp",
+    "index.html": "/hooverShop/index.html",
     "static/media/IP1251UKT_02.webp": "/hooverShop/static/media/IP1251UKT_02.9bbbe73c17f692612656.webp",
     "static/media/IZ202UK_02.webp": "/hooverShop/static/media/IZ202UK_02.ecd988863fe36f92b221.webp",
-    "index.html": "/hooverShop/index.html",
     "static/media/IZ202UKT_02.webp": "/hooverShop/static/media/IZ202UKT_02.7fcd056108c3b595b16f.webp",
     "static/media/IZ202UKTDB_02.webp": "/hooverShop/static/media/IZ202UKTDB_02.cb8c5f700ec6946832aa.webp",
     "static/media/NZ801UKT_01.webp": "/hooverShop/static/media/NZ801UKT_01.a5b4f3654c94fc8b8107.webp",
     "static/media/NZ691UKT_01.webp": "/hooverShop/static/media/NZ691UKT_01.88c41ba1153a482e3262.webp",
-    "main.809fb7e1.css.map": "/hooverShop/static/css/main.809fb7e1.css.map",
-    "main.5801f672.js.map": "/hooverShop/static/js/main.5801f672.js.map",
+    "main.4266f47f.css.map": "/hooverShop/static/css/main.4266f47f.css.map",
+    "main.0ab4c9a2.js.map": "/hooverShop/static/js/main.0ab4c9a2.js.map",
     "453.6326208c.chunk.js.map": "/hooverShop/static/js/453.6326208c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.809fb7e1.css",
-    "static/js/main.5801f672.js"
+    "static/css/main.4266f47f.css",
+    "static/js/main.0ab4c9a2.js"
   ]
 }
