@@ -73,7 +73,7 @@ export const CordedVacDisplay = ({
       <div className="product_info">
         <h3>{name}</h3>
         <p className="ratingValue">
-          <span class="fa fa-star checked"></span>
+          <span className="fa fa-star checked"></span>
           {rating}
         </p>
         <span className="prodInfoText">{info}</span>

@@ -3,7 +3,7 @@ import { HeaderLogo } from "../../component/header/headerLogo";
 import { Link } from "react-router-dom";
 import "../signInForm/formStyle.css";
 
-export const LogInFormDisplay = ({ cart = [], setCart }) => {
+export const LogInFormDisplay = () => {
   const {
     register,
     handleSubmit,
