@@ -7,9 +7,9 @@ export const CartComponentDisplay = ({
   image,
   amount = 1,
   onDelete,
-  onAmountChange,
   onSale,
   salePrice,
+  id,
 }) => {
   const [localAmount, setLocalAmount] = useState(amount);
   const [state, setState] = useState("del");
@@ -32,7 +32,6 @@ export const CartComponentDisplay = ({
     } else if (state === "-") {
       setLocalAmount((prev) => {
         const newAmount = Math.max(prev - 1, 1);
-        onAmountChange(newAmount);
         return newAmount;
       });
     }
@@ -42,7 +41,6 @@ export const CartComponentDisplay = ({
     if (localAmount < 5) {
       setLocalAmount((prev) => {
         const newAmount = prev + 1;
-        onAmountChange(newAmount);
         return newAmount;
       });
     }
@@ -65,7 +63,7 @@ export const CartComponentDisplay = ({
 
   return (
     <>
-      <div className="big_wrapper">
+      <div key={id} className="big_wrapper">
         <div
           className="img_position"
           style={{

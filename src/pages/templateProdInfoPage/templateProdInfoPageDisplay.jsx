@@ -8,7 +8,6 @@ export const TemplateProdInfoPageDisplay = ({
   id,
   whatsIncluded,
   prodInfoImg,
-  onAddToCart,
   price,
   onSale,
   salePrice,
@@ -18,7 +17,6 @@ export const TemplateProdInfoPageDisplay = ({
 
   const handleAddToCart = () => {
     setLoading(true);
-    onAddToCart();
     setTimeout(() => setLoading(false), 3000);
   };
   return (

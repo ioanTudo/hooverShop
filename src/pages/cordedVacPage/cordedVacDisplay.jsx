@@ -1,18 +1,20 @@
 import { useState, useEffect } from "react";
 import "./products.css";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../component/contexts";
 
 export const CordedVacDisplay = ({
   name,
   price,
   image,
   info,
-  onAddToCart,
   prodPagePath,
   salePrice,
   onSale,
   rating,
 }) => {
+  const [cart, setCart] = useContext(CartContext);
   const [hoverImgVisibility, setHoverImgVisibility] = useState("none");
   const [firstImgVisibility, setFirstImgVisibility] = useState("");
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1200);
@@ -31,8 +33,9 @@ export const CordedVacDisplay = ({
 
   const handleAddToCart = () => {
     setLoading(true);
-    onAddToCart();
+    console.log(cart);
     setTimeout(() => setLoading(false), 3000);
+    setCart([...cart, { image, name, price }]);
   };
 
   return (

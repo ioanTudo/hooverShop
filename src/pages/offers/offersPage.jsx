@@ -9,7 +9,7 @@ import {
 import "./offersPage.css";
 import headerOffersPageImg from "../../images/prodCatImgs/Shark-UK-Header-Template-Desktop-1500x720.webp";
 
-export const OffersPage = ({ addToCart, cart, setCart }) => {
+export const OffersPage = () => {
   const filteredCordedProducts = PRODUCTS.filter((product) =>
     [1, 2, 3].includes(product.id)
   );
@@ -24,7 +24,7 @@ export const OffersPage = ({ addToCart, cart, setCart }) => {
   );
 
   return (
-    <TemplatePageDisplay cart={cart} setCart={setCart}>
+    <TemplatePageDisplay>
       <div className="offersPage_container">
         <h1>Special Offers</h1>
         <div
@@ -47,7 +47,6 @@ export const OffersPage = ({ addToCart, cart, setCart }) => {
                 info={product.info}
                 prodPagePath={product.prodPagePath}
                 rating={product.rating}
-                onAddToCart={() => addToCart(product)}
               />
             ))}
           </div>
@@ -68,7 +67,6 @@ export const OffersPage = ({ addToCart, cart, setCart }) => {
                 info={product.info}
                 prodPagePath={product.prodPagePath}
                 rating={product.rating}
-                onAddToCart={() => addToCart(product)}
               />
             ))}
           </div>
@@ -89,7 +87,6 @@ export const OffersPage = ({ addToCart, cart, setCart }) => {
                 info={product.info}
                 prodPagePath={product.prodPagePath}
                 rating={product.rating}
-                onAddToCart={() => addToCart(product)}
               />
             ))}
           </div>
@@ -110,7 +107,6 @@ export const OffersPage = ({ addToCart, cart, setCart }) => {
                 info={product.info}
                 prodPagePath={product.prodPagePath}
                 rating={product.rating}
-                onAddToCart={() => addToCart(product)}
               />
             ))}
           </div>

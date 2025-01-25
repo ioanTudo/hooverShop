@@ -11,10 +11,10 @@ export const OrderInfo = ({ name, price, image, onSale, salePrice }) => {
           }}
         ></div>
         <div>
-          <p>{name}</p>
+          <span>{name}</span>
         </div>
         <div>
-          <p>Price: ${onSale ? salePrice : price}</p>
+          <p> ${onSale ? salePrice : price}</p>
         </div>
       </div>
       <hr />

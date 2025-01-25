@@ -1,25 +1,17 @@
 import { CartComponentDisplay } from "../../component/cartComponentDisplay";
-import { Link } from "react-router-dom";
-import { useCallback } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useCallback, useContext } from "react";
 import "../../App.css";
 import { TemplatePageDisplay } from "../templatePage/templatePageDisplay";
+import { CartContext } from "../../component/contexts";
 
-export const CheckoutPage = ({ cart, setCart }) => {
+export const CheckoutPage = () => {
+  const [cart, setCart] = useContext(CartContext);
+  const navigate = useNavigate();
   const subtotal = cart.reduce(
     (total, item) =>
       total + (item.onSale ? item.salePrice : item.price) * (item.amount || 1),
     0
-  );
-
-  const updateItemAmount = useCallback(
-    (index, newAmount) => {
-      setCart((prevCart) =>
-        prevCart.map((item, i) =>
-          i === index ? { ...item, amount: newAmount } : item
-        )
-      );
-    },
-    [setCart]
   );
 
   const handleDelete = useCallback(
@@ -30,7 +22,7 @@ export const CheckoutPage = ({ cart, setCart }) => {
   );
 
   return (
-    <TemplatePageDisplay cart={cart} setCart={setCart}>
+    <TemplatePageDisplay>
       <div className="cart_container">
         <h2>Your Cart</h2>
         {cart.length === 0 ? (
@@ -38,7 +30,7 @@ export const CheckoutPage = ({ cart, setCart }) => {
         ) : (
           cart.map((item, index) => (
             <CartComponentDisplay
-              key={item.id}
+              key={index}
               name={item.name}
               price={item.onSale ? item.salePrice : item.price}
               image={item.image}
@@ -46,7 +38,6 @@ export const CheckoutPage = ({ cart, setCart }) => {
               onSale={item.onSale}
               amount={item.amount}
               onDelete={() => handleDelete(index)}
-              onAmountChange={(newAmount) => updateItemAmount(index, newAmount)}
             />
           ))
         )}
@@ -67,10 +58,7 @@ export const CheckoutPage = ({ cart, setCart }) => {
               To Payment
             </button>
           </Link>
-          <Link
-            to="/corded-hoovers"
-            onClick={() => console.log("continue shopping btn clicked")}
-          >
+          <Link onClick={() => navigate(-1)}>
             <p>Continue Shopping</p>
           </Link>
         </div>

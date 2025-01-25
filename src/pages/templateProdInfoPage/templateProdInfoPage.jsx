@@ -8,7 +8,6 @@ export const TemplateProdInfoPage = ({
   whatsIncluded,
   prodInfoImg,
   price,
-  onAddToCart,
   onSale,
   salePrice,
   rating,
@@ -22,7 +21,6 @@ export const TemplateProdInfoPage = ({
       whatsIncluded={whatsIncluded}
       prodInfoImg={prodInfoImg}
       price={price}
-      onAddToCart={onAddToCart}
       onSale={onSale}
       salePrice={salePrice}
       rating={rating}

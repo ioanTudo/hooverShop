@@ -8,9 +8,10 @@ import { BurgerMenu } from "./burgerMenu.jsx";
 import { SearchLogo } from "./searchLogo.jsx";
 import { useState } from "react";
 
-export const Header = ({ cart }) => {
+export const Header = () => {
   const [visibility, setVisibility] = useState("");
   const [navVisibility, setNavVisibility] = useState("");
+
   return (
     <header className="header">
       <nav className="topNav">
@@ -29,7 +30,7 @@ export const Header = ({ cart }) => {
               />
             ))}
           </div>
-          <CartHeader cart={cart} />
+          <CartHeader />
           <BurgerMenu
             navVisibility={navVisibility}
             setNavVisibility={setNavVisibility}

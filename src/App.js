@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { StrictMode, useEffect, useState } from "react";
 import { CheckoutPage } from "./pages/checkoutPage/checkoutPage";
 import { HomePage } from "./pages/home/homePage";
 import { SignInPage } from "./pages/signInPage/signInPage";
@@ -33,24 +33,11 @@ import { AboutUsPage } from "./pages/aboutUsPage/aboutUsPage.jsx";
 import { ReviewsPage } from "./pages/reviews/reviewsPage.jsx";
 import { CleaningTipsPage } from "./pages/cleaningTipsPage/cleaningTipsPage.jsx";
 import { PaymentPage } from "./pages/paymentPage/paymentPage.jsx";
+import { CartContext } from "./component/contexts.jsx";
 
 function App() {
-  const [cart, setCart] = useState([]);
+  const cartHook = useState([]);
   const location = useLocation();
-
-  const addToCart = (product) => {
-    setCart((prevCart) => {
-      const existingProduct = prevCart.find((item) => item.id === product.id);
-
-      if (existingProduct) {
-        return prevCart.map((item) =>
-          item.id === product.id ? { ...item, amount: item.amount + 1 } : item
-        );
-      } else {
-        return [...prevCart, { ...product, amount: 1 }];
-      }
-    });
-  };
 
   useEffect(() => {
     const pathsWithProdInfoBody = [
@@ -97,227 +84,53 @@ function App() {
   }, [location.pathname]);
 
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<HomePage cart={cart} setCart={setCart} />} />
-        <Route
-          path="/offers"
-          element={
-            <OffersPage addToCart={addToCart} cart={cart} setCart={setCart} />
-          }
-        />
-        <Route
-          path="/corded-hoovers"
-          element={
-            <CordedVacPage
-              addToCart={addToCart}
-              cart={cart}
-              setCart={setCart}
-            />
-          }
-        />
-        <Route
-          path="/cordless-hoovers"
-          element={
-            <CordlessVacPage
-              addToCart={addToCart}
-              cart={cart}
-              setCart={setCart}
-            />
-          }
-        />
-        <Route
-          path="/hairDry-page"
-          element={
-            <HairDryPage addToCart={addToCart} cart={cart} setCart={setCart} />
-          }
-        />
-        <Route
-          path="/airPurifier-page"
-          element={
-            <AirPurifierPage
-              addToCart={addToCart}
-              cart={cart}
-              setCart={setCart}
-            />
-          }
-        />
-        <Route
-          path="/signIn-page"
-          element={<SignInPage cart={cart} setCart={setCart} />}
-        />
-        <Route
-          path="/logIn-page"
-          element={<LogInPage cart={cart} setCart={setCart} />}
-        />
-        <Route
-          path="/checkout-page"
-          element={<CheckoutPage setCart={setCart} cart={cart} />}
-        />
-        <Route
-          path="/zIdNZ810UKT"
-          element={
-            <NZ801UKTPage setCart={setCart} addToCart={addToCart} cart={cart} />
-          }
-        />
-        <Route
-          path="/zIdAZ3002UK"
-          element={
-            <AZ3002UKPage setCart={setCart} addToCart={addToCart} cart={cart} />
-          }
-        />
-        <Route
-          path="/zIdNV602UK"
-          element={
-            <NV602UKPage setCart={setCart} addToCart={addToCart} cart={cart} />
-          }
-        />
-        <Route
-          path="/zIdNZ691UKT"
-          element={
-            <NZ691UKTPage setCart={setCart} addToCart={addToCart} cart={cart} />
-          }
-        />
+    <StrictMode>
+      <div className="App">
+        <CartContext.Provider value={cartHook}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/offers" element={<OffersPage />} />
+            <Route path="/corded-hoovers" element={<CordedVacPage />} />
+            <Route path="/cordless-hoovers" element={<CordlessVacPage />} />
+            <Route path="/hairDry-page" element={<HairDryPage />} />
+            <Route path="/airPurifier-page" element={<AirPurifierPage />} />
+            <Route path="/signIn-page" element={<SignInPage />} />
+            <Route path="/logIn-page" element={<LogInPage />} />
+            <Route path="/checkout-page" element={<CheckoutPage />} />
+            <Route path="/zIdNZ810UKT" element={<NZ801UKTPage />} />
+            <Route path="/zIdAZ3002UK" element={<AZ3002UKPage />} />
+            <Route path="/zIdNV602UK" element={<NV602UKPage />} />
+            <Route path="/zIdNZ691UKT" element={<NZ691UKTPage />} />
 
-        <Route
-          path="/zIdAZ3900UKT"
-          element={
-            <AZ3900UKTPage
-              setCart={setCart}
-              addToCart={addToCart}
-              cart={cart}
-            />
-          }
-        />
+            <Route path="/zIdAZ3900UKT" element={<AZ3900UKTPage />} />
 
-        <Route
-          path="/zIdAZ3000UKT"
-          element={
-            <AZ3000UKTPage
-              setCart={setCart}
-              addToCart={addToCart}
-              cart={cart}
+            <Route path="/zIdAZ3000UKT" element={<AZ3000UKTPage />} />
+            <Route path="/zIdIP1251UKT" element={<IP1251UKTPage />} />
+            <Route path="/zIdIZ202UKT" element={<IZ202UKTPage />} />
+            <Route path="/zIdIZ202UKTDB" element={<IZ202UKTDBPage />} />
+            <Route path="/zIdIZ400UKT" element={<IZ400UKTPage />} />
+            <Route path="/zIdIZ202UK" element={<IZ202UKPage />} />
+            <Route path="/zIdIZ420UKTDB" element={<IZ420UKTDBPage />} />
+            <Route path="/zIdHD731UK" element={<HD731UKPage />} />
+            <Route path="/zIdHD752UK" element={<HD752UKPage />} />
+            <Route path="/zIdHD731202UK" element={<HD731202UKPage />} />
+            <Route path="/zIdHP300UK" element={<HP300UKPage />} />
+            <Route path="/zIdHP150UK" element={<HP150UKPage />} />
+            <Route path="/zIdHC450" element={<HC450UKPage />} />
+            <Route
+              path="/products-category"
+              element={<ProductsCategoryPage />}
             />
-          }
-        />
-        <Route
-          path="/zIdIP1251UKT"
-          element={
-            <IP1251UKTPage
-              setCart={setCart}
-              addToCart={addToCart}
-              cart={cart}
-            />
-          }
-        />
-        <Route
-          path="/zIdIZ202UKT"
-          element={
-            <IZ202UKTPage setCart={setCart} addToCart={addToCart} cart={cart} />
-          }
-        />
-        <Route
-          path="/zIdIZ202UKTDB"
-          element={
-            <IZ202UKTDBPage
-              setCart={setCart}
-              addToCart={addToCart}
-              cart={cart}
-            />
-          }
-        />
-        <Route
-          path="/zIdIZ400UKT"
-          element={
-            <IZ400UKTPage setCart={setCart} addToCart={addToCart} cart={cart} />
-          }
-        />
-        <Route
-          path="/zIdIZ202UK"
-          element={
-            <IZ202UKPage setCart={setCart} addToCart={addToCart} cart={cart} />
-          }
-        />
-        <Route
-          path="/zIdIZ420UKTDB"
-          element={
-            <IZ420UKTDBPage
-              setCart={setCart}
-              addToCart={addToCart}
-              cart={cart}
-            />
-          }
-        />
-        <Route
-          path="/zIdHD731UK"
-          element={
-            <HD731UKPage setCart={setCart} addToCart={addToCart} cart={cart} />
-          }
-        />
-        <Route
-          path="/zIdHD752UK"
-          element={
-            <HD752UKPage setCart={setCart} addToCart={addToCart} cart={cart} />
-          }
-        />
-        <Route
-          path="/zIdHD731202UK"
-          element={
-            <HD731202UKPage
-              setCart={setCart}
-              addToCart={addToCart}
-              cart={cart}
-            />
-          }
-        />
-        <Route
-          path="/zIdHP300UK"
-          element={
-            <HP300UKPage setCart={setCart} addToCart={addToCart} cart={cart} />
-          }
-        />
-        <Route
-          path="/zIdHP150UK"
-          element={
-            <HP150UKPage setCart={setCart} addToCart={addToCart} cart={cart} />
-          }
-        />
-        <Route
-          path="/zIdHC450"
-          element={
-            <HC450UKPage setCart={setCart} addToCart={addToCart} cart={cart} />
-          }
-        />
-        <Route
-          path="/products-category"
-          element={
-            <ProductsCategoryPage
-              setCart={setCart}
-              addToCart={addToCart}
-              cart={cart}
-            />
-          }
-        />
-        <Route
-          path="/about-us"
-          element={<AboutUsPage setCart={setCart} cart={cart} />}
-        />
-        <Route
-          path="/reviews"
-          element={<ReviewsPage setCart={setCart} cart={cart} />}
-        />
-        <Route
-          path="/cleaning-tips"
-          element={<CleaningTipsPage cart={cart} setCart={setCart} />}
-        />
-        <Route
-          path="/payment-page"
-          element={<PaymentPage setCart={setCart} cart={cart} />}
-        />
+            <Route path="/about-us" element={<AboutUsPage />} />
+            <Route path="/reviews" element={<ReviewsPage />} />
+            <Route path="/cleaning-tips" element={<CleaningTipsPage />} />
+            <Route path="/payment-page" element={<PaymentPage />} />
 
-        <Route path="*" element={<h1>Page not found</h1>} />
-      </Routes>
-    </div>
+            <Route path="*" element={<h1>Page not found</h1>} />
+          </Routes>
+        </CartContext.Provider>
+      </div>
+    </StrictMode>
   );
 }
 

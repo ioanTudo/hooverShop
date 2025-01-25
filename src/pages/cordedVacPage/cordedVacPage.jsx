@@ -1,16 +1,10 @@
-import { useEffect } from "react";
 import { PRODUCTS } from "../../data";
-
 import { TemplatePageDisplay } from "../templatePage/templatePageDisplay";
 import { CordedVacDisplay } from "./cordedVacDisplay";
 
-export const CordedVacPage = ({ cart, setCart, addToCart }) => {
-  useEffect(() => {
-    console.log("Cart updated:", cart);
-  }, [cart]);
-
+export const CordedVacPage = () => {
   return (
-    <TemplatePageDisplay cart={cart} setCart={setCart}>
+    <TemplatePageDisplay>
       <div className="products_wrapper">
         <h1>Corded vacuum cleaners</h1>
         <div className="products_container">
@@ -25,7 +19,6 @@ export const CordedVacPage = ({ cart, setCart, addToCart }) => {
               info={product.info}
               prodPagePath={product.prodPagePath}
               rating={product.rating}
-              onAddToCart={() => addToCart(product)}
             />
           ))}
         </div>

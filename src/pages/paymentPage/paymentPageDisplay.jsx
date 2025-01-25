@@ -3,8 +3,11 @@ import { OrderInfo } from "./orderInfo";
 import "./paymentPage.css";
 
 import { PaymentForm } from "./paymentForm";
+import { useContext } from "react";
+import { CartContext } from "../../component/contexts";
 
-export const PaymentPageDisplay = ({ cart = [], setCart }) => {
+export const PaymentPageDisplay = () => {
+  const [cart] = useContext(CartContext);
   const subtotal = cart.reduce(
     (total, item) =>
       total + (item.onSale ? item.salePrice : item.price) * (item.amount || 1),
@@ -14,8 +17,8 @@ export const PaymentPageDisplay = ({ cart = [], setCart }) => {
   return (
     <>
       <div className="paymentPage_container">
-        <div className="wrapper">
-          <PaymentForm cart={cart} setCart={setCart} />
+        <div className="paymentPage_wrapper">
+          <PaymentForm />
           <div className="orderDetails_container">
             <div className="">
               <h3>your order</h3>

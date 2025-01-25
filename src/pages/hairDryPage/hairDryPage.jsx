@@ -23,7 +23,6 @@ export const HairDryPage = ({ cart, setCart, addToCart }) => {
               info={product.info}
               prodPagePath={product.prodPagePath}
               rating={product.rating}
-              onAddToCart={() => addToCart(product)}
             />
           ))}
         </div>
