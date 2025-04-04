@@ -16,7 +16,7 @@ export const AboutUsPageDisplay = ({
         <p>{text}</p>
         <p>{moreInfo}</p>
       </div>
-      {""}
+
       <div className="companyDetails_container">
         <h2>Company Details</h2>
         <p>{companyDetails}</p>

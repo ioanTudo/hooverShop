@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { CartContext, useCart } from "../contexts";
+import { CartContext } from "../contexts";
 import { useContext } from "react";
 
 export const CartHeader = () => {

@@ -1,50 +1,48 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import "../App.css";
+import { LocalAmount } from "./localAmountProvider.jsx";
 
 export const CartComponentDisplay = ({
   name,
   price = 0,
   image,
-  amount = 1,
   onDelete,
   onSale,
   salePrice,
   id,
 }) => {
-  const [localAmount, setLocalAmount] = useState(amount);
+  const { amount, setAmountForId } = useContext(LocalAmount);
+  const itemAmount = amount[id] || 1;
   const [state, setState] = useState("del");
-  const [totalPrice, setTotalPrice] = useState(price * amount);
+  const [totalPrice, setTotalPrice] = useState(0);
   const [visibility, setVisibility] = useState("none");
   const [deleteMessageVisibility, setDeleteMessageVisibility] =
     useState("none");
 
   useEffect(() => {
-    setState(localAmount > 1 ? "-" : "del");
-
+    setState(itemAmount > 1 ? "-" : "del");
     const effectivePrice = onSale ? salePrice : price;
-    setTotalPrice((effectivePrice || 0) * localAmount);
-  }, [localAmount, price, salePrice, onSale]);
+    setTotalPrice((effectivePrice || 0) * itemAmount);
+
+    console.log("ID:", id, "itemAmount:", itemAmount, "amount object:", amount);
+  }, [itemAmount, price, salePrice, onSale]);
 
   const handleDecrease = () => {
     if (state === "del") {
       setDeleteMessageVisibility("block");
       document.body.style.overflow = "hidden";
-    } else if (state === "-") {
-      setLocalAmount((prev) => {
-        const newAmount = Math.max(prev - 1, 1);
-        return newAmount;
-      });
+    } else {
+      const newAmount = Math.max(itemAmount - 1, 1);
+      setAmountForId(id, newAmount);
     }
   };
 
   const handleIncrease = () => {
-    if (localAmount < 5) {
-      setLocalAmount((prev) => {
-        const newAmount = prev + 1;
-        return newAmount;
-      });
+    if (itemAmount < 5) {
+      setAmountForId(id, itemAmount + 1);
     }
-    if (localAmount === 4) {
+
+    if (itemAmount === 4) {
       setVisibility("block");
       setTimeout(() => setVisibility("none"), 5000);
     }
@@ -76,9 +74,9 @@ export const CartComponentDisplay = ({
           </div>
           <div className="amount_container_wrapper">
             <div className="amount_container">
-              <button onClick={handleDecrease}>{state}</button>
-              <span>{localAmount}</span>
-              <button disabled={localAmount === 5} onClick={handleIncrease}>
+              <button onClick={() => handleDecrease(id)}>{state}</button>
+              <span>{itemAmount}</span>
+              <button disabled={itemAmount === 5} onClick={handleIncrease}>
                 +
               </button>
             </div>

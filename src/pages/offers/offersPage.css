@@ -1,7 +1,9 @@
 .offersPage_container {
+  display: grid;
+
+  justify-content: center;
   padding: 10px;
   margin-top: 70px;
-  min-height: 100vh;
 }
 .offersPage_container h1 {
   text-transform: capitalize;
@@ -40,12 +42,23 @@
 
   margin: auto;
 }
-@media (min-width: 375px) {
+.offerCategory {
+  display: flex;
+}
+.offerTitleStlye {
+  display: flex;
+
+  margin: 50px 0;
+}
+@media (min-width: 320px) {
   .products_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     gap: 15px;
+  }
+  .offerTitleStlye {
+    justify-self: center;
   }
 }
 @media (min-width: 1200px) {
@@ -54,5 +67,8 @@
     grid-template-columns: 1fr 1fr 1fr;
 
     justify-self: center;
+  }
+  .offerTitleStlye {
+    justify-self: left;
   }
 }

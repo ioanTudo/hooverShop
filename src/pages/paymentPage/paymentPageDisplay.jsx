@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import { OrderInfo } from "./orderInfo";
 import "./paymentPage.css";
 
-import { PaymentForm } from "./paymentForm";
 import { useContext } from "react";
 import { CartContext } from "../../component/contexts";
+import { PaymentForm } from "./paymentForm";
 
 export const PaymentPageDisplay = () => {
   const [cart] = useContext(CartContext);
@@ -26,9 +26,9 @@ export const PaymentPageDisplay = () => {
               {cart.length === 0 ? (
                 <p>Your cart is empty.</p>
               ) : (
-                cart.map((item) => (
+                cart.map((item, index) => (
                   <OrderInfo
-                    key={item.id}
+                    key={index}
                     name={item.name}
                     price={item.onSale ? item.salePrice : item.price}
                     image={item.image}

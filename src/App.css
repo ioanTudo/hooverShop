@@ -2,16 +2,9 @@
   text-align: center;
   font-family: "Gill Sans", sans-serif;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -32,12 +25,35 @@
 .App-link {
   color: #61dafb;
 }
+.gridWrapper {
+  display: grid;
 
-@media (min-width: 375px) {
+  width: 80%;
+
+  gap: 20px;
+
+  padding: 15px;
+
+  margin: auto;
+}
+.page_wrapper .title {
+  padding-top: 100px;
+
+  text-transform: capitalize;
+}
+
+@media (min-width: 320px) {
+  .product_item {
+    width: 180px;
+    height: 390px;
+  }
   .products_wrapper h1 {
     text-transform: capitalize;
 
     color: rgb(167, 90, 242);
+  }
+  .gridWrapper {
+    grid-template-columns: 1fr;
   }
   .homepage {
     padding-bottom: 0;
@@ -242,13 +258,155 @@
 
     margin: 100px auto;
   }
+}
+@media (min-width: 500px) {
+  .gridWrapper {
+    grid-template-columns: repeat(2, auto);
 
-  @media (min-width: 1200px) {
-    .checkout_container button {
-      width: 40%;
-    }
-    .cart_container {
-      width: 60%;
-    }
+    justify-content: center;
   }
+}
+@media (min-width: 1200px) {
+  .gridWrapper {
+    grid-template-columns: repeat(3, auto);
+
+    justify-content: center;
+  }
+
+  .product_paymentInfo button:hover {
+    background-color: rgb(138, 43, 226);
+  }
+
+  .product_img {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 308px;
+    height: 200px;
+  }
+
+  .secondImgHover {
+    display: flex;
+    color: black;
+
+    width: 100%;
+    height: 200px;
+
+    margin: auto;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .secondImgHover span {
+    text-transform: uppercase;
+
+    font-weight: bold;
+  }
+  .checkout_container button {
+    width: 40%;
+  }
+  .cart_container {
+    width: 60%;
+  }
+}
+.prodInfoText {
+  display: none;
+}
+
+s {
+  color: #888;
+  margin-left: 10px;
+  font-size: 0.9em;
+}
+.ratingValue {
+  color: rgb(63, 0, 122);
+}
+
+.hairDryPage h1 {
+  text-transform: capitalize;
+}
+
+.product_item {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  border: 1px solid #bfbfbf;
+
+  border-radius: 10px;
+
+  padding: 20px 5px 10px 5px;
+
+  margin: auto;
+
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "XOPQ" 96, "XTRA" 468,
+    "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+}
+
+.products_container h3 {
+  color: rgb(120, 75, 160);
+
+  text-transform: uppercase;
+}
+.product_info {
+  justify-self: center;
+
+  color: rgb(138, 43, 226);
+
+  height: 150px;
+}
+
+.product_paymentInfo p {
+  color: black;
+}
+.product_img {
+  width: 120px;
+  height: 120px;
+
+  border-radius: 10px;
+
+  background-size: cover;
+
+  margin: auto;
+}
+.product_paymentInfo {
+  margin-bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.product_paymentInfo button {
+  width: 100px;
+  height: 50px;
+
+  grid-row: 3/4;
+
+  background-color: rgb(167, 90, 242);
+
+  border: 0px;
+  border-radius: 10px;
+
+  color: white;
+
+  margin: auto auto 0 auto;
+
+  cursor: pointer;
+}
+.product_paymentInfo button:disabled {
+  background-color: rgb(203, 148, 255);
+  color: #f2f2f2;
+  border: 1px solid #bfbfbf;
+  cursor: not-allowed;
+}
+
+.products_wrapper {
+  padding: 10px;
+
+  margin-top: 70px;
 }

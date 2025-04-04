@@ -1,117 +1,68 @@
-import { TemplatePageDisplay } from "../templatePage/templatePageDisplay";
-import { CordedVacDisplay } from "../cordedVacPage/cordedVacDisplay";
 import {
   PRODUCTS,
   PRODUCTS_CORDLESS,
   PRODUCTS_AIRPURIFIERS,
   PRODUCTS_HAIRDRY,
 } from "../../data";
+import "../../index.css";
 import "./offersPage.css";
 import headerOffersPageImg from "../../images/prodCatImgs/Shark-UK-Header-Template-Desktop-1500x720.webp";
 
-export const OffersPage = () => {
-  const filteredCordedProducts = PRODUCTS.filter((product) =>
-    [1, 2, 3].includes(product.id)
-  );
-  const filteredCordlessProducts = PRODUCTS_CORDLESS.filter((product) =>
-    [7, 8, 9].includes(product.id)
-  );
-  const filteredAirPurifiers = PRODUCTS_AIRPURIFIERS.filter((product) =>
-    [13, 15].includes(product.id)
-  );
-  const filteredHairDryers = PRODUCTS_HAIRDRY.filter((product) =>
-    [16].includes(product.id)
-  );
+import { TemplatePage } from "../TemplatePage/TemplatePage.jsx";
 
+const filteredCorded = PRODUCTS.filter((item) => item.onSale === true);
+const filteredCordless = PRODUCTS_CORDLESS.filter(
+  (item) => item.onSale === true
+);
+const filteredPurifiers = PRODUCTS_AIRPURIFIERS.filter(
+  (item) => item.onSale === true
+);
+const filteredHair = PRODUCTS_HAIRDRY.filter((item) => item.onSale === true);
+
+export const OffersPage = () => {
   return (
-    <TemplatePageDisplay>
-      <div className="offersPage_container">
-        <h1>Special Offers</h1>
+    <div className="offersPage_container">
+      <div>
         <div
           className="headerImg"
           style={{ backgroundImage: `url(${headerOffersPageImg})` }}
         ></div>
-        <div className="offersProd_container">
-          <div className="design_container">
-            <h2>Corded Vacuum Cleaners</h2>
-          </div>
-          <div className="products_grid">
-            {filteredCordedProducts.map((product) => (
-              <CordedVacDisplay
-                key={product.id}
-                name={product.name}
-                price={product.price}
-                onSale={product.onSale}
-                salePrice={product.salePrice}
-                image={product.image}
-                info={product.info}
-                prodPagePath={product.prodPagePath}
-                rating={product.rating}
-              />
-            ))}
-          </div>
+      </div>
+      <div>
+        <h1>Offers</h1>
+      </div>
+
+      <div className="offersProd_container">
+        <div className="offerCategory">
+          <TemplatePage
+            titleClass={"offerTitleStlye"}
+            title={"Corded Hoovers"}
+            prodType={filteredCorded}
+          />
         </div>
-        <div className="offersProd_container">
-          <div className="design_container">
-            <h2>Cordless Vacuum Cleaners</h2>
-          </div>
-          <div className="products_grid">
-            {filteredCordlessProducts.map((product) => (
-              <CordedVacDisplay
-                key={product.id}
-                name={product.name}
-                price={product.price}
-                onSale={product.onSale}
-                salePrice={product.salePrice}
-                image={product.image}
-                info={product.info}
-                prodPagePath={product.prodPagePath}
-                rating={product.rating}
-              />
-            ))}
-          </div>
+        <div className="offerCategory">
+          <TemplatePage
+            titleClass={"offerTitleStlye"}
+            title={"Cordless Hoovers"}
+            prodType={filteredCordless}
+          />
         </div>
-        <div className="offersProd_container">
-          <div className="design_container">
-            <h2>Air Purifiers</h2>
-          </div>
-          <div className="products_grid">
-            {filteredAirPurifiers.map((product) => (
-              <CordedVacDisplay
-                key={product.id}
-                name={product.name}
-                price={product.price}
-                onSale={product.onSale}
-                salePrice={product.salePrice}
-                image={product.image}
-                info={product.info}
-                prodPagePath={product.prodPagePath}
-                rating={product.rating}
-              />
-            ))}
-          </div>
+        <div className="offerCategory">
+          <TemplatePage
+            titleClass={"offerTitleStlye"}
+            title={"Air Purifiers"}
+            prodType={filteredPurifiers}
+          />
         </div>
-        <div className="offersProd_container">
-          <div className="design_container">
-            <h2>Hair Dryers</h2>
-          </div>
-          <div className="products_grid">
-            {filteredHairDryers.map((product) => (
-              <CordedVacDisplay
-                key={product.id}
-                name={product.name}
-                price={product.price}
-                onSale={product.onSale}
-                salePrice={product.salePrice}
-                image={product.image}
-                info={product.info}
-                prodPagePath={product.prodPagePath}
-                rating={product.rating}
-              />
-            ))}
-          </div>
+
+        <div className="offerCategory">
+          <TemplatePage
+            titleClass={"offerTitleStlye"}
+            title={"Hair Dryers"}
+            prodType={filteredHair}
+          />
         </div>
       </div>
-    </TemplatePageDisplay>
+    </div>
   );
 };

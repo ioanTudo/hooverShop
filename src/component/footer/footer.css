@@ -1,14 +1,5 @@
 html,
 .prodCategory_body,
-#root {
-  height: 100%;
-
-  margin: 0;
-
-  display: flex;
-  flex-direction: column;
-}
-
 main {
   flex: 1;
   display: flex;
@@ -123,7 +114,6 @@ footer a::before {
   border-right: 0.125rem solid rgb(120, 75, 160);
 }
 
-/* Formular pentru footer */
 .footer_form_container form {
   display: grid;
   grid-template-columns: 1fr;
@@ -138,7 +128,11 @@ footer a::before {
 .footer_form_container input {
   width: 100%;
 
-  padding-right: 0;
+  padding: 10px 5px 10px 10px;
+
+  border: 0px;
+
+  border-radius: 10px;
 }
 
 .footer_form_container button {
@@ -165,7 +159,7 @@ footer a::before {
   cursor: pointer;
 }
 
-@media (min-width: 375px) {
+@media (min-width: 320px) {
   .footerNav_link {
     grid-template-columns: 1fr;
   }

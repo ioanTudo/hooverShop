@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./prodInfo.css";
+import { CartContext } from "../../component/contexts";
 
-export const TemplateProdInfoPageDisplay = ({
+export const TemplateProdInfoDisplay = ({
   info,
   technology,
   name,
@@ -12,12 +13,18 @@ export const TemplateProdInfoPageDisplay = ({
   onSale,
   salePrice,
   rating,
+  image,
+  price_id,
 }) => {
   const [loading, setLoading] = useState(false);
+  const [cart, setCart] = useContext(CartContext);
 
   const handleAddToCart = () => {
     setLoading(true);
+
+    console.log(cart);
     setTimeout(() => setLoading(false), 3000);
+    setCart([...cart, { image, name, price, price_id }]);
   };
   return (
     <div className="prodInfoContainer" key={id}>
@@ -53,7 +60,9 @@ export const TemplateProdInfoPageDisplay = ({
               <span>Sale: ${salePrice}</span>
             </div>
           ) : (
-            <span>Price: ${price}</span>
+            <div>
+              <span>Price: ${price}</span>
+            </div>
           )}
         </div>
         <div className="buttonPayment_container">

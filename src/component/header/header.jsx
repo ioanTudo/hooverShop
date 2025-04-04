@@ -30,6 +30,7 @@ export const Header = () => {
               />
             ))}
           </div>
+
           <CartHeader />
           <BurgerMenu
             navVisibility={navVisibility}
