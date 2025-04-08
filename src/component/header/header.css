@@ -42,6 +42,8 @@
   .navItm_container {
     display: none;
 
+    gap: 10px;
+
     grid-row: 3/4;
     grid-column: 1 / span 5;
 
@@ -79,7 +81,6 @@
 
   .header_ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
     text-transform: uppercase;
 
@@ -96,9 +97,7 @@
   .nav_link {
     position: relative;
 
-    margin-top: 35px;
-
-    grid-row: 3/4;
+    grid-row: 3/3;
 
     display: none;
 

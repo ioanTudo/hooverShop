@@ -317,8 +317,8 @@ export const NAVList = [
       },
     ],
   },
-  { id: 2, name: "sign in", pathLink: "/signIn-page" },
-  { id: 3, name: "log in", pathLink: "/logIn-page" },
+  { id: 2, name: "register", pathLink: "/register" },
+  { id: 3, name: "log in", pathLink: "/login" },
 ];
 
 export const FOOTER_items = [

@@ -4,16 +4,15 @@ import { StrictMode, useState } from "react";
 
 import { CheckoutPage } from "./pages/checkoutPage/checkoutPage";
 import { HomePage } from "./pages/home/homePage";
-import { SignInPage } from "./pages/signInPage/signInPage";
-import { LogInPage } from "./pages/logInPage/logInPage";
+
 import { OffersPage } from "./pages/offers/offersPage";
 import { ProductsCategoryPage } from "./pages/products-category/productsCategoryPage.jsx";
 import { AboutUsPage } from "./pages/aboutUsPage/aboutUsPage.jsx";
 import { ReviewsPage } from "./pages/reviews/reviewsPage.jsx";
 import { CleaningTipsPage } from "./pages/cleaningTipsPage/cleaningTipsPage.jsx";
 
-import { CartContext } from "./component/contexts"; // ✅ DOAR CartContext din contexts.jsx
-import { LocalAmountProvider } from "./component/localAmountProvider"; // ✅ Provider corect
+import { CartContext } from "./component/contexts";
+import { LocalAmountProvider } from "./component/localAmountProvider";
 
 import { Header } from "./component/header/header.jsx";
 import { FooterContainer } from "./component/footer/footerContainer.jsx";
@@ -29,6 +28,7 @@ import { TemplatePage } from "./pages/TemplatePage/TemplatePage.jsx";
 import { TemplateProdInfoPage } from "./pages/TemplateProdInfoPage/TemplateProdInfoPage.jsx";
 import { Success } from "./pages/paymentConfirmation/Success.jsx";
 import { Cancel } from "./pages/paymentConfirmation/Cancel.jsx";
+import { RegisterForm } from "./component/auth/registerForm.jsx";
 
 function App() {
   const cartHook = useState([]);
@@ -79,8 +79,7 @@ function App() {
                   />
                 }
               />
-              <Route path="/signIn-page" element={<SignInPage />} />
-              <Route path="/logIn-page" element={<LogInPage />} />
+              <Route path="/register" element={<RegisterForm />} />
               <Route path="/checkout-page" element={<CheckoutPage />} />
               <Route
                 path="/products-category"
