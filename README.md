@@ -20,7 +20,7 @@ Tech Stack
  
 Setup Instructions
 	1.	Clone the repository
-git clone https://github.com/your-username/hoovershop.git
+git clone https://github.com/ioanTudo/hooverShop.git
 cd hoovershop
 	2.	Install dependencies
 npm install
