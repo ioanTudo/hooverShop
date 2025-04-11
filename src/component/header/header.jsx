@@ -6,11 +6,26 @@ import { SearchBar } from "./searchBar";
 import { CartHeader } from "./cartHeader.jsx";
 import { BurgerMenu } from "./burgerMenu.jsx";
 import { SearchLogo } from "./searchLogo.jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const Header = () => {
   const [visibility, setVisibility] = useState("");
   const [navVisibility, setNavVisibility] = useState("");
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1200) {
+        setNavVisibility("");
+      } else {
+        setNavVisibility("none");
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // setare inițială
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <header className="header">
@@ -27,6 +42,7 @@ export const Header = () => {
                 name={navItems.name}
                 submenu={navItems.submenu}
                 navVisibility={navVisibility}
+                setNavVisibility={setNavVisibility}
               />
             ))}
           </div>

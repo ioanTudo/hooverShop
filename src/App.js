@@ -28,10 +28,26 @@ import { TemplatePage } from "./pages/TemplatePage/TemplatePage.jsx";
 import { TemplateProdInfoPage } from "./pages/TemplateProdInfoPage/TemplateProdInfoPage.jsx";
 import { Success } from "./pages/paymentConfirmation/Success.jsx";
 import { Cancel } from "./pages/paymentConfirmation/Cancel.jsx";
-import { RegisterForm } from "./component/auth/registerForm.jsx";
+
+import { Dashboard } from "./pages/dashboard/dashboard.jsx";
+import { AuthForm } from "./component/auth/authForm.jsx";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 
 function App() {
   const cartHook = useState([]);
+
+  const [confirmationRegistration, setConfirmationRegistration] =
+    useState(null);
+  const [errorRegistration, setErrorRegistration] = useState(null);
+  const [loadingRegistration, setLoadingRegistration] = useState(false);
+
+  const [loginError, setLoginError] = useState(null);
+  const [loadingLogIn, setLoadingLogIn] = useState(false);
+  const [confirmationLogIn, setConfirmationLogin] = useState(null);
+  const [showPassword, setShowPassword] = useState(false);
 
   return (
     <StrictMode>
@@ -79,7 +95,55 @@ function App() {
                   />
                 }
               />
-              <Route path="/register" element={<RegisterForm />} />
+
+              <Route
+                path="/register"
+                element={
+                  <AuthForm
+                    title={"Register"}
+                    authMethod={createUserWithEmailAndPassword}
+                    confirmation={confirmationRegistration}
+                    errorMsg={errorRegistration}
+                    loading={loadingRegistration}
+                    setLoading={setLoadingRegistration}
+                    setConfirmation={setConfirmationRegistration}
+                    setErrorMsg={setErrorRegistration}
+                    loadingMsg={"Registering..."}
+                    btnText={"Register"}
+                    isNavigatingToDashboard={false}
+                    showLoginPath={true}
+                    showPassword={showPassword}
+                    setShowPassword={setShowPassword}
+                    registrationMsgConfirmation={"Account created succesfully"}
+                    isRegisteringAcc={true}
+                  />
+                }
+              />
+
+              <Route
+                path="/login"
+                element={
+                  <AuthForm
+                    title={"Log in"}
+                    authMethod={signInWithEmailAndPassword}
+                    confirmation={confirmationRegistration}
+                    setConfirmation={() => confirmationLogIn}
+                    errorMsg={loginError}
+                    loading={loadingLogIn}
+                    setLoading={setLoadingLogIn}
+                    setErrorMsg={setLoginError}
+                    loadingMsg={"Logging in..."}
+                    btnText={"Log in"}
+                    isNavigatingToDashboard={true}
+                    showLoginPath={false}
+                    showPassword={showPassword}
+                    setShowPassword={setShowPassword}
+                    registrationMsgConfirmation={setConfirmationLogin}
+                    isRegisteringAcc={false}
+                  />
+                }
+              />
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/checkout-page" element={<CheckoutPage />} />
               <Route
                 path="/products-category"

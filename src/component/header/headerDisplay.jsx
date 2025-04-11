@@ -8,30 +8,38 @@ export const HeaderDisplay = ({
   id,
   submenu,
   navVisibility,
+  setNavVisibility,
 }) => {
   const [visibility, setVisibility] = useState("none");
 
   const onPageSelect = () => {
-    console.log(`Page selected in header: ${name}`);
     document.body.style.overflow = "visible";
+    if (window.innerWidth < 1200) {
+      setNavVisibility("none");
+      setVisibility("none");
+    }
   };
 
-  const handleToggleVisibility = () => {
-    setVisibility(visibility === "none" ? "block" : "none");
+  const handleToggleSubmenu = () => {
+    if (name === "products") {
+      setVisibility((prev) => (prev === "none" ? "block" : "none"));
+    }
+
+    if (window.innerWidth < 1200 && name !== "products") {
+      setNavVisibility("none");
+      setVisibility("none");
+    }
   };
 
   return (
     <li
       style={{ display: navVisibility }}
-      className={`nav_link ${name === "products" ? "dropdownIcon" : ""}  `}
+      className={`nav_link ${name === "products" ? "dropdownIcon" : ""}`}
       key={id}
     >
       <NavLink
         className={`${name === "offers" ? "offersButton" : ""}`}
-        onClick={() => {
-          onPageSelect();
-          handleToggleVisibility();
-        }}
+        onClick={handleToggleSubmenu}
         to={pathLink}
       >
         {name}
@@ -48,10 +56,7 @@ export const HeaderDisplay = ({
               <NavLink
                 key={`${id}-${item.id}`}
                 to={item.pathLink}
-                onClick={() => {
-                  onPageSelect();
-                  handleToggleVisibility();
-                }}
+                onClick={onPageSelect}
                 className="submenu_link"
               >
                 <li key={item.id}>{item.name}</li>
