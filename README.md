@@ -26,15 +26,8 @@ cd hoovershop
 npm install
 	3.	Create a .env file in the root of the project with the following keys:
 
-REACT_APP_FIREBASE_API_KEY=your_api_key
-REACT_APP_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-REACT_APP_FIREBASE_PROJECT_ID=your_project_id
-REACT_APP_FIREBASE_APP_ID=your_app_id
-REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_public_key
 	4.	Start the development server
 npm start
-
-
 
 Future Improvements
 	•	Admin dashboard for product management
