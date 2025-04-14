@@ -19,14 +19,17 @@ Tech Stack
 	•	Deployment: Optional (Vercel, Netlify, Firebase Hosting)
  
 Setup Instructions
-	1.	Clone the repository
+/////
+	**1.**	Clone the repository
 git clone https://github.com/ioanTudo/hooverShop.git
 cd hoovershop
-	2.	Install dependencies
+/////
+	**2.**	Install dependencies
 npm install
-	3.	Create a .env file in the root of the project with the following keys:
-
-	4.	Start the development server
+/////
+	**3.**	Create a .env file in the root of the project with the following keys:
+/////
+	**4.**	Start the development server
 npm start
 
 Future Improvements
