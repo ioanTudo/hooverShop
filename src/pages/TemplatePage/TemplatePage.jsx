@@ -20,10 +20,16 @@ export const TemplatePage = ({ prodType = [], title, titleClass }) => {
   }, []);
 
   const handleAddToCart = (item) => {
+    if (cart.find((prod) => prod.id === item.id)) {
+      console.log("Product is already in the cart");
+      return;
+    }
+
     setLoading(item.id);
-    setTimeout(() => setLoading(false), 3000);
-    setCart([
-      ...cart,
+    setTimeout(() => setLoading(null), 3000);
+
+    setCart((prevCart) => [
+      ...prevCart,
       {
         id: item.id,
         image: item.image,
@@ -32,9 +38,6 @@ export const TemplatePage = ({ prodType = [], title, titleClass }) => {
         price_id: item.price_id,
       },
     ]);
-    if (cart === item.id) {
-      console.log("deja aici");
-    }
   };
 
   return (
@@ -43,7 +46,7 @@ export const TemplatePage = ({ prodType = [], title, titleClass }) => {
       <div className="gridWrapper">
         {prodType.map((prod) => {
           const isLoading = loading === prod.id;
-          const isInCart = cart.some((item) => item.id === prod.id);
+          const isInCart = cart.find((item) => item.id === prod.id);
           return (
             <div key={prod.id} className="product_item">
               <Link to={`/product/${prod.id}/${prod.name}`}>
@@ -76,7 +79,7 @@ export const TemplatePage = ({ prodType = [], title, titleClass }) => {
                 )}
                 <button
                   className="addCartButton"
-                  disabled={(isLoading, isInCart)}
+                  disabled={isLoading || isInCart}
                   onClick={() => handleAddToCart(prod)}
                 >
                   {isLoading ? (

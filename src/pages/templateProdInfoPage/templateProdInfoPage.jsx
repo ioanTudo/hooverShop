@@ -27,7 +27,7 @@ export const TemplateProdInfoPage = ({ technology, prodType = [] }) => {
     <>
       {product && (
         <TemplateProdInfoDisplay
-          key={product.id}
+          id={product.id}
           info={product.info}
           technology={technology}
           name={product.name}

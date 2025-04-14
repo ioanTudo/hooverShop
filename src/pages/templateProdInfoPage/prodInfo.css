@@ -1,4 +1,4 @@
-@media (min-width: 375px) {
+@media (min-width: 320px) {
   .prodInfo_body {
     padding-bottom: 80px;
   }
@@ -65,10 +65,10 @@
   .buttonPayment_container {
     margin: auto;
   }
-  .buttonPayment_container button:hover {
+  .addCartButton:hover {
     background-color: rgb(138, 43, 226);
   }
-  .buttonPayment_container button {
+  .addCartButton {
     width: 150px;
     height: 50px;
 

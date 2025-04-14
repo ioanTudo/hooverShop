@@ -16,16 +16,19 @@ export const TemplateProdInfoDisplay = ({
   image,
   price_id,
 }) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(null);
   const [cart, setCart] = useContext(CartContext);
 
-  const handleAddToCart = () => {
-    setLoading(true);
+  const isInCart = cart.find((prod) => prod.id === id);
+  const isLoading = loading === id;
 
-    console.log(cart);
-    setTimeout(() => setLoading(false), 3000);
-    setCart([...cart, { image, name, price, price_id }]);
+  const handleAddToCart = () => {
+    setLoading(id);
+    setTimeout(() => setLoading(null), 3000);
+
+    setCart((prev) => [...prev, { image, name, price, price_id, id }]);
   };
+
   return (
     <div className="prodInfoContainer" key={id}>
       <div
@@ -35,11 +38,11 @@ export const TemplateProdInfoDisplay = ({
       <div>
         <h2>{name}</h2>
         <p className="ratingValue">
-          <span class="fa fa-star checked"></span>
+          <span className="fa fa-star checked"></span>
           {rating}
         </p>
         <h3>{info}</h3>
-        <ul key={id}>
+        <ul>
           <li>Technology: {technology}</li>
         </ul>
         <h3>What's Included:</h3>
@@ -51,12 +54,12 @@ export const TemplateProdInfoDisplay = ({
           ))}
         </ul>
       </div>
+
       <div className="paymentProdInfo_container">
         <div className="priceProdInfo_container">
           {onSale ? (
             <div className="priceInfo_container">
               <s>${price}</s>
-
               <span>Sale: ${salePrice}</span>
             </div>
           ) : (
@@ -65,14 +68,17 @@ export const TemplateProdInfoDisplay = ({
             </div>
           )}
         </div>
+
         <div className="buttonPayment_container">
           <button
             className="addCartButton"
-            disabled={loading ? true : false}
+            disabled={isInCart}
             onClick={handleAddToCart}
           >
-            {loading ? (
+            {isLoading ? (
               <i className="fa fa-spinner fa-spin"></i>
+            ) : isInCart ? (
+              <span>Added to cart</span>
             ) : (
               <span>Add to Cart</span>
             )}

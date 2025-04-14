@@ -153,14 +153,23 @@
 
     cursor: pointer;
   }
+  .checkout_container button:disabled {
+    background-color: rgb(203, 148, 255);
+
+    color: #f2f2f2;
+
+    border: 1px solid #bfbfbf;
+
+    cursor: not-allowed;
+  }
   .amount_container button {
     cursor: pointer;
   }
 
-  .checkout_container button:hover {
+  .addCartButton:hover {
     background-color: rgb(138, 43, 226);
   }
-  .checkout_container button:disabled {
+  .addCartButton:disabled {
     background-color: rgb(203, 148, 255);
 
     color: #f2f2f2;
