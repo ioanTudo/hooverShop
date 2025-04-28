@@ -296,29 +296,31 @@ export const NAVList = [
     name: "products",
     submenu: [
       {
-        id: 0,
+        id: 2,
         name: "corded",
         pathLink: "/corded-hoovers",
       },
       {
-        id: 1,
+        id: 3,
         name: "cordless",
         pathLink: "/cordless-hoovers",
       },
       {
-        id: 2,
+        id: 4,
         name: "hair dryers",
         pathLink: "/hairDry-page",
       },
       {
-        id: 3,
+        id: 5,
         name: "air purifiers",
         pathLink: "/airPurifier-page",
       },
     ],
   },
-  { id: 2, name: "register", pathLink: "/register" },
-  { id: 3, name: "log in", pathLink: "/login" },
+  { id: 6, name: "register", pathLink: "/register", isLogged: false },
+  { id: 7, name: "log in", pathLink: "/login", isLogged: false },
+  { id: 8, name: "dashboard", pathLink: "/dashboard" },
+  { id: 9, name: "log out", isLogged: false },
 ];
 
 export const FOOTER_items = [

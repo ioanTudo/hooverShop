@@ -1,13 +1,16 @@
 import { CartComponentDisplay } from "../../component/cartComponentDisplay";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCallback, useContext } from "react";
 import "../../App.css";
 import { CartContext } from "../../component/contexts";
 import { LocalAmount } from "../../component/localAmountProvider";
+import { getAuth } from "firebase/auth";
 
 export const CheckoutPage = () => {
   const [cart, setCart] = useContext(CartContext);
   const { amount, setAmountForId } = useContext(LocalAmount);
+
+  const navigate = useNavigate();
 
   const totalPrice = cart.reduce((total, item) => {
     const qty = amount[item.id] || 1;
@@ -27,26 +30,49 @@ export const CheckoutPage = () => {
 
   const handleCheckout = async () => {
     try {
+      const auth = getAuth();
+      const user = auth.currentUser;
+
+      if (!user) {
+        alert("Please log in before placing an order.");
+        navigate("/login");
+        return;
+      }
+
+      const idToken = await user.getIdToken();
+
       const formattedCartItems = cart.map((item) => ({
         price_id: item.price_id,
         quantity: amount[item.id] || 1,
       }));
 
-      const response = await fetch(
-        "http://localhost:4242/create-checkout-session",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            cartItems: formattedCartItems,
-          }),
-        }
-      );
+      console.log("Formatted cart items:", formattedCartItems);
 
-      const data = await response.json();
-      window.location.href = data.url;
+      const res = await fetch("http://localhost:4242/create-checkout-session", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${idToken}`,
+        },
+        body: JSON.stringify({ cartItems: formattedCartItems }),
+      });
+
+      if (!res.ok) {
+        const errorData = await res.json();
+        console.error("❌ Server response:", errorData);
+        throw new Error(errorData.error || "Checkout session failed");
+      }
+
+      const data = await res.json();
+
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        throw new Error("Stripe session failed");
+      }
     } catch (error) {
       console.error("Checkout error:", error);
+      alert("Checkout failed. Please try again.");
     }
   };
 

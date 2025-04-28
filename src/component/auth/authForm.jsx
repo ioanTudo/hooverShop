@@ -49,7 +49,13 @@ export const AuthForm = ({
       reset();
     } catch (error) {
       setConfirmation("");
-      setErrorMsg("Something went wrong, please try again.");
+      if (error.code === "auth/email-already-in-use") {
+        setErrorMsg("Email already in use.");
+      } else if (error.code === "auth/wrong-password") {
+        setErrorMsg("Incorrect password.");
+      } else {
+        setErrorMsg("Something went wrong, please try again.");
+      }
     } finally {
       setLoading(false);
     }

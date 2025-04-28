@@ -26,8 +26,6 @@ import {
 
 import { TemplatePage } from "./pages/TemplatePage/TemplatePage.jsx";
 import { TemplateProdInfoPage } from "./pages/TemplateProdInfoPage/TemplateProdInfoPage.jsx";
-import { Success } from "./pages/paymentConfirmation/Success.jsx";
-import { Cancel } from "./pages/paymentConfirmation/Cancel.jsx";
 
 import { Dashboard } from "./pages/dashboard/dashboard.jsx";
 import { AuthForm } from "./component/auth/authForm.jsx";
@@ -35,6 +33,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+import { PaymentConfirmationTemplate } from "./pages/paymentConfirmation/PaymentConfirmationTemplate.jsx";
 
 function App() {
   const cartHook = useState([]);
@@ -152,8 +151,14 @@ function App() {
               <Route path="/about-us" element={<AboutUsPage />} />
               <Route path="/reviews" element={<ReviewsPage />} />
               <Route path="/cleaning-tips" element={<CleaningTipsPage />} />
-              <Route path="/success" element={<Success />} />
-              <Route path="/cancel" element={<Cancel />} />
+              <Route
+                path="/success"
+                element={<PaymentConfirmationTemplate isSucces={true} />}
+              />
+              <Route
+                path="/cancel"
+                element={<PaymentConfirmationTemplate isCanceled={true} />}
+              />
               <Route path="*" element={<h1>Page not found</h1>} />
             </Routes>
             <FooterContainer />

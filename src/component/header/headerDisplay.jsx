@@ -1,6 +1,8 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./header.css";
 import { useState } from "react";
+import { signOut } from "firebase/auth";
+import { auth } from "../../api/firebase";
 
 export const HeaderDisplay = ({
   pathLink,
@@ -9,9 +11,10 @@ export const HeaderDisplay = ({
   submenu,
   navVisibility,
   setNavVisibility,
+  currentUser,
 }) => {
   const [visibility, setVisibility] = useState("none");
-
+  const navigate = useNavigate();
   const onPageSelect = () => {
     document.body.style.overflow = "visible";
     if (window.innerWidth < 1200) {
@@ -31,6 +34,18 @@ export const HeaderDisplay = ({
     }
   };
 
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      navigate("/");
+    } catch (error) {
+      console.error("Logout error:", error);
+    }
+  };
+
+  if ((name === "log in" || name === "register") && currentUser) return null;
+  if ((name === "dashboard" || name === "log out") && !currentUser) return null;
+
   return (
     <li
       style={{ display: navVisibility }}
@@ -39,8 +54,8 @@ export const HeaderDisplay = ({
     >
       <NavLink
         className={`${name === "offers" ? "offersButton" : ""}`}
-        onClick={handleToggleSubmenu}
-        to={pathLink}
+        onClick={name === "log out" ? handleLogout : handleToggleSubmenu}
+        to={name === "log out" ? "#" : pathLink}
       >
         {name}
       </NavLink>
