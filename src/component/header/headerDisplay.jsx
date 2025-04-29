@@ -16,9 +16,11 @@ export const HeaderDisplay = ({
   const [visibility, setVisibility] = useState("none");
   const navigate = useNavigate();
   const onPageSelect = () => {
-    document.body.style.overflow = "visible";
     if (window.innerWidth < 1200) {
       setNavVisibility("none");
+      setVisibility("none");
+    }
+    if (window.innerWidth > 1200) {
       setVisibility("none");
     }
   };
